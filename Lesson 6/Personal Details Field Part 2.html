@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details File</title>
+</head>
+<body>
+
+    <h1>Personal Details File</h1>
+    <form>
+        <label>Name</label><br>
+        <input type="text" id="name"><br><br>
+        
+        <!-- Changed type to "email" for proper validation -->
+        <label>Email ID</label><br>
+        <input type="email" id="email"><br><br>
+        
+        <label>Contact Number (This will be hidden)</label><br>
+        <input type="password" id="contact"><br><br>
+        
+        <label>Gender</label><br>
+        <input type="radio" id="female" name="gender" value="female">Female<br><br>
+        <input type="radio" id="male" name="gender" value="male">Male<br><br>
+        
+        <label>Favorite City</label><br>
+        <!-- Cleaned up IDs so they are unique per checkbox -->
+        <input type="checkbox" id="city-ny" name="city" value="New York">New York<br><br>
+        <input type="checkbox" id="city-paris" name="city" value="Paris">Paris<br><br>
+        <input type="checkbox" id="city-tokyo" name="city" value="Tokyo">Tokyo<br><br>
+        <input type="checkbox" id="city-sydney" name="city" value="Sydney">Sydney<br><br>
+        <input type="checkbox" id="city-madrid" name="city" value="Madrid">Madrid<br><br>
+        <input type="checkbox" id="city-rome" name="city" value="Rome">Rome<br><br>
+        <input type="checkbox" id="city-dubai" name="city" value="Dubai">Dubai<br><br>
+        <input type="checkbox" id="city-singapore" name="city" value="Singapore">Singapore<br><br>
+
+        <!-- NEW FIELDS ADDED BELOW -->
+
+        <!-- 1. Date of Birth Field -->
+        <label>Date of Birth</label><br>
+        <input type="date" id="dob"><br><br>
+
+        <!-- 2. Dropdown Menu Selection -->
+        <label>Country</label><br>
+        <select id="country">
+            <option value="">Select your country</option>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="IN">India</option>
+            <option value="AU">Australia</option>
+        </select><br><br>
+
+        <!-- 3. Multi-line Text Area -->
+        <label>About Yourself / Comments</label><br>
+        <textarea id="comments" rows="4" cols="40"></textarea><br><br>
+
+        <input type="submit">
+    </form>
+
+</body>
+</html>
