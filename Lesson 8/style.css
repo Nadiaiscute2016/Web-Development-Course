@@ -1,5 +1,5 @@
 body {
-    background-color: lightpink;
+    background-color: midnightblue;
     background-image:linear-gradient(to bottom, hotpink, lightpink);
     background-repeat: no-repeat;
     background-position: top center;
@@ -32,5 +32,5 @@ body {
     }
     .footer-text{
         text-align: center;
-        color: rgb(252, 247, 245);
+        color: rgb(154, 17, 74);
     }
