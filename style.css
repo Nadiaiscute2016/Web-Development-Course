@@ -1,0 +1,115 @@
+/* Page Background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+
+    background-color: #87ceeb;
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+    background-size: 40px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Weather Card */
+.weather-card {
+    margin-top: 50px;
+    width: 320px;
+    padding: 30px;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #4facfe,
+        #00f2fe
+    );
+
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Weather Icon */
+.weather-icon {
+    font-size: 60px;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Forecast Section */
+.forecast {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.forecast h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Forecast Cards Container */
+.days {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Individual Day Card */
+.day {
+    background: white;
+    width: 85px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s;
+}
+
+.day:hover {
+    transform: scale(1.05);
+}
+
+.day p {
+    margin: 5px 0;
+}
+
+.day span {
+    font-size: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .weather-card {
+        width: 80%;
+    }
+
+    .day {
+        width: 70px;
+        padding: 10px;
+    }
+
+    .day span {
+        font-size: 24px;
+    }
+}
