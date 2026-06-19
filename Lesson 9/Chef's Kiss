@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Restaurant Menu Card</title>
+    <style>body {
+    background-color: #a44bf2;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.menu-card {
+    width: 700px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.restaurant-name {
+    text-align: center;
+    color: purple;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px gray;
+}
+
+.tagline {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    text-decoration: underline;
+    font-size: 18px;
+}
+
+.offer-banner {
+    background: gold;
+    color: darkred;
+    text-align: center;
+    padding: 12px;
+    margin: 20px 0;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px gray;
+    text-transform: uppercase;
+}
+
+.section-title {
+    color: darkblue;
+    border-bottom: 2px solid darkblue;
+    text-transform: capitalize;
+    margin-top: 25px;
+}
+
+.item h3 {
+    color: rgb(77, 4, 44);
+    text-transform: capitalize;
+}
+
+.item p {
+    color: #444;
+    text-indent: 30px;
+    line-height: 1.6;
+}
+ </style>
+</head>
+<body> 
+<h2 class="section-title">Starters</h2>
+<div class="item">
+    <h3>Chicken Wings</h3>
+    <p>Crispy chicken wings served with spicy sauce.</p>
+</div>
+
+<div class="item">
+    <h3>Fish Fingers</h3>
+    <p>Golden fried fish strips with tartar sauce.</p>
+</div>
+
+<h2 class="section-title">Main Course</h2>
+
+<div class="item">
+    <h3>Grilled Chicken</h3>
+    <p>Tender grilled chicken served with seasoned potatoes.</p>
+</div>
+
+<div class="item">
+    <h3>Beef Burger</h3>
+    <p>Juicy beef patty with cheese and special sauce.</p>
+</div>
+
+<h2 class="section-title">Desserts</h2>
+
+<div class="item">
+    <h3>Chocolate Cake</h3>
+    <p>Rich chocolate cake topped with creamy frosting.</p>
+</div>
+
+<div class="item">
+    <h3>Strawberry Ice Cream</h3>
+    <p>Refreshing strawberry ice cream with sweet toppings.</p>
+</div>
