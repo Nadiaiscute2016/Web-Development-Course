@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Ice Cream Shop Menu</title>
+    <style>
+        body {
+    background-color: #ffe4ec;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: coral;
+}
+
+h2 {
+    color: hotpink;
+}
+
+/* Child Selector */
+.menu > li {
+    background-color: white;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 12px;
+    list-style: none;
+}
+
+/* Hover Pseudo Class */
+.menu li:hover {
+    background-color: coral;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Special Flavour */
+.special {
+    background-color: pink;
+    font-weight: bold;
+    border: 3px dashed coral;
+}
+
+/* First Letter Pseudo Element */
+.intro::first-letter {
+    font-size: 40px;
+    color: coral;
+    font-weight: bold;
+}
+
+/* First Menu Item */
+.menu li:first-child {
+    border-left: 6px solid hotpink;
+}
+
+/* Last Menu Item */
+.menu li:last-child {
+    border-right: 6px solid hotpink;
+}
+
+/* Adjacent Sibling Selector */
+h2 + p {
+    color: coral;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+
+    <h1>🍦 Nadia's Ice Cream Shop 🍦</h1>
+
+    <p class="intro">
+        Welcome to the sweetest ice cream shop in town! Choose your favorite flavour below.
+    </p>
+
+    <ul class="menu">
+        <li>Vanilla Dream</li>
+        <li>Chocolate Delight</li>
+        <li class="special">Coral Strawberry Swirl</li>
+        <li>Mint Magic</li>
+        <li>Bubblegum Blast</li>
+    </ul>
+
+    <h2>Special Offers</h2>
+
+    <p>Buy 2 scoops and get free sprinkles!</p>
+
+    <p>Try our limited-edition Coral Strawberry Swirl today!</p>
+
+</body>
+</html>
