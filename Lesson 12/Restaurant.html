@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Restaurant Page</title>
+</head>
+
+<body>
+
+<div class="top-bar">🍕 Tasty Bites Restaurant</div>
+
+<h1>Welcome to Tasty Bites!</h1>
+
+<h2>Static</h2>
+<div class="list-item">🍔 Cheeseburger - $8</div>
+<div class="list-item">🍕 Pepperoni Pizza - $12</div>
+
+<h2>Relative</h2>
+<p>This chef's special moves a little to the right.</p>
+<div class="special-note">👨‍🍳 Chef's Special: Creamy Pasta</div>
+
+<h2>Absolute</h2>
+<p>The discount badge stays in the corner of the menu card.</p>
+
+<div class="menu-card">
+    <p>🍟 Family Combo Meal - $20</p>
+    <div class="badge">20% OFF</div>
+</div>
+
+<h2>Sticky</h2>
+<p>Scroll down and the menu label sticks to the top!</p>
+
+<div class="section-label">Today's Menu</div>
+
+<div class="list-item">🥗 Caesar Salad - $7</div>
+<div class="list-item">🌮 Chicken Tacos - $10</div>
+<div class="list-item">🍗 Fried Chicken - $11</div>
+<div class="list-item">🍜 Noodles - $9</div>
+<div class="list-item">🌭 Hot Dog - $6</div>
+<div class="list-item">🍰 Chocolate Cake - $5</div>
+<div class="list-item">🥤 Fresh Juice - $4</div>
+<div class="list-item">🍦 Ice Cream - $3</div>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background-color:#fff0db;
+    padding:65px 30px 30px 30px;
+    min-height:1800px;
+}
+
+h1,h2{
+    color:#d35400;
+}
+
+.top-bar{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    background-color:#ff6b35;
+    color:white;
+    padding:14px 20px;
+}
+
+.list-item{
+    background:white;
+    border:2px solid #ff914d;
+    padding:10px 20px;
+    margin:5px 0;
+}
+
+.special-note{
+    position:relative;
+    left:30px;
+    background-color:#ff914d;
+    color:white;
+    padding:10px 20px;
+}
+
+.menu-card{
+    position:relative;
+    background:#ffe5b4;
+    border:3px solid #ff914d;
+    padding:15px 25px;
+}
+
+.badge{
+    position:absolute;
+    top:8px;
+    right:8px;
+    background:green;
+    color:white;
+    padding:4px 8px;
+    border-radius:5px;
+}
+
+.section-label{
+    position:sticky;
+    top:55px;
+    background:#d35400;
+    color:white;
+    padding:10px 20px;
+    margin:15px 0 8px;
+}
+</style>
+
+</body>
+</html>
