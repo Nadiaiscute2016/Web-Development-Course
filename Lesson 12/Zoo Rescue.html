@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Zoo Rescue Tracker</title>
+
+<style>
+body{
+    margin:0;
+    background:linear-gradient(#ffd6e8,#ffe8c8,#dff8ff);
+    font-family:Arial,sans-serif;
+}
+
+h1{
+    text-align:center;
+    color:#ff4f87;
+    margin-top:20px;
+}
+
+.park{
+    width:900px;
+    height:550px;
+    margin:30px auto;
+    background:#c9f7b8;
+    border:8px solid #5cb85c;
+    border-radius:25px;
+    position:relative;
+    box-shadow:0 0 15px gray;
+}
+
+.card{
+    width:160px;
+    background:white;
+    padding:12px;
+    border-radius:18px;
+    text-align:center;
+    position:absolute;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.2);
+}
+
+.lion{
+    top:40px;
+    left:40px;
+    border:4px solid gold;
+}
+
+.panda{
+    top:60px;
+    right:50px;
+    border:4px solid pink;
+}
+
+.elephant{
+    bottom:60px;
+    left:70px;
+    border:4px solid coral;
+}
+
+.giraffe{
+    bottom:40px;
+    right:40px;
+    border:4px solid orange;
+}
+
+.hq{
+    width:220px;
+    background:#ffb6d9;
+    border:5px solid hotpink;
+    border-radius:20px;
+    text-align:center;
+    padding:18px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:22px;
+    font-weight:bold;
+}
+
+.safe{
+    color:green;
+    font-weight:bold;
+}
+
+.rescue{
+    color:orange;
+    font-weight:bold;
+}
+
+.recovered{
+    color:deeppink;
+    font-weight:bold;
+}
+
+footer{
+    text-align:center;
+    margin:20px;
+    font-size:18px;
+    color:#ff4f87;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>🦁 Zoo Rescue Tracker 🐼</h1>
+
+<div class="park">
+
+<div class="card lion">
+<h2>🦁 Lion</h2>
+<p>Zone A</p>
+<p class="safe">✅ Safe</p>
+</div>
+
+<div class="card panda">
+<h2>🐼 Panda</h2>
+<p>Zone B</p>
+<p class="rescue">🚑 Being Rescued</p>
+</div>
+
+<div class="card elephant">
+<h2>🐘 Elephant</h2>
+<p>Zone C</p>
+<p class="recovered">❤️ Recovered</p>
+</div>
+
+<div class="card giraffe">
+<h2>🦒 Giraffe</h2>
+<p>Zone D</p>
+<p class="safe">✅ Safe</p>
+</div>
+
+<div class="hq">
+🚑<br>
+Rescue HQ
+</div>
+
+</div>
+
+<footer>
+🐾 Every rescue is a happily-ever-after! 💖
+</footer>
+
+</body>
+</html>
