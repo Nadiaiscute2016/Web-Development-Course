@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adventure Park Challenge - Game Lobby</title>
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts for Gaming Aesthetic -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-dark: #0d0e15;
+            --panel-bg: #161925;
+            --neon-cyan: #00f0ff;
+            --neon-magenta: #ff007f;
+            --neon-green: #39ff14;
+            --text-main: #e2e8f0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(255, 0, 127, 0.1) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(0, 240, 255, 0.1) 0px, transparent 50%);
+        }
+
+        h1, h2, h3, h4, .navbar-brand, .lobby-status {
+            font-family: 'Orbitron', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Neon Glow Effects */
+        .glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.5);
+            color: var(--neon-cyan) !important;
+        }
+
+        .glow-magenta {
+            text-shadow: 0 0 10px rgba(255, 0, 79, 0.7), 0 0 20px rgba(255, 0, 79, 0.5);
+            color: var(--neon-magenta) !important;
+        }
+
+        /* Game Lobby Navbar */
+        .navbar {
+            background: rgba(22, 25, 37, 0.95) !important;
+            border-bottom: 2px solid var(--neon-cyan);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-link {
+            color: var(--text-main) !important;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link:hover {
+            color: var(--neon-cyan) !important;
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        /* Lobby Status Header */
+        .lobby-banner {
+            background: var(--panel-bg);
+            border: 2px solid var(--neon-magenta);
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(255, 0, 127, 0.3);
+            animation: pulseGlow 3s infinite alternate;
+        }
+
+        /* Ride Cards (Character Selection Style) */
+        .ride-card {
+            background: var(--panel-bg);
+            border: 2px solid #2d3250;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ride-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+        }
+
+        .ride-status {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid var(--neon-green);
+            color: var(--neon-green);
+        }
+
+        /* System Alerts (Assignment Prompt Preservation) */
+        .alert-info-custom {
+            background: rgba(0, 240, 255, 0.05);
+            border: 1px solid var(--neon-cyan);
+            color: var(--text-main);
+            box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.1);
+        }
+
+        /* Interactive Ticket Terminal */
+        .ticket-terminal {
+            background: #090a0f;
+            border: 2px dashed var(--neon-cyan);
+            border-radius: 12px;
+            padding: 25px;
+        }
+
+        .form-control, .form-select {
+            background: var(--panel-bg);
+            border: 1px solid #2d3250;
+            color: #fff;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background: var(--panel-bg);
+            border-color: var(--neon-cyan);
+            color: #fff;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+
+        /* Neon Gaming Buttons */
+        .btn-neon {
+            background: transparent;
+            border: 2px solid var(--neon-magenta);
+            color: var(--neon-magenta);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+        }
+
+        .btn-neon:hover {
+            background: var(--neon-magenta);
+            color: #fff;
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.6);
+        }
+
+        /* Animations */
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 15px rgba(255, 0, 127, 0.2); border-color: rgba(255, 0, 127, 0.6); }
+            100% { box-shadow: 0 0 25px rgba(255, 0, 127, 0.5); border-color: rgba(255, 0, 127, 1); }
+        }
+
+        .float-animation {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Gaming Lobby Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand glow-cyan fw-bold" href="#">🎮 ADV_PARK //</a>
+            <button class="navbar-toggler btn-neon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-expand navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">LOBBY</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#rides">MAP_RELIQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tickets">SHOP_PASS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container my-5">
+        
+        <!-- Typography Assignment Prompt & Lobby Dashboard Section -->
+        <section id="dashboard" class="lobby-banner p-4 p-md-5 mb-5 float-animation">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <span class="badge bg-danger mb-2 px-3 py-2 text-uppercase font-monospace">System Update v2.6</span>
+                    <h1 class="display-4 glow-cyan fw-bold">Adventure Park Challenge</h1>
+                    <h2 class="h4 text-muted mt-2">Typography & UI Architecture Sandbox</h2>
+                    
+                    <p class="lead mt-4 text-light">
+                        In this assignment, you will build a colorful HTML and Bootstrap webpage called 
+                        <strong class="text-info">"Adventure Park Challenge"</strong>. This project helps you understand how 
+                        typography tags make webpage text clear, readable, and visually interesting.
+                    </p>
+                    
+                    <hr class="border-secondary my-4">
+                    
+                    <h3 class="h5 glow-magenta">What you will learn</h3>
+                    <p class="text-secondary">Explore headings, paragraphs, and custom responsive interfaces below:</p>
+                    <ul class="list-unstyled row g-2 font-monospace text-light">
+                        <div class="col-sm-6"><li>🟢 [01] Heading Tags (h1 to h6)</li></div>
+                        <div class="col-sm-6"><li>🟢 [02] Fluid Bootstrap Containers</li></div>
+                        <div class="col-sm-6"><li>🟢 [03] Typography Responsive Scaling</li></div>
+                    </ul>
+                </div>
+                
+                <!-- Live Server Status Metric Widget -->
+                <div class="col-lg-4 mt-4 mt-lg-0 text-center">
+                    <div class="p-3 rounded bg-dark border border-secondary">
+                        <div class="text-uppercase tracking-wider small text-muted">Lobby Status</div>
+                        <div class="h2 my-2 text-success font-monospace" style="text-shadow: 0 0 10px #39ff14;">ONLINE</div>
+                        <div class="small text-muted font-monospace">Ping: 14ms // Players: 1,402</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alert alert-info-custom mt-4 mb-0 d-flex align-items-center" role="alert">
+                <div class="me-2">💡</div>
+                <div><strong>Lobby Tip:</strong> Use the <code>.lead</code> utility class to automatically maximize readability across screens!</div>
+            </div>
+        </section>
+
+        <!-- Rides Grid Section (Game Character Map Archetype) -->
+        <section id="rides" class="mb-5">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <h2 class="h2 glow-magenta m-0">Select Your Stage [Rides]</h2>
+                <span class="text-muted font-monospace d-none d-sm-block">CHOOSE_AN_ACTIVITY_TO_QUEUE</span>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Ride 1 -->
+                <div class="col-md-4">
+                    <div class="ride-card h-100 p-4">
+                        <span class="ride-status">READY</span>
+                        <div class="display-6 my-3">🎢</div>
+                        <h3 class="h4 text-info fw-bold">Hyper Velocity Coaster</h3>
