@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Blossom 🌸</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff0f5;
+            color: #555;
+        }
+
+        nav {
+            background: #ff8fab;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px;
+            background: #ffd6e0;
+        }
+
+        .hero h1 {
+            font-size: 45px;
+            color: #d63384;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .flowers {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px #ddd;
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .card h3 {
+            color: #e75480;
+        }
+
+        button {
+            background: #ff8fab;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #d63384;
+        }
+
+        .about {
+            background: #ffe5ec;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .checkout-form {
+            background: white;
+            max-width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px #ddd;
+        }
+
+        .checkout-form label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            color: #d63384;
+            font-weight: bold;
+        }
+
+        .checkout-form input,
+        .checkout-form select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 2px solid #ffd6e0;
+            border-radius: 10px;
+        }
+
+        .checkout-form button {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        footer {
+            background: #ff8fab;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#flowers">Flowers</a>
+    <a href="#about">About</a>
+    <a href="#checkout">Checkout</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+    <h1>🌸 Sweet Blossom 🌸</h1>
+    <p>Beautiful flowers to brighten every special moment.</p>
+</section>
+
+<section class="section" id="flowers">
+    <h2>Our Flower Collection 🌺</h2>
+
+    <div class="flowers">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946">
+            <h3>Rose Bouquet</h3>
+            <p>Perfect flowers for love and friendship.</p>
+            <button onclick="location.href='#checkout'">Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
+            <h3>Spring Garden</h3>
+            <p>A colorful mix of fresh seasonal flowers.</p>
+            <button onclick="location.href='#checkout'">Order Now</button>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9">
+            <h3>Pink Tulips</h3>
+            <p>Soft and elegant flowers for any occasion.</p>
+            <button onclick="location.href='#checkout'">Order Now</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>About Sweet Blossom 🌷</h2>
+    <p>
+        Sweet Blossom creates beautiful flower arrangements
+        that bring happiness, color, and nature into people's lives.
+    </p>
+</section>
+
+<section class="section" id="checkout">
+    <h2>🌸 Flower Checkout 🌸</h2>
+
+    <form class="checkout-form">
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email" required>
+
+        <label>Delivery Date:</label>
+        <input type="date" required>
+
+        <label>Flower Type:</label>
+        <select required>
+            <option>Rose Bouquet</option>
+            <option>Spring Garden</option>
+            <option>Pink Tulips</option>
+            <option>Custom Bouquet</option>
+        </select>
+
+        <button type="submit">Place Order 💐</button>
+
+    </form>
+</section>
+
+<section class="section" id="contact">
+    <h2>Contact Us 💌</h2>
+    <p>Email: sweetblossom@example.com</p>
+    <p>Phone: +250 700 000 000</p>
+</section>
+
+<footer>
+    © 2026 Sweet Blossom Flower Shop 🌸
+</footer>
+
+</body>
+</html>
