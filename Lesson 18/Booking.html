@@ -2,7 +2,7 @@
 <html>
 
 <head>
-
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
 <title>Booking - Sapphire Shores Resort 💎</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +12,7 @@
 body {
     background:#0b0b0b;
     color:white;
-    font-family:Georgia, serif;
+    font-family:"Great Vibes", cursive;
 }
 
 .navbar {
@@ -75,6 +75,39 @@ footer {
     padding:20px;
     margin-top:50px;
 }
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:14px;
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #d4af37;
+    border-radius:10px;
+    font-size:18px;
+    box-sizing:border-box;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#bdbdbd;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+    border-color:#f5d76e;
+    box-shadow:0 0 8px rgba(212,175,55,.5);
+}
 
 </style>
 
@@ -92,19 +125,79 @@ footer {
 Sapphire Shores Resort 💎
 </a>
 
-<div>
+<button class="navbar-toggler bg-warning"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+<a class="nav-link d-inline" href="Sapphire Shores Resort.html">
+🏠 Home
+</a>
+
+<a class="nav-link d-inline" href="About Us.html">
+ℹ️ About Us
+</a>
 
 <a class="nav-link d-inline" href="Rooms.html">
-Rooms
+🛏️ Rooms
+</a>
+
+<a class="nav-link d-inline" href="Booking.html">
+📅 Booking
+</a>
+
+<a class="nav-link d-inline" href="The Golden Bite.html">
+🍽️ The Golden Bite
+</a>
+
+<a class="nav-link d-inline" href="Tours.html">
+🌴 Tours & Activities
+</a>
+
+<a class="nav-link d-inline" href="Infinity Pool.html">
+🏊 Infinity Pool
+</a>
+
+<a class="nav-link d-inline" href="Boutique.html">
+🛍️ Boutique
 </a>
 
 <a class="nav-link d-inline" href="VIP.html">
-VIP
+👑 VIP Club
 </a>
 
 <a class="nav-link d-inline" href="AI Concierge.html">
-AI Concierge
+🤖 Lumi AI
 </a>
+
+<a class="nav-link d-inline" href="Customer Reviews.html">
+⭐ Reviews
+</a>
+
+<a class="nav-link d-inline" href="Contact Us.html">
+📞 Contact
+</a>
+
+<a class="nav-link d-inline" href="More.html">
+➕ More
+</a>
+
+<a class="nav-link d-inline" href="Gallery.html">
+Gallery 📸
+</a>
+
+</div>
+
+</div>
+
+</nav>
+
 
 </div>
 
@@ -143,21 +236,21 @@ Available Rooms 🌊
 <div class="room-choice">
 
 <h3>
-Sapphire Ocean Suite 🌊
+Sapphire Royal Suite 💎
 </h3>
 
 <p>
-Ocean balcony, king bed, luxury bathroom,
-and sunrise views.
+Elegant suite with ocean views, luxury furnishings,
+private lounge area, and premium room service.
 </p>
 
 <h4>
-$450 / Night
+$1800 / Night
 </h4>
 
 <button type="button"
 class="btn btn-gold"
-onclick="selectRoom('Sapphire Ocean Suite')">
+onclick="selectRoom('Sapphire Royal Suite 💎')">
 
 Select Room
 
@@ -168,25 +261,24 @@ Select Room
 
 
 
-
 <div class="room-choice">
 
 <h3>
-Royal Coral Villa 🐚
+Ocean Pearl Villa 🦪
 </h3>
 
 <p>
-Private pool, tropical garden, beach access,
-and concierge service.
+A private beachfront villa with a personal pool,
+beautiful views, and peaceful surroundings.
 </p>
 
 <h4>
-$900 / Night
+$2500 / Night
 </h4>
 
 <button type="button"
 class="btn btn-gold"
-onclick="selectRoom('Royal Coral Villa')">
+onclick="selectRoom('Ocean Pearl Villa 🦪')">
 
 Select Room
 
@@ -197,49 +289,80 @@ Select Room
 
 
 
-
 <div class="room-choice">
 
 <h3>
-Diamond Presidential Suite 👑
+Golden Sunset Suite 🌅
 </h3>
 
 <p>
-Private lounge, luxury dining,
-and VIP treatment.
+Enjoy stunning sunset views, a spacious bedroom,
+and a relaxing private balcony.
 </p>
 
 <h4>
-$2000 / Night
+$1400 / Night
 </h4>
 
 <button type="button"
 class="btn btn-gold"
-onclick="selectRoom('Diamond Presidential Suite')">
+onclick="selectRoom('Golden Sunset Suite 🌅')">
 
 Select Room
 
 </button>
 
 </div>
+
+
+
+
 <div class="room-choice">
 
 <h3>
-VIP Sapphire Penthouse 👑💎
+Crystal Lagoon Villa 🏝️
 </h3>
 
 <p>
-Enjoy private ocean views, a personal concierge,
-VIP beach access, luxury dining, and exclusive resort benefits.
+Luxury villa surrounded by tropical gardens,
+with a private pool and lagoon views.
 </p>
 
 <h4>
-$3500 / Night
+$2800 / Night
 </h4>
 
 <button type="button"
 class="btn btn-gold"
-onclick="selectRoom('VIP Sapphire Penthouse')">
+onclick="selectRoom('Crystal Lagoon Villa 🏝️')">
+
+Select Room
+
+</button>
+
+</div>
+
+
+
+
+<div class="room-choice">
+
+<h3>
+Royal Sapphire Residence 👑
+</h3>
+
+<p>
+A grand luxury residence featuring multiple rooms,
+private dining, and VIP services.
+</p>
+
+<h4>
+$5000 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Royal Sapphire Residence 👑')">
 
 Select VIP Room
 
@@ -250,6 +373,142 @@ Select VIP Room
 
 
 
+<div class="room-choice">
+
+<h3>
+Palm Garden Suite 🌴
+</h3>
+
+<p>
+A peaceful tropical suite surrounded by gardens
+with a private outdoor relaxation area.
+</p>
+
+<h4>
+$1000 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Palm Garden Suite 🌴')">
+
+Select Room
+
+</button>
+
+</div>
+
+
+
+
+<div class="room-choice">
+
+<h3>
+Azure Sky Suite ☁️
+</h3>
+
+<p>
+Modern luxury suite with panoramic ocean views
+and a comfortable private lounge.
+</p>
+
+<h4>
+$1600 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Azure Sky Suite ☁️')">
+
+Select Room
+
+</button>
+
+</div>
+
+
+
+
+<div class="room-choice">
+
+<h3>
+Coral Paradise Villa 🪸
+</h3>
+
+<p>
+A tropical villa featuring beach access,
+luxury interiors, and private relaxation spaces.
+</p>
+
+<h4>
+$2200 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Coral Paradise Villa 🪸')">
+
+Select Room
+
+</button>
+
+</div>
+
+
+
+
+<div class="room-choice">
+
+<h3>
+Diamond Ocean Residence 💎🌊
+</h3>
+
+<p>
+Exclusive residence with premium ocean views,
+private dining, and elite services.
+</p>
+
+<h4>
+$4500 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Diamond Ocean Residence 💎🌊')">
+
+Select VIP Room
+
+</button>
+
+</div>
+
+
+
+
+<div class="room-choice">
+
+<h3>
+Moonlit Beach Villa 🌙🏝️
+</h3>
+
+<p>
+A romantic beachfront villa with evening ocean
+views and luxury amenities.
+</p>
+
+<h4>
+$3200 / Night
+</h4>
+
+<button type="button"
+class="btn btn-gold"
+onclick="selectRoom('Moonlit Beach Villa 🌙🏝️')">
+
+Select Room
+
+</button>
+
+</div>
 
 <h2 class="mt-5">
 Guest Information ✨
@@ -259,24 +518,165 @@ Guest Information ✨
 <form>
 
 
-<label class="form-label">
-Selected Room
-</label>
+<label>🏨 Select Room</label>
 
-<input id="room"
-class="form-control mb-3"
-readonly
-placeholder="Click Select Room">
+<input
+id="room"
+type="text"
+list="rooms"
+placeholder="Type your room or experience"
+required
+>
+
+<datalist id="rooms">
+
+<option value="Sapphire Ocean Suite 🌊">
+
+<option value="Royal Coral Villa 🐚">
+
+<option value="Diamond Presidential Suite 👑">
+
+<option value="VIP Sapphire Penthouse 👑💎">
+
+<option value="Moonlight Honeymoon Suite 🌙">
+
+<option value="Cloud Nine Penthouse ☁️">
+
+<option value="Sapphire Royal Suite 💎">
+
+<option value="Ocean Pearl Villa 🦪">
+
+<option value="Golden Sunset Suite 🌅">
+<option value="Crystal Lagoon Villa 🏝️">
+<option value="Royal Sapphire Residence 👑">
+<option value="Palm Garden Suite 🌴">
+<option value="Azure Sky Suite ☁️">
+<option value="Coral Paradise Villa 🪸">
+<option value="Diamond Ocean Residence 💎🌊">
+<option value="Moonlit Beach Villa 🌙🏝️">
+<option value="Private Yacht Escape 🛥️">
+<option value="Luxury Safari 🦁">
+<option value="Beach Horseback Riding 🐎">
+<option value="Royal Dining 🍽️">
+</datalist>
+
+<button type="button" class="btn btn-gold" onclick="checkRoom()">
+Continue
+</button>
+<script>
+
+function checkRoom(){
+
+    let room = document.getElementById("room").value.trim();
+
+    let available = [
+
+        "Sapphire Ocean Suite 🌊",
+
+        "Royal Coral Villa 🐚",
+
+        "Diamond Presidential Suite 👑",
+
+        "VIP Sapphire Penthouse 👑💎",
+
+        "Moonlight Honeymoon Suite 🌙",
+
+        "Cloud Nine Penthouse ☁️",
+
+        "Sapphire Royal Suite 💎",
+
+        "Ocean Pearl Villa 🦪",
+
+        "Golden Sunset Suite 🌅",
+
+        "Crystal Lagoon Villa 🏝️",
+
+        "Royal Sapphire Residence 👑",
+
+        "Palm Garden Suite 🌴",
+
+        "Azure Sky Suite ☁️",
+
+        "Coral Paradise Villa 🪸",
+
+        "Diamond Ocean Residence 💎🌊",
+
+        "Moonlit Beach Villa 🌙🏝️",
+
+
+        "Private Yacht Escape 🛥️",
+
+        "Luxury Safari 🦁",
+
+        "Beach Horseback Riding 🐎",
+
+        "Royal Dining 🍽️"
+
+    ];
+
+
+    if(available.includes(room)){
+
+        alert("✅ Great choice!\n\n" + room + " is available.\n\nWelcome to Sapphire Shores Resort 💎🌊");
+
+    }
+
+    else{
+
+        alert("❌ Sorry!\n\n'" + room + "' does not exist.\n\nPlease choose one of our available rooms or experiences.");
+
+        document.getElementById("room").focus();
+
+    }
+
+}
 
 
 
+function selectRoom(roomName){
+
+    document.getElementById("room").value = roomName;
+
+}
+
+
+
+function confirmBooking(){
+
+    let room = document.getElementById("room").value;
+
+    let name = document.getElementById("name").value;
+
+
+    if(room == ""){
+
+        alert("Please select a room first 💎");
+
+    }
+
+    else if(name == ""){
+
+        alert("Please enter your name ✨");
+
+    }
+
+    else{
+
+        alert("Thank you " + name + "! Your " + room + " reservation has been received.\n\nWelcome to Sapphire Shores Resort 💎🌊");
+
+    }
+
+}
+
+</script>
+
+</script>
 <label class="form-label">
 Full Name
 </label>
-
 <input id="name"
 class="form-control mb-3"
-placeholder="Enter your name">
+placeholder="Enter your full name">
 
 
 
