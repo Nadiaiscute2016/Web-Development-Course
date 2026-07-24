@@ -7,89 +7,209 @@
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+
 <style>
 
-body {
+body{
+
     background:#0b0b0b;
     color:white;
-    font-family:Georgia, serif;
+    font-family:"Playfair Display",serif;
+
 }
 
 
-.navbar {
+.navbar{
+
     background:#000;
     border-bottom:2px solid #d4af37;
+
 }
 
 
 .navbar-brand,
-.nav-link {
+.nav-link{
+
     color:#d4af37 !important;
     font-weight:bold;
+
 }
 
 
-.ai-box {
-    background:#161616;
+.nav-link:hover{
+
+    color:#f5d76e !important;
+
+}
+
+
+.hero{
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400");
+
+    background-size:cover;
+    background-position:center;
+    border-radius:25px;
+    padding:80px 40px;
+    text-align:center;
+    margin-bottom:40px;
+
+}
+
+
+.hero h1{
+
+    font-family:"Great Vibes",cursive;
+    color:#d4af37;
+    font-size:75px;
+
+}
+
+
+.hero p{
+
+    font-size:20px;
+    line-height:1.8;
+
+}
+
+
+.chat-container{
+
+    background:#141414;
     border:2px solid #d4af37;
     border-radius:25px;
-    padding:40px;
-    box-shadow:0 5px 20px rgba(212,175,55,.2);
+    overflow:hidden;
+    box-shadow:0 0 30px rgba(212,175,55,.2);
+
 }
 
 
-h1,h2,h3 {
+.chat-header{
+
+    background:#000;
     color:#d4af37;
+    padding:25px;
+    text-align:center;
+    border-bottom:2px solid #d4af37;
+
 }
 
 
-.chat-box {
+.chat-header h2{
 
-    background:#111;
-    border-radius:20px;
+    font-family:"Great Vibes",cursive;
+    font-size:50px;
+
+}
+
+
+.chat-header p{
+
+    color:white;
+
+}
+
+
+.chat-box{
+
+    height:520px;
+    overflow-y:auto;
     padding:25px;
-    min-height:250px;
+    background:#111;
+
+}
+
+
+.message{
+
+    display:flex;
+    margin-bottom:20px;
+
+}
+
+
+.bot{
+
+    justify-content:flex-start;
+
+}
+
+
+.user{
+
+    justify-content:flex-end;
+
+}
+
+
+.bubble{
+
+    max-width:80%;
+    padding:16px 20px;
+    border-radius:20px;
+    font-size:17px;
+    line-height:1.7;
+
+}
+
+
+.bot .bubble{
+
+    background:#1c1c1c;
     border:1px solid #d4af37;
 
 }
 
 
-.message {
-
-    background:#222;
-    padding:15px;
-    border-radius:15px;
-    margin:10px 0;
-
-}
-
-
-.user {
+.user .bubble{
 
     background:#d4af37;
     color:black;
-    text-align:right;
+    font-weight:bold;
 
 }
 
 
-.form-control {
+.chat-input{
 
-    background:#222;
+    background:#000;
+    padding:20px;
+    border-top:2px solid #d4af37;
+
+}
+
+
+.form-control{
+
+    background:#1a1a1a;
     color:white;
     border:1px solid #d4af37;
 
 }
 
 
-.form-control::placeholder {
+.form-control:focus{
+
+    background:#1a1a1a;
+    color:white;
+    border-color:#f5d76e;
+
+}
+
+
+.form-control::placeholder{
 
     color:#aaa;
 
 }
 
 
-.btn-gold {
+.btn-gold{
 
     background:#d4af37;
     color:black;
@@ -98,39 +218,96 @@ h1,h2,h3 {
 }
 
 
-.btn-gold:hover {
+.btn-gold:hover{
 
     background:#f5d76e;
 
 }
 
 
-footer {
+.quick-actions{
+
+    background:#161616;
+    padding:25px;
+
+}
+
+
+.quick-actions h4{
+
+    color:#d4af37;
+
+}
+
+
+.quick-actions .btn{
+
+    margin:6px;
+
+}
+
+
+.typing{
+
+    display:none;
+    color:#d4af37;
+    font-style:italic;
+    margin-top:15px;
+
+}
+
+
+.info-box{
+
+    background:#161616;
+    border:1px solid #d4af37;
+    border-radius:20px;
+    padding:25px;
+    margin-top:40px;
+
+}
+
+
+.info-box h3{
+
+    color:#d4af37;
+    font-family:"Great Vibes",cursive;
+    font-size:45px;
+
+}
+
+
+footer{
 
     background:#000;
     color:#d4af37;
     border-top:2px solid #d4af37;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:50px;
 
 }
+
 
 </style>
 
 </head>
 
 
-
 <body>
+
 
 <nav class="navbar navbar-expand-lg">
 
 <div class="container">
 
+
 <a class="navbar-brand" href="Sapphire Shores Resort.html">
+
 Sapphire Shores Resort 💎
+
 </a>
+
 
 <button class="navbar-toggler bg-warning"
 type="button"
@@ -141,78 +318,83 @@ data-bs-target="#navbarNav">
 
 </button>
 
+
 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
 
 <a class="nav-link d-inline" href="Sapphire Shores Resort.html">
 🏠 Home
 </a>
 
+
 <a class="nav-link d-inline" href="About Us.html">
 ℹ️ About Us
 </a>
+
 
 <a class="nav-link d-inline" href="Rooms.html">
 🛏️ Rooms
 </a>
 
+
 <a class="nav-link d-inline" href="Booking.html">
 📅 Booking
 </a>
+
 
 <a class="nav-link d-inline" href="The Golden Bite.html">
 🍽️ The Golden Bite
 </a>
 
+
 <a class="nav-link d-inline" href="Tours.html">
 🌴 Tours & Activities
 </a>
+
 
 <a class="nav-link d-inline" href="Infinity Pool.html">
 🏊 Infinity Pool
 </a>
 
+
 <a class="nav-link d-inline" href="Boutique.html">
 🛍️ Boutique
 </a>
+
 
 <a class="nav-link d-inline" href="VIP.html">
 👑 VIP Club
 </a>
 
+
 <a class="nav-link d-inline" href="AI Concierge.html">
 🤖 Lumi AI
 </a>
-
 <a class="nav-link d-inline" href="Customer Reviews.html">
 ⭐ Reviews
 </a>
+
 
 <a class="nav-link d-inline" href="Contact Us.html">
 📞 Contact
 </a>
 
+
+<a class="nav-link d-inline" href="Gallery.html">
+📸 Gallery
+</a>
+
+
 <a class="nav-link d-inline" href="More.html">
 ➕ More
 </a>
 
-<a class="nav-link d-inline" href="Gallery.html">
-Gallery 📸
-</a>
 
 </div>
 
 </div>
 
 </nav>
-
-
-</div>
-
-
-</div>
-
-</nav>
-
 
 
 
@@ -220,31 +402,129 @@ Gallery 📸
 <div class="container my-5">
 
 
-<div class="ai-box">
+
+<section class="hero">
 
 
-<h1 class="text-center">
-Meet Lumi AI Concierge 🤖✨
+<h1>
+🤖 Lumi AI Concierge
 </h1>
 
 
-<p class="text-center">
-Your personal Sapphire Shores assistant, available to help plan your perfect luxury escape.
+<p>
+
+Welcome to Sapphire Shores Resort. I'm Lumi, your personal luxury concierge.
+
+Whether you are planning a romantic escape, a family vacation, an exciting adventure,
+or a peaceful retreat, I am here to help you create the perfect experience.
+
 </p>
 
 
-<hr>
+</section>
 
 
 
-<div class="chat-box" id="chat">
 
 
-<div class="message">
 
-🤖 Lumi: Welcome to Sapphire Shores Resort! 
-I can help you choose rooms, explore VIP experiences,
-and plan activities.
+<div class="chat-container">
+
+
+
+<div class="chat-header">
+
+
+<h2>
+Lumi Concierge
+</h2>
+
+
+<p>
+Luxury assistance available 24 hours a day.
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="chat-box" id="chatBox">
+
+
+
+<div class="message bot">
+
+
+<div class="bubble">
+
+
+💎 Welcome to Sapphire Shores Resort!
+
+
+<br><br>
+
+
+I'm <b>Lumi</b>, your personal AI concierge.
+
+
+<br><br>
+
+
+I can help you discover:
+
+
+<br><br>
+
+
+🛏️ Luxury rooms and suites
+
+<br>
+🍽️ The Golden Bite dining experiences
+
+<br>
+🌴 Tours and adventures
+
+<br>
+🧖 Sapphire Spa treatments
+
+<br>
+👑 VIP Club benefits
+
+<br>
+🚘 Luxury transportation
+
+<br>
+🎉 Events and celebrations
+
+<br>
+🧸 Kids' activities
+
+<br>
+🏋️ Fitness Center
+
+<br>
+🌅 Sunset Viewing Deck
+
+<br>
+📸 Photo locations
+
+<br>
+🛍️ Boutique shopping
+
+<br>
+🎁 Special offers
+
+
+<br><br>
+
+
+Ask me anything about Sapphire Shores Resort,
+or choose a quick question below to begin your journey. ✨
+
 
 </div>
 
@@ -252,20 +532,43 @@ and plan activities.
 </div>
 
 
+</div>
 
 
-<div class="mt-4">
 
 
-<input id="userInput"
-class="form-control mb-3"
-placeholder="Ask Lumi something...">
 
 
-<button class="btn btn-gold"
-onclick="askLumi()">
 
-Send Message 💎
+<div class="chat-input">
+
+
+<div class="input-group">
+
+
+<input
+
+type="text"
+
+id="userInput"
+
+class="form-control"
+
+placeholder="Ask Lumi anything about Sapphire Shores Resort..."
+
+>
+
+
+
+<button
+
+class="btn btn-gold"
+
+onclick="sendMessage()"
+
+>
+
+Send 💎
 
 </button>
 
@@ -274,11 +577,157 @@ Send Message 💎
 
 
 
+<div class="typing" id="typing">
+
+🤖 Lumi is preparing your recommendation...
+
 </div>
 
 
 </div>
 
+
+
+
+
+
+
+<div class="quick-actions">
+
+
+<h4 class="text-center">
+
+Quick Questions
+
+</h4>
+
+
+
+
+<div class="text-center">
+
+
+
+<button class="btn btn-gold" onclick="quickQuestion('rooms')">
+🛏️ Rooms
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('booking')">
+📅 Booking
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('restaurant')">
+🍽️ Dining
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('tours')">
+🌴 Tours
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('pool')">
+🏊 Pool
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('vip')">
+👑 VIP
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('spa')">
+🧖 Spa
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('kids')">
+🧸 Kids
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('transport')">
+🚘 Transport
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('events')">
+🎉 Events
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('gallery')">
+📸 Gallery
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('offers')">
+🎁 Offers
+</button>
+
+
+<button class="btn btn-gold" onclick="quickQuestion('surprise')">
+✨ Surprise Me
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+<div class="info-box">
+
+<h3>
+What can Lumi help with?
+</h3>
+
+
+<ul>
+
+<li>🛏️ Luxury room recommendations</li>
+
+<li>📅 Booking assistance</li>
+
+<li>🍽️ The Golden Bite restaurant information</li>
+
+<li>🌴 Adventure tours and activities</li>
+
+<li>🧖 Sapphire Spa treatments</li>
+
+<li>🏊 Infinity Pool details</li>
+
+<li>👑 VIP Club benefits</li>
+
+<li>🚘 Luxury limousine transportation</li>
+
+<li>🎉 Weddings, birthdays, anniversaries, and celebrations</li>
+
+<li>🧸 Kids' Corner activities</li>
+
+<li>🏋️ Fitness Center information</li>
+
+<li>🌅 Sunset Viewing Deck recommendations</li>
+
+<li>📸 Best photo locations</li>
+
+<li>🛍️ Boutique shopping</li>
+
+<li>🎁 Special offers</li>
+
+<li>💎 Personalized recommendations</li>
+
+</ul>
+
+</div>
+
+
+</div>
 
 
 
@@ -286,7 +735,7 @@ Send Message 💎
 
 <footer>
 
-© 2026 Sapphire Shores Resort 💎 | Lumi AI Concierge
+© 2026 Sapphire Shores Resort 💎 | Powered by Lumi AI Concierge
 
 </footer>
 
@@ -295,85 +744,525 @@ Send Message 💎
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
 <script>
 
-function askLumi(){
+
+const chatBox = document.getElementById("chatBox");
+const input = document.getElementById("userInput");
+const typing = document.getElementById("typing");
+let guestName = "";
 
 
-let input = document.getElementById("userInput");
+input.addEventListener("keypress",function(event){
 
-let question = input.value;
+if(event.key==="Enter"){
 
+event.preventDefault();
 
-if(question == ""){
-
-return;
-
-}
-
-
-let chat = document.getElementById("chat");
-
-
-
-chat.innerHTML +=
-
-"<div class='message user'>" 
-+ question +
-"</div>";
-
-
-
-let answer = "";
-
-
-
-if(question.toLowerCase().includes("room")){
-
-answer = "Our available rooms include the Sapphire Ocean Suite, Royal Coral Villa, and Diamond Presidential Suite. 💎";
+sendMessage();
 
 }
 
-
-else if(question.toLowerCase().includes("vip")){
-
-answer = "The VIP Sapphire Club includes private beach access, luxury spa treatments, and personal concierge service. 👑";
-
-}
+});
 
 
-else if(question.toLowerCase().includes("food")){
-
-answer = "Our resort offers oceanfront dining with fresh seafood and gourmet meals. 🍽️";
-
-}
 
 
-else if(question.toLowerCase().includes("spa")){
+function addUserMessage(message){
 
-answer = "Our Sapphire Spa offers relaxing treatments designed for complete luxury and comfort. ✨";
+chatBox.innerHTML += `
 
-}
+<div class="message user">
 
+<div class="bubble">
 
-else {
+${message}
 
-answer = "I can help with rooms, VIP experiences, food, spa services, and bookings. 🌊";
+</div>
+
+</div>
+
+`;
+
+scrollChat();
 
 }
 
 
 
 
-chat.innerHTML +=
+function addBotMessage(message){
 
-"<div class='message'>🤖 Lumi: " 
-+ answer +
-"</div>";
+chatBox.innerHTML += `
+
+<div class="message bot">
+
+<div class="bubble">
+
+${message}
+
+</div>
+
+</div>
+
+`;
+
+scrollChat();
+
+}
 
 
 
-input.value = "";
+
+function scrollChat(){
+
+chatBox.scrollTop = chatBox.scrollHeight;
+
+}
+
+
+
+
+
+function sendMessage(){
+
+let message=input.value.trim();
+
+
+if(message==="") return;
+
+
+addUserMessage(message);
+
+
+input.value="";
+
+
+typing.style.display="block";
+
+
+setTimeout(function(){
+
+
+typing.style.display="none";
+
+
+addBotMessage(getResponse(message.toLowerCase()));
+
+
+},1000);
+
+
+}
+
+
+
+
+
+function quickQuestion(topic){
+
+input.value=topic;
+
+sendMessage();
+
+}
+
+
+
+
+
+function getResponse(message){
+
+
+if(message.includes("hello") ||
+message.includes("hi") ||
+message.includes("hey")){
+
+
+return "💎 Welcome to Sapphire Shores Resort! I'm Lumi, your AI concierge. I can help you with rooms, dining, adventures, spa, VIP services, transportation, events, and more.";
+
+
+}
+
+
+
+else if(message.includes("room") ||
+message.includes("suite") ||
+message.includes("villa") ||
+message.includes("penthouse")){
+
+
+return `
+
+🛏️ <b>Sapphire Shores Luxury Rooms</b>
+
+<br><br>
+
+🌊 Sapphire Ocean Suite
+
+<br>
+Beautiful ocean views, luxury furnishings, and peaceful comfort.
+
+<br><br>
+
+🐚 Royal Coral Villa
+
+<br>
+A tropical villa with privacy, elegance, and relaxing surroundings.
+
+<br><br>
+
+👑 Diamond Presidential Suite
+
+<br>
+Our most prestigious accommodation with VIP services.
+
+<br><br>
+
+👑💎 VIP Sapphire Penthouse
+
+<br>
+Ultimate luxury with exclusive benefits and premium comfort.
+
+<br><br>
+
+🌙 Moonlight Honeymoon Suite
+
+<br>
+A romantic escape designed for unforgettable moments.
+
+<br><br>
+
+☁️ Cloud Nine Penthouse
+
+<br>
+A spectacular top-floor residence with amazing views.
+
+`;
+
+}
+
+
+
+else if(message.includes("booking") ||
+message.includes("book") ||
+message.includes("reserve")){
+
+
+return `
+
+📅 <b>Booking Assistance</b>
+
+<br><br>
+
+To reserve your Sapphire Shores experience:
+
+<br><br>
+
+1️⃣ Choose your room or activity.
+
+<br>
+2️⃣ Select your dates.
+
+<br>
+3️⃣ Enter your guest details.
+
+<br>
+4️⃣ Confirm your reservation.
+
+<br><br>
+
+I can help you choose the perfect option.
+
+`;
+
+}
+
+
+
+
+else if(message.includes("restaurant") ||
+message.includes("food") ||
+message.includes("dining") ||
+message.includes("golden bite")){
+
+
+return `
+
+🍽️ <b>The Golden Bite</b>
+
+<br><br>
+
+Enjoy gourmet cuisine including:
+
+<br><br>
+
+🍤 Fresh seafood
+
+<br>
+🥩 Premium steaks
+
+<br>
+🍰 Desserts
+
+<br>
+🥂 Luxury drinks
+
+<br><br>
+
+Perfect for romantic dinners, family meals, and celebrations.
+
+`;
+
+}
+
+
+
+
+else if(message.includes("tour") ||
+message.includes("activity") ||
+message.includes("adventure")){
+
+
+return `
+
+🌴 <b>Sapphire Adventures</b>
+
+<br><br>
+
+Enjoy:
+
+<br><br>
+
+🛥️ Private Yacht Escape
+
+<br>
+🦁 Luxury Safari
+
+<br>
+🐬 Dolphin Discovery Tour
+
+<br>
+🐢 Marine Discovery Class
+
+<br>
+🚁 Ocean Helicopter Tour
+
+<br>
+🐠 Coral Reef Diving
+
+<br>
+🌅 Sunset Island Escape
+
+`;
+
+}
+
+
+
+
+
+else if(message.includes("spa") ||
+message.includes("massage")){
+
+
+return `
+
+🧖 <b>Sapphire Spa</b>
+
+<br><br>
+
+Relax with:
+
+<br><br>
+
+✨ Massages
+
+<br>
+🌸 Aromatherapy
+
+<br>
+💎 Luxury facials
+
+<br>
+🌊 Ocean-view treatments
+
+<br><br>
+
+A peaceful escape designed for complete relaxation.
+
+`;
+
+}
+
+
+
+
+
+else if(message.includes("vip")){
+
+
+return `
+
+👑 <b>Sapphire VIP Club</b>
+
+<br><br>
+
+VIP guests receive:
+
+<br><br>
+
+💎 Private concierge service
+
+<br>
+🏖️ Exclusive access
+
+<br>
+🍽️ Priority dining
+
+<br>
+🚘 Luxury transportation
+
+<br>
+🎁 Special experiences
+
+`;
+
+}
+
+
+
+
+
+else if(message.includes("pool")){
+
+
+return `
+
+🏊 <b>Infinity Pool</b>
+
+<br><br>
+
+Enjoy ocean views, luxury loungers, refreshments, and unforgettable sunsets.
+
+<br><br>
+
+Open daily from 6:00 AM to 10:00 PM.
+
+`;
+
+}
+
+
+
+
+
+else if(message.includes("transport") ||
+message.includes("car") ||
+message.includes("airport")){
+
+
+return `
+
+🚘 <b>Luxury Transportation</b>
+
+<br><br>
+
+We provide:
+
+<br><br>
+
+✈️ Airport transfers
+
+<br>
+🚘 Limousine service
+
+<br>
+👑 VIP arrivals
+
+<br>
+🌴 Private transportation
+
+`;
+
+}
+
+
+
+
+
+else if(message.includes("thank")){
+
+
+return "✨ You are very welcome! It is my pleasure to assist you at Sapphire Shores Resort. 💎";
+
+}
+
+
+
+
+
+else if(message.includes("surprise")){
+
+
+return `
+
+✨ <b>Lumi's Recommendation</b>
+
+<br><br>
+
+Start your day with breakfast at The Golden Bite, explore the ocean with a yacht cruise, relax at the spa, and finish with a sunset view.
+
+<br><br>
+
+A perfect Sapphire Shores day awaits. 💎
+
+`;
+
+}
+
+
+
+
+
+return `
+
+💎 I'm still learning that request.
+
+<br><br>
+
+Try asking about:
+
+<br>
+
+🛏️ Rooms
+
+<br>
+📅 Booking
+
+<br>
+🍽️ Dining
+
+<br>
+🌴 Tours
+
+<br>
+🧖 Spa
+
+<br>
+👑 VIP
+
+<br>
+🏊 Pool
+
+<br>
+🎁 Offers
+
+`;
 
 }
 

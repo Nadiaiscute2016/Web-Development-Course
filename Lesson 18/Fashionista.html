@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Veloura AI Stylist 👗</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+
+    background:#0b0b0b;
+    color:white;
+    font-family:"Playfair Display",serif;
+
+}
+
+
+.navbar{
+
+    background:#000;
+    border-bottom:3px solid #d4af37;
+
+}
+
+
+.navbar-brand,
+.nav-link{
+
+    color:#d4af37 !important;
+    font-weight:bold;
+
+}
+
+
+.nav-link:hover{
+
+    color:#f5d76e !important;
+
+}
+
+
+.hero{
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1445205170230-053b83016050?w=1400");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:90px 40px;
+    text-align:center;
+
+    border-radius:30px;
+    margin-top:40px;
+
+    border:2px solid #d4af37;
+
+}
+
+
+.hero h1{
+
+    font-family:"Great Vibes",cursive;
+    color:#d4af37;
+    font-size:90px;
+
+}
+
+
+.hero p{
+
+    font-size:22px;
+    line-height:1.8;
+
+}
+
+
+
+.chat-container{
+
+    background:#141414;
+    border:2px solid #d4af37;
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 35px rgba(212,175,55,.25);
+
+}
+
+
+
+.chat-header{
+
+    background:#000;
+    color:#d4af37;
+
+    padding:30px;
+
+    text-align:center;
+
+    border-bottom:2px solid #d4af37;
+
+}
+
+
+
+.chat-header h2{
+
+    font-family:"Great Vibes",cursive;
+    font-size:55px;
+
+}
+
+
+
+.chat-box{
+
+    height:520px;
+
+    overflow-y:auto;
+
+    padding:30px;
+
+    background:#0f0f0f;
+
+}
+
+
+
+.message{
+
+    display:flex;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.bot{
+
+    justify-content:flex-start;
+
+}
+
+
+
+.user{
+
+    justify-content:flex-end;
+
+}
+
+
+
+.bubble{
+
+    max-width:80%;
+
+    padding:18px 22px;
+
+    border-radius:25px;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+
+
+.bot .bubble{
+
+    background:#1c1c1c;
+
+    color:white;
+
+    border:1px solid #d4af37;
+
+}
+
+
+
+.user .bubble{
+
+    background:#d4af37;
+
+    color:black;
+
+    font-weight:bold;
+
+}
+
+
+
+.chat-input{
+
+    background:#000;
+
+    padding:20px;
+
+    border-top:2px solid #d4af37;
+
+}
+
+
+
+.form-control{
+
+    background:#1a1a1a;
+
+    color:white;
+
+    border:2px solid #d4af37;
+
+}
+
+
+
+.form-control::placeholder{
+
+    color:#aaa;
+
+}
+
+
+
+.btn-fashion{
+
+    background:#d4af37;
+
+    color:#000;
+
+    font-weight:bold;
+
+    border:none;
+
+    border-radius:25px;
+
+    padding:12px 25px;
+
+}
+
+
+
+.btn-fashion:hover{
+
+    background:#f5d76e;
+
+    color:black;
+
+}
+
+
+
+.quick-buttons{
+
+    background:#111;
+
+    padding:30px;
+
+}
+
+
+
+.quick-buttons h3{
+
+    color:#d4af37;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:45px;
+
+}
+
+
+
+.quick-buttons button{
+
+    margin:6px;
+
+}
+
+
+
+.info-card{
+
+    background:#141414;
+
+    border:2px solid #d4af37;
+
+    border-radius:25px;
+
+    padding:30px;
+
+    margin-top:40px;
+
+}
+
+
+
+.info-card h2{
+
+    color:#d4af37;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:45px;
+
+}
+
+
+
+footer{
+
+    background:#000;
+
+    color:#d4af37;
+
+    border-top:3px solid #d4af37;
+
+    text-align:center;
+
+    padding:25px;
+
+    margin-top:50px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+
+<a class="navbar-brand" href="Home.html">
+👗 Veloura AI
+</a>
+
+
+
+<button class="navbar-toggler bg-warning"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+
+
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+
+
+<a class="nav-link" href="Home.html">
+🏠 Home
+</a>
+
+
+
+<a class="nav-link" href="Fashionista.html">
+💬 AI Stylist
+</a>
+
+
+
+<a class="nav-link" href="Wardrobe.html">
+👚 Wardrobe
+</a>
+
+
+
+<a class="nav-link" href="gallery 2.html">
+📸 Gallery
+</a>
+
+
+
+<a class="nav-link" href="Style Quiz.html">
+🎨 Style Quiz
+</a>
+
+
+
+<a class="nav-link" href="Favorites.html">
+⭐ Favorites
+</a>
+
+
+
+<a class="nav-link" href="Outfit Planner.html">
+📅 Outfit Planner
+</a>
+
+
+
+</div>
+
+
+</div>
+
+</nav>
+<div class="container my-5">
+
+
+<section class="hero">
+
+<h1>
+✨ Veloura AI Stylist
+</h1>
+
+
+<p>
+
+Your private AI fashion consultant.
+
+Discover outfit ideas, luxury styling advice,
+color combinations, and fashion inspiration
+designed just for you.
+
+</p>
+
+
+</section>
+
+
+
+
+<div class="chat-container">
+
+
+<div class="chat-header">
+
+<h2>
+Veloura
+</h2>
+
+
+<p>
+Your personal luxury fashion assistant ✨
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="chat-box" id="chatBox">
+
+
+<div class="message bot">
+
+
+<div class="bubble">
+
+
+🖤 Welcome to Veloura Atelier!
+
+
+<br><br>
+
+
+I'm <b>Veloura</b>, your AI fashion stylist.
+
+
+<br><br>
+
+
+I can help you with:
+
+
+<br><br>
+
+
+👗 Outfit ideas
+
+<br>
+💎 Luxury styling
+
+<br>
+🎨 Color matching
+
+<br>
+👠 Shoes and accessories
+
+<br>
+👜 Wardrobe suggestions
+
+<br>
+🎉 Event outfits
+
+<br>
+🌸 Seasonal fashion
+
+
+<br><br>
+
+
+Tell me what style you need, and I'll create your perfect look. ✨
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="chat-input">
+
+
+<div class="input-group">
+
+
+<input
+
+type="text"
+
+id="userInput"
+
+class="form-control"
+
+placeholder="Ask Veloura for fashion advice..."
+
+>
+
+
+<button
+
+class="btn btn-fashion"
+
+onclick="sendMessage()">
+
+Send ✨
+
+</button>
+
+
+</div>
+
+
+<div class="typing" id="typing">
+
+✨ Veloura is designing your look...
+
+</div>
+
+
+</div>
+<div class="quick-buttons">
+
+
+<h3 class="text-center">
+
+Fashion Studio
+
+</h3>
+
+
+<div class="text-center">
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('casual')">
+
+👕 Casual Look
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('luxury')">
+
+👑 Luxury Look
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('party')">
+
+🎉 Party Outfit
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('school')">
+
+📚 School Style
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('colors')">
+
+🎨 Colors
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('accessories')">
+
+👜 Accessories
+
+</button>
+
+
+<button class="btn btn-fashion" onclick="quickQuestion('surprise')">
+
+✨ Surprise Me
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="info-card">
+
+
+<h2>
+
+What can Veloura help with?
+
+</h2>
+
+
+<ul>
+
+
+<li>👗 Personalized outfit recommendations</li>
+
+
+<li>💎 Luxury fashion styling</li>
+
+
+<li>🎨 Color combinations</li>
+
+
+<li>👠 Shoe matching</li>
+
+
+<li>👜 Accessory ideas</li>
+
+
+<li>🎉 Special event outfits</li>
+
+
+<li>🌸 Seasonal fashion trends</li>
+
+
+<li>🖤 Wardrobe improvement ideas</li>
+
+
+</ul>
+
+
+</div>
+
+
+</div>
+<footer>
+
+© 2026 Veloura AI Atelier ✨ | Powered by Your Personal Fashion Stylist
+
+</footer>
+
+
+
+<script>
+
+
+const chatBox = document.getElementById("chatBox");
+
+const input = document.getElementById("userInput");
+
+const typing = document.getElementById("typing");
+
+
+
+input.addEventListener("keypress",function(event){
+
+
+if(event.key==="Enter"){
+
+
+event.preventDefault();
+
+sendMessage();
+
+
+}
+
+
+});
+
+
+
+
+
+function addUserMessage(message){
+
+
+chatBox.innerHTML += `
+
+<div class="message user">
+
+<div class="bubble">
+
+${message}
+
+</div>
+
+</div>
+
+`;
+
+
+scrollChat();
+
+
+}
+
+
+
+
+
+function addBotMessage(message){
+
+
+chatBox.innerHTML += `
+
+<div class="message bot">
+
+<div class="bubble">
+
+${message}
+
+</div>
+
+</div>
+
+`;
+
+
+scrollChat();
+
+
+}
+
+
+
+
+
+function scrollChat(){
+
+
+chatBox.scrollTop = chatBox.scrollHeight;
+
+
+}
+
+
+
+
+
+function sendMessage(){
+
+
+let message=input.value.trim();
+
+
+if(message==="") return;
+
+
+
+addUserMessage(message);
+
+
+input.value="";
+
+
+typing.style.display="block";
+
+
+
+setTimeout(function(){
+
+
+typing.style.display="none";
+
+
+addBotMessage(getResponse(message.toLowerCase()));
+
+
+},1000);
+
+
+
+}
+
+
+
+
+function quickQuestion(topic){
+
+
+input.value=topic;
+
+
+sendMessage();
+
+
+}
+
+
+
+
+
+
+
+function getResponse(message){
+
+
+
+if(message.includes("casual")){
+
+
+return `
+
+👕 <b>Casual Style Recommendation</b>
+
+<br><br>
+
+Try a clean and comfortable look:
+
+<br><br>
+
+🤍 Neutral top
+
+<br>
+👖 Well-fitted jeans or trousers
+
+<br>
+👟 Stylish sneakers
+
+<br>
+👜 Simple accessories
+
+<br><br>
+
+Casual fashion is about looking effortless while staying polished.
+
+`;
+
+}
+
+
+
+else if(message.includes("luxury")){
+
+
+return `
+
+👑 <b>Luxury Fashion Look</b>
+
+<br><br>
+
+A timeless luxury outfit:
+
+<br><br>
+
+🖤 Elegant black outfit
+
+<br>
+✨ Gold accessories
+
+<br>
+👠 Classic heels
+
+<br>
+👜 Designer-inspired handbag
+
+<br><br>
+
+The secret of luxury style is elegance and confidence.
+
+`;
+
+}
+
+
+
+else if(message.includes("party") ||
+message.includes("event")){
+
+
+return `
+
+🎉 <b>Party Outfit Idea</b>
+
+<br><br>
+
+Choose:
+
+<br><br>
+
+✨ Statement outfit
+
+<br>
+💎 Sparkling accessories
+
+<br>
+👠 Stylish shoes
+
+<br>
+🌟 A hairstyle that completes the look
+
+<br><br>
+
+Your outfit should match the mood of the celebration.
+
+`;
+
+}
+
+
+
+else if(message.includes("school")){
+
+
+return `
+
+📚 <b>School Style</b>
+
+<br><br>
+
+A fashionable everyday outfit:
+
+<br><br>
+
+👕 Comfortable top
+
+<br>
+👖 Neat trousers or skirt
+
+<br>
+🎒 Cute bag
+
+<br>
+👟 Comfortable shoes
+
+<br><br>
+
+Smart, comfortable, and ready for the day.
+
+`;
+
+}
+
+
+
+else if(message.includes("color")){
+
+
+return `
+
+🎨 <b>Color Styling</b>
+
+<br><br>
+
+Classic combinations:
+
+<br><br>
+
+🖤 Black + gold = luxury
+
+<br>
+🤍 White + beige = elegant
+
+<br>
+💙 Blue + silver = modern
+
+<br>
+🌸 Soft pink + cream = graceful
+
+<br><br>
+
+Choose colors that make your outfit feel amazing.
+
+`;
+
+}
+
+
+
+else if(message.includes("accessor")){
+
+
+return `
+
+👜 <b>Accessory Advice</b>
+
+<br><br>
+
+Complete your outfit with:
+
+<br><br>
+
+✨ Earrings
+
+<br>
+⌚ Elegant watch
+
+<br>
+👜 Handbag
+
+<br>
+💍 Simple jewelry
+
+<br><br>
+
+Accessories are the finishing sparkle of a look.
+
+`;
+
+}
+
+
+
+else if(message.includes("surprise")){
+
+
+return `
+
+✨ <b>Veloura's Fashion Pick</b>
+
+<br><br>
+
+Today's inspiration:
+
+<br><br>
+
+🖤 Black elegant outfit
+
+<br>
+✨ Gold details
+
+<br>
+👠 Classic shoes
+
+<br>
+👜 Structured handbag
+
+<br><br>
+
+A timeless style that belongs on any runway.
+
+`;
+
+}
+
+
+
+else{
+
+
+return `
+
+🖤 I'm still learning that style request.
+
+<br><br>
+
+Try asking about:
+
+<br><br>
+
+👕 Casual
+
+<br>
+👑 Luxury
+
+<br>
+🎉 Party
+
+<br>
+📚 School
+
+<br>
+🎨 Colors
+
+<br>
+👜 Accessories
+
+<br><br>
+
+Veloura is ready to design your next look. ✨
+
+`;
+
+}
+
+
+}
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

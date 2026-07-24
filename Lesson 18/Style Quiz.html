@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Veloura AI - Style Quiz 🎨</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+body{
+
+background:#0b0b0b;
+color:white;
+font-family:"Playfair Display",serif;
+
+}
+
+
+
+.navbar{
+
+background:#000;
+border-bottom:3px solid #d4af37;
+padding:18px;
+
+}
+
+
+
+.navbar-brand,
+.nav-link{
+
+color:#d4af37 !important;
+font-weight:bold;
+
+}
+
+
+
+.nav-link{
+
+margin-left:15px;
+
+}
+
+
+
+.nav-link:hover{
+
+color:#f5d76e !important;
+
+}
+
+
+
+.hero{
+
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("https://images.unsplash.com/photo-1485968579580-b6d095142e6e?w=1400");
+
+background-size:cover;
+background-position:center;
+
+padding:90px 40px;
+
+border-radius:30px;
+
+margin-top:40px;
+
+text-align:center;
+
+border:2px solid #d4af37;
+
+}
+
+
+
+.hero h1{
+
+font-family:"Great Vibes",cursive;
+
+font-size:90px;
+
+color:#d4af37;
+
+}
+
+
+
+.hero p{
+
+font-size:22px;
+
+}
+
+
+
+
+.quiz-box{
+
+background:#141414;
+
+border:2px solid #d4af37;
+
+border-radius:30px;
+
+padding:40px;
+
+margin-top:40px;
+
+}
+
+
+
+.quiz-box h2{
+
+font-family:"Great Vibes",cursive;
+
+color:#d4af37;
+
+font-size:55px;
+
+text-align:center;
+
+}
+
+
+
+
+.question{
+
+background:#1b1b1b;
+
+border:1px solid #d4af37;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-top:25px;
+
+}
+
+
+
+.question h3{
+
+color:#d4af37;
+
+}
+
+
+
+.option{
+
+display:block;
+
+margin:12px;
+
+padding:15px;
+
+background:#000;
+
+border:1px solid #d4af37;
+
+border-radius:15px;
+
+cursor:pointer;
+
+}
+
+
+
+.option:hover{
+
+background:#d4af37;
+
+color:black;
+
+}
+
+
+
+.btn-gold{
+
+background:#d4af37;
+
+color:black;
+
+font-weight:bold;
+
+margin-top:25px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+
+<a class="navbar-brand" href="Home.html">
+👗 Veloura AI
+</a>
+
+
+<button class="navbar-toggler bg-warning"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+
+<a class="nav-link" href="Home.html">
+🏠 Home
+</a>
+
+
+<a class="nav-link" href="Fashionista.html">
+💬 AI Stylist
+</a>
+
+
+<a class="nav-link" href="Wardrobe.html">
+👚 Wardrobe
+</a>
+
+
+<a class="nav-link" href="gallery 2.html">
+📸 Gallery
+</a>
+
+
+<a class="nav-link" href="Style Quiz.html">
+🎨 Style Quiz
+</a>
+
+
+<a class="nav-link" href="Favorites.html">
+⭐ Favorites
+</a>
+
+
+<a class="nav-link" href="Outfit Planner.html">
+📅 Outfit Planner
+</a>
+
+
+
+
+</div>
+
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<section class="hero">
+
+
+<h1>
+Discover Your Style
+</h1>
+
+
+<p>
+Let Veloura AI reveal your fashion personality.
+</p>
+
+
+</section>
+<div class="quiz-box">
+
+
+<h2>
+✨ Fashion Personality Quiz
+</h2>
+
+
+
+
+<div class="question">
+
+<h3>
+1. What style describes you best?
+</h3>
+
+
+<button class="option" onclick="chooseStyle('Luxury')">
+👑 Luxury & Elegant
+</button>
+
+
+<button class="option" onclick="chooseStyle('Casual')">
+🌸 Casual & Comfortable
+</button>
+
+
+<button class="option" onclick="chooseStyle('Trendy')">
+🔥 Trendy & Bold
+</button>
+
+
+<button class="option" onclick="chooseStyle('Classic')">
+🤍 Classic & Timeless
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="question">
+
+<h3>
+2. Pick your dream outfit:
+</h3>
+
+
+<button class="option" onclick="chooseStyle('Luxury')">
+✨ Designer Evening Dress
+</button>
+
+
+<button class="option" onclick="chooseStyle('Casual')">
+👖 Jeans & Stylish Top
+</button>
+
+
+<button class="option" onclick="chooseStyle('Trendy')">
+🕶️ Fashion Statement Look
+</button>
+
+
+<button class="option" onclick="chooseStyle('Classic')">
+👗 Elegant Simple Outfit
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="question">
+
+<h3>
+3. Your perfect fashion color palette:
+</h3>
+
+
+<button class="option" onclick="chooseStyle('Luxury')">
+🥂 Gold, Black & Deep Tones
+</button>
+
+
+<button class="option" onclick="chooseStyle('Casual')">
+🌿 Soft Neutrals & Pastels
+</button>
+
+
+<button class="option" onclick="chooseStyle('Trendy')">
+🌈 Bright & Creative Colors
+</button>
+
+
+<button class="option" onclick="chooseStyle('Classic')">
+🤍 White, Beige & Timeless Shades
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div class="text-center">
+
+<button class="btn btn-gold btn-lg" onclick="showResult()">
+
+✨ Reveal My Style
+
+</button>
+
+
+</div>
+
+
+
+
+<div id="result" class="question" style="display:none;">
+
+
+<h3>
+Your Veloura Style:
+</h3>
+
+
+<p id="resultText"></p>
+
+
+<a href="Fashionista.html" class="btn btn-gold">
+Ask AI Stylist
+</a>
+
+
+<a href="gallery 2.html" class="btn btn-gold">
+View Looks
+</a>
+
+
+</div>
+
+
+
+</div>
+<footer style="
+
+background:#000;
+
+color:#d4af37;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:50px;
+
+border-top:3px solid #d4af37;
+
+">
+
+© 2026 Veloura AI 👗 | Discover Your Unique Style
+
+</footer>
+
+
+
+
+<script>
+
+
+let styles = {
+
+Luxury:0,
+
+Casual:0,
+
+Trendy:0,
+
+Classic:0
+
+};
+
+
+
+function chooseStyle(style){
+
+
+styles[style]++;
+
+
+alert("✨ Style choice saved!");
+
+
+}
+
+
+
+
+
+function showResult(){
+
+
+let winner="Luxury";
+
+let highest=0;
+
+
+
+for(let style in styles){
+
+
+if(styles[style] > highest){
+
+
+highest = styles[style];
+
+winner = style;
+
+
+}
+
+
+}
+
+
+
+
+
+let message="";
+
+
+
+if(winner==="Luxury"){
+
+
+message="👑 You are a Luxury Fashionista! You love elegance, premium looks, and unforgettable outfits.";
+
+
+}
+
+
+else if(winner==="Casual"){
+
+
+message="🌸 You are a Casual Chic stylist! You love comfortable outfits with fashionable details.";
+
+
+}
+
+
+else if(winner==="Trendy"){
+
+
+message="🔥 You are a Trendsetter! You enjoy bold styles and trying the newest fashion ideas.";
+
+
+}
+
+
+else{
+
+
+message="🤍 You are a Classic Icon! You love timeless pieces that never go out of style.";
+
+
+}
+
+
+
+
+
+document.getElementById("result").style.display="block";
+
+
+document.getElementById("resultText").innerHTML=message;
+
+
+}
+
+
+
+</script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

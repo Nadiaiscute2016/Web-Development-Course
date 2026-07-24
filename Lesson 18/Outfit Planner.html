@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Veloura AI - Outfit Planner 📅</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+body{
+
+background:#0b0b0b;
+color:white;
+font-family:"Playfair Display",serif;
+
+}
+
+
+
+.navbar{
+
+background:#000;
+border-bottom:3px solid #d4af37;
+padding:18px;
+
+}
+
+
+
+.navbar-brand,
+.nav-link{
+
+color:#d4af37 !important;
+font-weight:bold;
+
+}
+
+
+
+.nav-link{
+
+margin-left:15px;
+
+}
+
+
+
+.nav-link:hover{
+
+color:#f5d76e !important;
+
+}
+
+
+
+
+.hero{
+
+background:
+linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url("YOUR IMAGE HERE");
+
+background-size:cover;
+background-position:center;
+
+padding:90px 40px;
+
+border-radius:30px;
+
+margin-top:40px;
+
+text-align:center;
+
+border:2px solid #d4af37;
+
+}
+
+
+
+.hero h1{
+
+font-family:"Great Vibes",cursive;
+
+font-size:90px;
+
+color:#d4af37;
+
+}
+
+
+
+.hero p{
+
+font-size:22px;
+
+}
+
+
+
+
+.planner-box{
+
+background:#141414;
+
+border:2px solid #d4af37;
+
+border-radius:30px;
+
+padding:40px;
+
+margin-top:40px;
+
+}
+
+
+
+.planner-box h2{
+
+font-family:"Great Vibes",cursive;
+
+font-size:55px;
+
+color:#d4af37;
+
+text-align:center;
+
+}
+
+
+
+.option-box{
+
+background:#1b1b1b;
+
+border:1px solid #d4af37;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-top:25px;
+
+}
+
+
+
+.option-box h3{
+
+color:#d4af37;
+
+}
+
+
+
+select{
+
+background:#000;
+
+color:white;
+
+border:1px solid #d4af37;
+
+padding:12px;
+
+border-radius:10px;
+
+width:100%;
+
+}
+
+
+
+.btn-gold{
+
+background:#d4af37;
+
+color:black;
+
+font-weight:bold;
+
+margin-top:25px;
+
+}
+
+
+.btn-gold:hover{
+
+background:#f5d76e;
+
+}
+
+
+
+.result{
+
+display:none;
+
+background:#1b1b1b;
+
+border:1px solid #d4af37;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-top:30px;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg">
+
+<div class="container">
+
+
+<a class="navbar-brand" href="Home.html">
+👗 Veloura AI
+</a>
+
+
+<button class="navbar-toggler bg-warning"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#navbarNav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+
+<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+
+<a class="nav-link" href="Home.html">
+🏠 Home
+</a>
+
+
+<a class="nav-link" href="Fashionista.html">
+💬 AI Stylist
+</a>
+
+
+<a class="nav-link" href="Wardrobe.html">
+👚 Wardrobe
+</a>
+
+
+<a class="nav-link" href="gallery 2.html">
+📸 Gallery
+</a>
+
+
+<a class="nav-link" href="Style Quiz.html">
+🎨 Style Quiz
+</a>
+
+
+<a class="nav-link" href="Favorites.html">
+⭐ Favorites
+</a>
+
+
+<a class="nav-link" href="Outfit Planner.html">
+📅 Outfit Planner
+</a>
+
+
+</div>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<section class="hero">
+
+
+<h1>
+Outfit Planner
+</h1>
+
+
+<p>
+Create the perfect outfit for every moment with Veloura AI.
+</p>
+
+
+</section>
+<div class="planner-box">
+
+
+<h2>
+✨ Create Your Outfit
+</h2>
+
+
+
+
+<div class="option-box">
+
+
+<h3>
+🎉 Choose Occasion
+</h3>
+
+
+<select id="occasion">
+
+<option value="school">
+🏫 School
+</option>
+
+
+<option value="party">
+🎉 Party
+</option>
+
+
+<option value="date">
+💎 Special Event
+</option>
+
+
+<option value="vacation">
+🌴 Vacation
+</option>
+
+
+<option value="work">
+💼 Professional
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="option-box">
+
+
+<h3>
+👗 Choose Style
+</h3>
+
+
+<select id="style">
+
+
+<option value="luxury">
+👑 Luxury
+</option>
+
+
+<option value="casual">
+🌸 Casual
+</option>
+
+
+<option value="trendy">
+🔥 Trendy
+</option>
+
+
+<option value="classic">
+🤍 Classic
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="option-box">
+
+
+<h3>
+🎨 Choose Color Mood
+</h3>
+
+
+<select id="color">
+
+
+<option value="gold">
+✨ Gold & Elegant
+</option>
+
+
+<option value="pink">
+🌸 Soft Pink
+</option>
+
+
+<option value="black">
+🖤 Black & Sophisticated
+</option>
+
+
+<option value="blue">
+💙 Ocean Blue
+</option>
+
+
+<option value="white">
+🤍 Clean & Classic
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="text-center">
+
+
+<button class="btn btn-gold btn-lg" onclick="createOutfit()">
+
+✨ Generate Outfit
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="result" id="result">
+
+
+<h3 style="color:#d4af37;">
+Your Veloura Recommendation:
+</h3>
+
+
+<p id="outfitText"></p>
+
+
+<a href="Fashionista.html" class="btn btn-gold">
+Ask AI Stylist
+</a>
+
+
+<a href="gallery 2.html" class="btn btn-gold">
+View Fashion Gallery
+</a>
+
+
+</div>
+
+
+
+
+</div>
+<footer style="
+
+background:#000;
+
+color:#d4af37;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:50px;
+
+border-top:3px solid #d4af37;
+
+">
+
+
+© 2026 Veloura AI 👗 | Your Personal Outfit Assistant
+
+
+</footer>
+
+
+
+
+
+<script>
+
+
+function createOutfit(){
+
+
+let occasion = document.getElementById("occasion").value;
+
+let style = document.getElementById("style").value;
+
+let color = document.getElementById("color").value;
+
+
+
+let outfit="";
+
+
+
+if(occasion==="school"){
+
+outfit += "🏫 For school: ";
+
+}
+
+else if(occasion==="party"){
+
+outfit += "🎉 For a party: ";
+
+}
+
+else if(occasion==="date"){
+
+outfit += "💎 For a special event: ";
+
+}
+
+else if(occasion==="vacation"){
+
+outfit += "🌴 For vacation: ";
+
+}
+
+else{
+
+outfit += "💼 For a professional day: ";
+
+}
+
+
+
+
+
+if(style==="luxury"){
+
+outfit += "choose an elegant designer-inspired outfit with a polished silhouette. ";
+
+}
+
+
+else if(style==="casual"){
+
+outfit += "try a comfortable chic look with stylish everyday pieces. ";
+
+}
+
+
+else if(style==="trendy"){
+
+outfit += "go bold with fashionable pieces and statement details. ";
+
+}
+
+
+else{
+
+outfit += "select timeless pieces that never go out of style. ";
+
+}
+
+
+
+
+
+if(color==="gold"){
+
+outfit += "✨ Add gold accents for a glamorous finish.";
+
+}
+
+else if(color==="pink"){
+
+outfit += "🌸 Add soft pink tones for a graceful look.";
+
+}
+
+else if(color==="black"){
+
+outfit += "🖤 Use black tones for a sophisticated style.";
+
+}
+
+else if(color==="blue"){
+
+outfit += "💙 Add blue shades for a fresh and elegant vibe.";
+
+}
+
+else{
+
+outfit += "🤍 Use white tones for a clean classic appearance.";
+
+}
+
+
+
+
+
+document.getElementById("outfitText").innerHTML=outfit;
+
+
+document.getElementById("result").style.display="block";
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>
