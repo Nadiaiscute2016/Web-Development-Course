@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fun Functions Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #dff6ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+    background: #2196F3;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0b79d0;
+}
+#output {
+    margin-top: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ef3271;
+}
+
+
+        
+    </style> 
+</head>
+
+<body>
+
+    <div class="box">
+        <h2>🎉 Fun Function Machine</h2>
+        <p>Click a button to see what happens!</p>
+
+        <button onclick="hello()">Hello</button>
+        <button onclick="joke()">Joke</button>
+        <button onclick="fact()">Fact</button>
+        <button onclick="myName()">My Name</button>
+        <button onclick="motivate()">Motivate Me</button>
+        <button onclick="clearText()">Clear</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function hello() {
+            document.getElementById("output").innerHTML = "👋 Hello Future Programmer!";
+        }
+
+        function joke() {
+            document.getElementById("output").innerHTML = "Two fish are in a tank. One looks at the other and says, 'Do you know how to drive this thing?'";
+        }
+
+        function fact() {
+            document.getElementById("output").innerHTML = "💡 JavaScript was created in just 10 days!";
+        }
+
+        function myName() {
+            document.getElementById("output").innerHTML = "Nadia is a great name! Keep coding, Nadia!";
+        }
+
+        function motivate() {
+            document.getElementById("output").innerHTML = "🌟 Never give up. Every great programmer started as a beginner!";
+        }
+
+        function clearText() {
+            document.getElementById("output").innerHTML = "";
+        }
+    </script>
+
+</body>
+</html>
