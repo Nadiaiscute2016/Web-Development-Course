@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Multiplication Using Functions</title>
-</head>
-<body>
+  <head>
+    </head>
 
-<h2>Multiplication Using Functions</h2>
-
-<p id="result"></p>
-
-<script>
-    function multiply(num1, num2) {
-        return num1 * num2;
+  <body>
+    <button onclick="multiply(4)">Click Me!</button>
+    <p id="result"></p>
+    <script>
+function multiply(a,b)
+{
+    if(b === undefined)
+    {
+    alert ("The value of b is undefined");
+    b=5;
     }
+    var result = a * b;
+}
+document.getElementById("result").innerHTML = result;
 
-    let answer = multiply(8, 5);
-
-    document.getElementById("result").innerHTML =
-        "8 × 5 = " + answer;
 </script>
-
-</body>
+  </body>
 </html>
