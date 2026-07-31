@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2>JavaScript String Methods and Loops</h2>
+    <p>Numbers from 1 to 10</p>
+    <p id="result"></p>
+
+    <script>
+        // Initialize the empty string variable
+        var number = "";
+
+        // For loop running from 1 up to 10
+        for (i = 1; i < 11; i++) {
+            // Concatenate each number followed by a line break
+            number += i + "<br>";
+        }
+
+        // Print the final concatenated string to the 'result' paragraph
+        document.getElementById("result").innerHTML = number;
+
+        // Print the rounded random number (0 to 99)
+        document.write("The random value is " + Math.floor(Math.random() * 100));
+        
+        // Add a line break for spacing between outputs
+        document.write("<br>"); 
+
+        // Create a new Date object and print the current day of the month
+        var date = new Date();
+        document.write("Today's Date is " + date.getDate());
+    </script>
+
+</body>
+</html>

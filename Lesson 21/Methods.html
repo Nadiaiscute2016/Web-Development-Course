@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Methods Activity</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eef7ff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            }
+
+        button {
+            padding: 10px 15px;
+            margin: 5px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <div class="box">
+        <h2>✨ JavaScript String Methods</h2>
+
+        <input type="text" id="text" placeholder="Type your name">
+
+        <br>
+
+        <button onclick="upper()">UPPERCASE</button>
+        <button onclick="lower()">lowercase</button>
+        <button onclick="count()">Count</button>
+        <button onclick="trimText()">Trim</button>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+      function upper() {
+        let t=document.getElementById("text").value;
+        document.getElementById("output").innerHTML=t.toUpperCase();
+      }
+      function lower() {
+        let t=document.getElementById("text").value;
+        document.getElementById("output").innerHTML=t.toLowerCase();
+      }
+      function count() {
+        let t=document.getElementById("text").value;
+        document.getElementById("output").innerHTML=t.length;
+      }
+      function trimText() {
+        let t=document.getElementById("text").value;
+        document.getElementById("output").innerHTML=t.trim();
+      }
+    </script>
+</body>
+    
+
+
+
+</html>

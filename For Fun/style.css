@@ -1,0 +1,2554 @@
+/* =====================================
+   ACE STUDENT PROGRESS TRACKER
+   STYLE.CSS PART 1
+   PROFESSIONAL EDUCATION UI
+===================================== */
+
+
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
+
+
+*{
+
+box-sizing:border-box;
+
+font-family:
+"Inter",
+"Segoe UI",
+Arial,
+sans-serif;
+
+}
+
+
+
+body{
+
+margin:0;
+
+background:#F8FAFC;
+
+color:#0F172A;
+
+min-height:100vh;
+
+}
+
+
+
+button{
+
+cursor:pointer;
+
+border:none;
+
+font-weight:600;
+
+transition:0.25s ease;
+
+}
+
+
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   APP CONTAINER
+===================================== */
+
+
+.app{
+
+width:100%;
+
+min-height:100vh;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   LOGIN / SIGNUP SCREEN
+===================================== */
+
+
+.auth-section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#DBEAFE,
+
+#F8FAFC
+
+);
+
+}
+
+
+
+.auth-card{
+
+width:420px;
+
+background:white;
+
+padding:40px;
+
+border-radius:24px;
+
+box-shadow:
+
+0 20px 50px rgba(15,23,42,0.12);
+
+text-align:center;
+
+}
+
+
+
+.app-logo{
+
+font-size:60px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.auth-card h1{
+
+font-size:30px;
+
+color:#0F172A;
+
+margin-bottom:8px;
+
+}
+
+
+
+.auth-card p{
+
+color:#64748B;
+
+}
+
+
+
+
+
+.auth-card h2{
+
+color:#2563EB;
+
+margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+/* INPUTS */
+
+
+.auth-card input{
+
+width:100%;
+
+padding:15px 18px;
+
+margin:10px 0;
+
+border-radius:12px;
+
+border:
+
+1px solid #CBD5E1;
+
+font-size:15px;
+
+outline:none;
+
+background:#F8FAFC;
+
+}
+
+
+
+.auth-card input:focus{
+
+border-color:#2563EB;
+
+background:white;
+
+}
+
+
+
+
+
+
+
+
+/* BUTTONS */
+
+
+.auth-card button{
+
+width:100%;
+
+padding:14px;
+
+margin-top:12px;
+
+border-radius:12px;
+
+background:#2563EB;
+
+color:white;
+
+font-size:16px;
+
+}
+
+
+
+.auth-card button:hover{
+
+background:#1D4ED8;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+
+.navbar{
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:16px 30px;
+
+background:white;
+
+box-shadow:
+
+0 4px 20px rgba(15,23,42,0.08);
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+}
+
+
+
+.nav-logo{
+
+font-size:22px;
+
+font-weight:800;
+
+color:#0F172A;
+
+}
+
+
+
+.navbar nav{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.navbar nav button{
+
+background:#EFF6FF;
+
+color:#2563EB;
+
+padding:10px 16px;
+
+border-radius:10px;
+
+}
+
+
+
+.navbar nav button:hover{
+
+background:#2563EB;
+
+color:white;
+
+}
+
+
+
+.nav-actions button{
+
+background:#0F172A;
+
+color:white;
+
+border-radius:50%;
+
+width:42px;
+
+height:42px;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   PAGE SECTIONS
+===================================== */
+
+
+.page-section{
+
+padding:35px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   DASHBOARD CARD FOUNDATION
+===================================== */
+
+
+.dashboard-card,
+.welcome-card,
+.student-profile,
+.stat-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:25px;
+
+margin-bottom:25px;
+
+box-shadow:
+
+0 8px 25px rgba(15,23,42,0.08);
+
+}
+
+
+
+.dashboard-card h2{
+
+color:#0F172A;
+
+font-size:22px;
+
+border-left:
+
+5px solid #2563EB;
+
+padding-left:12px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   WELCOME CARD
+===================================== */
+
+
+.welcome-card{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#FFFFFF,
+
+#DBEAFE
+
+);
+
+}
+
+
+
+.welcome-card h1{
+
+font-size:32px;
+
+color:#0F172A;
+
+}
+
+
+
+.welcome-card span{
+
+color:#2563EB;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   STUDENT PROFILE FOUNDATION
+===================================== */
+
+
+.student-profile{
+
+display:flex;
+
+align-items:center;
+
+gap:25px;
+
+}
+
+
+
+.profile-image{
+
+width:130px;
+
+height:130px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:
+
+4px solid #2563EB;
+
+cursor:pointer;
+
+}
+
+
+
+.profile-info h2{
+
+margin:0;
+
+color:#0F172A;
+
+}
+
+
+
+.profile-info p{
+
+color:#64748B;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   QUICK STATS
+===================================== */
+
+
+.stats-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(220px,1fr)
+
+);
+
+gap:20px;
+
+}
+
+
+
+.stat-card{
+
+text-align:center;
+
+}
+
+
+
+.stat-card h3{
+
+color:#64748B;
+
+font-size:15px;
+
+}
+
+
+
+.stat-card p{
+
+font-size:32px;
+
+font-weight:800;
+
+color:#2563EB;
+
+}
+
+
+/* =====================================
+   ACE STUDENT PROGRESS TRACKER
+   STYLE.CSS PART 2
+   DASHBOARD POLISH
+===================================== */
+
+
+
+
+
+/* =====================================
+   STUDENT PROFILE CARD
+===================================== */
+
+
+.student-profile{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#FFFFFF,
+
+#EFF6FF
+
+);
+
+}
+
+
+
+.student-profile img{
+
+transition:.3s ease;
+
+}
+
+
+
+.student-profile img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+.profile-info{
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+}
+
+
+
+.profile-info h2{
+
+font-size:26px;
+
+}
+
+
+
+.profile-info p{
+
+margin:0;
+
+font-size:16px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PROFILE DETAILS BADGES
+===================================== */
+
+
+#profileBadge{
+
+display:inline-block;
+
+background:#FEF3C7;
+
+color:#92400E;
+
+padding:5px 12px;
+
+border-radius:20px;
+
+font-weight:700;
+
+}
+
+
+
+#profileStreak{
+
+color:#10B981;
+
+font-weight:700;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   STAT CARDS UPGRADE
+===================================== */
+
+
+.stat-card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.stat-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+height:5px;
+
+width:100%;
+
+background:#2563EB;
+
+}
+
+
+
+.stat-card:nth-child(2)::before{
+
+background:#10B981;
+
+}
+
+
+
+.stat-card:nth-child(3)::before{
+
+background:#F59E0B;
+
+}
+
+
+
+.stat-card:nth-child(4)::before{
+
+background:#7C3AED;
+
+}
+
+
+
+.stat-card:hover{
+
+transform:translateY(-5px);
+
+box-shadow:
+
+0 15px 35px rgba(15,23,42,.12);
+
+}
+
+
+
+.stat-card p{
+
+margin-top:15px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   CHART CARDS
+===================================== */
+
+
+canvas{
+
+max-width:100%;
+
+margin-top:20px;
+
+}
+
+
+
+.dashboard-card canvas{
+
+padding:10px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PROGRESS OVERVIEW
+===================================== */
+
+
+.progress-overview{
+
+display:flex;
+
+align-items:center;
+
+gap:30px;
+
+}
+
+
+
+.progress-circle{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:32px;
+
+font-weight:800;
+
+color:white;
+
+
+background:
+
+conic-gradient(
+
+#2563EB 82%,
+
+#E2E8F0 0
+
+);
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   GOALS SYSTEM
+===================================== */
+
+
+.goal-input-area{
+
+display:flex;
+
+gap:15px;
+
+margin-bottom:20px;
+
+}
+
+
+
+.goal-input-area input{
+
+flex:1;
+
+padding:14px;
+
+border-radius:12px;
+
+border:
+
+1px solid #CBD5E1;
+
+font-size:16px;
+
+}
+
+
+
+.goal-input-area button{
+
+background:#2563EB;
+
+color:white;
+
+padding:14px 25px;
+
+border-radius:12px;
+
+}
+
+
+
+
+
+.goal-item{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:#F8FAFC;
+
+padding:15px;
+
+margin:12px 0;
+
+border-radius:15px;
+
+border-left:
+
+5px solid #2563EB;
+
+}
+
+
+
+.goal-item button{
+
+background:#10B981;
+
+color:white;
+
+padding:8px 15px;
+
+border-radius:10px;
+
+}
+
+
+
+.goal-item button:hover{
+
+background:#059669;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PACE TRACKER
+===================================== */
+
+
+.pace-item{
+
+background:white;
+
+border-radius:15px;
+
+padding:18px;
+
+margin:15px 0;
+
+border-left:
+
+5px solid #F59E0B;
+
+box-shadow:
+
+0 5px 15px rgba(0,0,0,.05);
+
+}
+
+
+
+.pace-item h3{
+
+margin-top:0;
+
+color:#0F172A;
+
+}
+
+
+
+.pace-item p{
+
+color:#64748B;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PROGRESS BARS
+===================================== */
+
+
+.subject-row{
+
+display:grid;
+
+grid-template-columns:
+
+100px 1fr 60px;
+
+align-items:center;
+
+gap:15px;
+
+margin:18px 0;
+
+}
+
+
+
+.bar{
+
+height:12px;
+
+background:#E2E8F0;
+
+border-radius:20px;
+
+overflow:hidden;
+
+}
+
+
+
+.bar div{
+
+height:100%;
+
+background:#2563EB;
+
+border-radius:20px;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   SMOOTH APP ANIMATION
+===================================== */
+
+
+.page-section{
+
+animation:
+
+fadeIn .3s ease;
+
+}
+
+
+
+@keyframes fadeIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(10px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+/* =====================================
+   ACE STUDENT PROGRESS TRACKER
+   STYLE.CSS PART 3
+   ACHIEVEMENTS SYSTEM
+===================================== */
+
+
+
+
+
+
+/* =====================================
+   BADGE COLLECTION
+===================================== */
+
+
+.badge-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(220px,1fr)
+
+);
+
+gap:20px;
+
+}
+
+
+
+.badge-card{
+
+background:white;
+
+border-radius:20px;
+
+padding:25px;
+
+text-align:center;
+
+box-shadow:
+
+0 8px 25px rgba(15,23,42,.08);
+
+transition:.3s ease;
+
+position:relative;
+
+}
+
+
+
+.badge-card:hover{
+
+transform:translateY(-6px);
+
+}
+
+
+
+
+
+.badge-icon{
+
+font-size:50px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.badge-card h3{
+
+color:#0F172A;
+
+margin:10px 0;
+
+}
+
+
+
+.badge-card p{
+
+color:#64748B;
+
+font-size:14px;
+
+}
+
+
+
+
+
+
+/* UNLOCKED BADGES */
+
+
+.badge-card.unlocked{
+
+border-top:
+
+5px solid #F59E0B;
+
+}
+
+
+
+.badge-card.unlocked .badge-icon{
+
+filter:
+
+drop-shadow(
+
+0 5px 10px rgba(245,158,11,.4)
+
+);
+
+}
+
+
+
+
+
+/* LOCKED BADGES */
+
+
+.badge-card.locked{
+
+opacity:.55;
+
+background:#F8FAFC;
+
+filter:grayscale(.5);
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================
+   FIREBASE BADGE CONTAINER
+===================================== */
+
+
+#badgeCollection{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(220px,1fr)
+
+);
+
+gap:20px;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   REWARD STORE
+===================================== */
+
+
+.reward-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(230px,1fr)
+
+);
+
+gap:20px;
+
+}
+
+
+
+
+.reward-card{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:
+
+0 8px 25px rgba(15,23,42,.08);
+
+text-align:center;
+
+transition:.3s ease;
+
+}
+
+
+
+.reward-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+
+.reward-card h3{
+
+color:#0F172A;
+
+font-size:20px;
+
+}
+
+
+
+.reward-card p{
+
+color:#F59E0B;
+
+font-weight:700;
+
+font-size:18px;
+
+}
+
+
+
+
+
+.reward-card button{
+
+background:#2563EB;
+
+color:white;
+
+padding:12px 25px;
+
+border-radius:12px;
+
+margin-top:10px;
+
+}
+
+
+
+.reward-card button:hover{
+
+background:#1D4ED8;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   REWARD OWNED STATE
+===================================== */
+
+
+.reward-card.owned{
+
+border:
+
+2px solid #10B981;
+
+}
+
+
+
+.reward-card.owned button{
+
+background:#10B981;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   CERTIFICATES
+===================================== */
+
+
+.certificate-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(280px,1fr)
+
+);
+
+gap:25px;
+
+}
+
+
+
+
+.certificate-card{
+
+background:
+
+linear-gradient(
+
+135deg,
+
+#FFFFFF,
+
+#EFF6FF
+
+);
+
+padding:30px;
+
+border-radius:20px;
+
+text-align:center;
+
+border:
+
+1px solid #DBEAFE;
+
+box-shadow:
+
+0 10px 30px rgba(15,23,42,.08);
+
+}
+
+
+
+.certificate-card h3{
+
+color:#0F172A;
+
+font-size:21px;
+
+}
+
+
+
+.certificate-card p{
+
+color:#64748B;
+
+line-height:1.5;
+
+}
+
+
+
+.certificate-card button{
+
+background:#F59E0B;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:12px;
+
+margin-top:15px;
+
+}
+
+
+
+.certificate-card button:hover{
+
+background:#D97706;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PROFILE PAGE
+===================================== */
+
+
+.profile-page{
+
+text-align:center;
+
+}
+
+
+
+.large-avatar{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:
+
+6px solid #2563EB;
+
+margin:20px;
+
+}
+
+
+
+.profile-details{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(220px,1fr)
+
+);
+
+gap:15px;
+
+margin-top:25px;
+
+}
+
+
+
+.profile-details p{
+
+background:#F8FAFC;
+
+padding:18px;
+
+border-radius:15px;
+
+font-weight:600;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   ACHIEVEMENT POPUP ANIMATION
+===================================== */
+
+
+@keyframes achievementPop{
+
+
+0%{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+.badge-card.unlocked,
+.certificate-card{
+
+animation:
+
+achievementPop .5s ease;
+
+}
+/* =====================================
+   ACE STUDENT PROGRESS TRACKER
+   STYLE.CSS PART 4
+   ADVANCED DASHBOARD
+===================================== */
+
+
+
+/* =====================================
+   PARENT / TEACHER DASHBOARD CARDS
+===================================== */
+
+
+.parent-dashboard,
+.teacher-dashboard{
+
+background:white;
+
+padding:30px;
+
+border-radius:22px;
+
+box-shadow:
+
+0 10px 30px rgba(15,23,42,.08);
+
+}
+
+
+
+.parent-stats,
+.teacher-stats{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+
+auto-fit,
+
+minmax(220px,1fr)
+
+);
+
+gap:20px;
+
+}
+
+
+
+
+
+.dashboard-stat{
+
+background:#F8FAFC;
+
+padding:25px;
+
+border-radius:18px;
+
+border-left:
+
+5px solid #2563EB;
+
+}
+
+
+
+.dashboard-stat h3{
+
+color:#64748B;
+
+}
+
+
+
+.dashboard-stat p{
+
+font-size:30px;
+
+font-weight:800;
+
+color:#0F172A;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   STUDENT LIST (TEACHER)
+===================================== */
+
+
+.student-card{
+
+background:white;
+
+padding:20px;
+
+border-radius:18px;
+
+margin:15px 0;
+
+box-shadow:
+
+0 5px 20px rgba(15,23,42,.08);
+
+border-left:
+
+5px solid #10B981;
+
+}
+
+
+
+.student-card h3{
+
+color:#0F172A;
+
+}
+
+
+
+.student-card p{
+
+color:#64748B;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   SETTINGS
+===================================== */
+
+
+.setting-item{
+
+background:#F8FAFC;
+
+padding:22px;
+
+border-radius:18px;
+
+margin:15px 0;
+
+}
+
+
+
+.setting-item h3{
+
+color:#0F172A;
+
+}
+
+
+
+.setting-item button{
+
+background:#2563EB;
+
+color:white;
+
+padding:12px 22px;
+
+border-radius:12px;
+
+}
+
+
+
+
+
+
+/* =====================================
+   CLOUD STATUS
+===================================== */
+
+
+.cloud-status{
+
+display:inline-block;
+
+background:#DCFCE7;
+
+color:#166534;
+
+padding:10px 18px;
+
+border-radius:20px;
+
+font-weight:700;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   LOGOUT
+===================================== */
+
+
+.logout-area{
+
+text-align:center;
+
+padding:30px;
+
+}
+
+
+
+.logout-area button{
+
+background:#DC2626;
+
+color:white;
+
+padding:15px 35px;
+
+border-radius:14px;
+
+}
+
+
+
+.logout-area button:hover{
+
+background:#B91C1C;
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+
+.footer{
+
+text-align:center;
+
+padding:30px;
+
+color:#64748B;
+
+border-top:
+
+1px solid #E2E8F0;
+
+}
+
+
+
+
+
+/* =====================================
+   DARK MODE
+===================================== */
+
+
+body.dark-mode{
+
+background:#020617;
+
+color:#F8FAFC;
+
+}
+
+
+
+.dark-mode .dashboard-card,
+.dark-mode .welcome-card,
+.dark-mode .student-profile,
+.dark-mode .stat-card,
+.dark-mode .badge-card,
+.dark-mode .reward-card,
+.dark-mode .certificate-card,
+.dark-mode .navbar,
+.dark-mode .auth-card{
+
+background:#0F172A;
+
+color:#F8FAFC;
+
+}
+
+
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3{
+
+color:#F8FAFC;
+
+}
+
+
+
+.dark-mode p{
+
+color:#CBD5E1;
+
+}
+
+
+
+.dark-mode .goal-item,
+.dark-mode .setting-item,
+.dark-mode .profile-details p{
+
+background:#1E293B;
+
+color:#F8FAFC;
+
+}
+
+
+
+.dark-mode input{
+
+background:#1E293B;
+
+color:white;
+
+border-color:#334155;
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+
+@media(max-width:768px){
+
+
+.navbar{
+
+flex-direction:column;
+
+gap:15px;
+
+}
+
+
+
+.navbar nav{
+
+justify-content:center;
+
+}
+
+
+
+.page-section{
+
+padding:15px;
+
+}
+
+
+
+.student-profile{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+
+
+.progress-overview{
+
+flex-direction:column;
+
+}
+
+
+
+.goal-input-area{
+
+flex-direction:column;
+
+}
+
+
+
+.auth-card{
+
+width:100%;
+
+}
+
+
+
+}
+/* =====================================
+   ACE STUDENT PROGRESS TRACKER
+   STYLE.CSS PART 5
+   FINAL APP POLISH
+===================================== */
+
+
+
+
+
+/* =====================================
+   SMOOTH PAGE TRANSITIONS
+===================================== */
+
+
+.page-section{
+
+animation:
+
+slideIn .35s ease;
+
+}
+
+
+
+@keyframes slideIn{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(15px);
+
+}
+
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PREMIUM CARD EFFECTS
+===================================== */
+
+
+.dashboard-card,
+.stat-card,
+.badge-card,
+.reward-card,
+.certificate-card{
+
+
+transition:
+
+transform .25s ease,
+box-shadow .25s ease;
+
+
+}
+
+
+
+.dashboard-card:hover,
+.stat-card:hover,
+.reward-card:hover,
+.certificate-card:hover{
+
+
+transform:translateY(-4px);
+
+
+box-shadow:
+
+0 18px 40px rgba(15,23,42,.12);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   ACHIEVEMENT GLOW
+===================================== */
+
+
+.badge-card.unlocked{
+
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+
+.badge-card.unlocked::after{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:-50%;
+
+
+left:-50%;
+
+
+width:200%;
+
+
+height:200%;
+
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(245,158,11,.25),
+
+transparent
+
+);
+
+
+transform:rotate(25deg);
+
+
+animation:
+
+shine 3s infinite;
+
+
+}
+
+
+
+@keyframes shine{
+
+
+0%{
+
+transform:translateX(-100%) rotate(25deg);
+
+}
+
+
+
+100%{
+
+transform:translateX(100%) rotate(25deg);
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   PROFILE AVATAR POLISH
+===================================== */
+
+
+.profile-image,
+.large-avatar{
+
+
+box-shadow:
+
+0 10px 25px rgba(37,99,235,.25);
+
+
+}
+
+
+
+.profile-image:hover,
+.large-avatar:hover{
+
+
+box-shadow:
+
+0 15px 35px rgba(37,99,235,.35);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   EMPTY STATES
+===================================== */
+
+
+.empty-state{
+
+
+text-align:center;
+
+padding:40px;
+
+color:#64748B;
+
+
+}
+
+
+
+.empty-state i{
+
+
+font-size:50px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   TABLE DESIGN
+===================================== */
+
+
+table{
+
+
+width:100%;
+
+border-collapse:collapse;
+
+background:white;
+
+border-radius:15px;
+
+overflow:hidden;
+
+
+}
+
+
+
+th{
+
+
+background:#EFF6FF;
+
+color:#2563EB;
+
+padding:15px;
+
+text-align:left;
+
+
+}
+
+
+
+td{
+
+
+padding:15px;
+
+border-bottom:
+
+1px solid #E2E8F0;
+
+
+}
+
+
+
+tr:hover{
+
+
+background:#F8FAFC;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   SCROLLBAR
+===================================== */
+
+
+::-webkit-scrollbar{
+
+
+width:10px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track{
+
+
+background:#F1F5F9;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb{
+
+
+background:#2563EB;
+
+
+border-radius:20px;
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   BUTTON PRESS EFFECT
+===================================== */
+
+
+button:active{
+
+
+transform:scale(.96);
+
+
+}
+
+
+
+
+
+
+
+
+/* =====================================
+   APP-LIKE MOBILE NAV
+===================================== */
+
+
+@media(max-width:600px){
+
+
+.navbar nav button{
+
+
+font-size:13px;
+
+padding:9px;
+
+
+}
+
+
+
+.stat-card p{
+
+
+font-size:26px;
+
+
+}
+
+
+
+.dashboard-card{
+
+
+padding:18px;
+
+
+}
+
+
+}
+
+
+
+
+/* =====================================
+   PRINT CERTIFICATES
+===================================== */
+
+
+@media print{
+
+
+.navbar,
+.logout-area,
+.footer,
+button{
+
+
+display:none;
+
+
+}
+
+
+
+.dashboard-card{
+
+
+box-shadow:none;
+
+
+}
+
+
+}
