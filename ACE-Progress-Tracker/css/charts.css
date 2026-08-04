@@ -1,0 +1,196 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Charts Styling
+========================================== */
+
+
+/* Chart Container */
+
+.chart-container {
+
+    width:100%;
+
+    height:320px;
+
+    padding:20px;
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.06);
+
+}
+
+
+
+/* Canvas */
+
+canvas {
+
+    max-width:100%;
+
+}
+
+
+
+/* Chart Widget */
+
+.widget canvas {
+
+    margin-top:15px;
+
+}
+
+
+
+/* Analytics Cards */
+
+.analytics-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.06);
+
+}
+
+
+
+.analytics-card h3 {
+
+    color:#1e293b;
+
+    margin-bottom:15px;
+
+}
+
+
+
+/* Progress Ring Placeholder */
+
+.progress-ring {
+
+    width:150px;
+
+    height:150px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    background:
+
+    conic-gradient(
+        #2563eb 0%,
+        #2563eb 75%,
+        #e2e8f0 75%
+    );
+
+}
+
+
+
+.progress-ring span {
+
+    width:110px;
+
+    height:110px;
+
+    background:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+}
+
+
+
+/* Chart Legend */
+
+.chart-legend {
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.legend-item {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+
+
+.legend-dot {
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+}
+
+
+
+/* Dark Mode */
+
+body.dark .chart-container,
+body.dark .analytics-card {
+
+    background:#1e293b;
+
+}
+
+
+body.dark .analytics-card h3 {
+
+    color:#e2e8f0;
+
+}
+
+
+body.dark .progress-ring span {
+
+    background:#1e293b;
+
+}

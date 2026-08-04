@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>PACE Database | ACE Tracker</title>
+
+
+<!-- PWA -->
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2563eb">
+
+
+
+<!-- CSS -->
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/sidebar.css">
+
+<link rel="stylesheet" href="css/paces.css">
+
+<link rel="stylesheet" href="css/cards.css">
+
+<link rel="stylesheet" href="css/animations.css">
+
+<link rel="stylesheet" href="css/darkmode.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+
+
+
+<!-- SIDEBAR -->
+
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+
+<div class="logo-icon">
+📘
+</div>
+
+
+<div>
+
+<h2>
+ACE Tracker
+</h2>
+
+
+<small>
+Student Portal
+</small>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<ul class="menu">
+
+
+<li>
+
+<a href="dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+</li>
+
+
+
+
+<li class="active">
+
+<a href="paces.html">
+
+📚 My PACEs
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="goals.html">
+
+🎯 Goals
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="achievements.html">
+
+🏆 Achievements
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="profile.html">
+
+👤 Profile
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="settings.html">
+
+⚙️ Settings
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+
+
+
+<button class="logout-btn">
+
+Logout
+
+</button>
+
+
+
+</aside>
+
+
+
+
+
+
+
+
+
+<!-- MAIN -->
+
+
+<main class="content">
+
+
+
+
+
+<header class="topbar">
+
+
+<button class="menu-btn">
+
+☰
+
+</button>
+
+
+<h2>
+
+📚 PACE Database
+
+</h2>
+
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- ADD PACE -->
+
+<section class="pace-card">
+
+
+<h1>
+
+Add New PACE
+
+</h1>
+
+
+<p>
+
+Track every PACE you complete.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="pace-form">
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Subject
+</label>
+
+
+<select id="subject">
+
+
+<option>
+Math
+</option>
+
+
+<option>
+English
+</option>
+
+
+<option>
+Science
+</option>
+
+
+<option>
+Social Studies
+</option>
+
+
+<option>
+Word Building
+</option>
+
+
+</select>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+PACE Number
+</label>
+
+
+<input
+
+id="paceNumber"
+
+type="number"
+
+placeholder="Example: 1025">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Pages Completed
+</label>
+
+
+<input
+
+id="pagesCompleted"
+
+type="number"
+
+placeholder="0">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Total Pages
+</label>
+
+
+<input
+
+id="totalPages"
+
+type="number"
+
+placeholder="42">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="input-group">
+
+
+<label>
+Final Test Score
+</label>
+
+
+<input
+
+id="finalScore"
+
+type="number"
+
+placeholder="Percentage">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="checks">
+
+
+
+<label>
+
+<input
+
+type="checkbox"
+
+id="selfTest">
+
+Self Test Completed
+
+</label>
+
+
+
+
+<label>
+
+<input
+
+type="checkbox"
+
+id="checkup">
+
+Checkup Completed
+
+</label>
+
+
+
+
+
+<label>
+
+<input
+
+type="checkbox"
+
+id="goalCheck">
+
+Goal Check Completed
+
+</label>
+
+
+
+
+
+<label>
+
+<input
+
+type="checkbox"
+
+id="finalTest">
+
+Final Test Completed
+
+</label>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<button
+
+class="primary-btn"
+
+onclick="addPACE()">
+
+
+➕ Add PACE
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DATABASE -->
+
+
+<section class="pace-history">
+
+
+
+<h2>
+
+📖 My PACE History
+
+</h2>
+
+
+
+<div id="paceList">
+
+
+<!-- PACEs appear here -->
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SUBJECT MASTERY -->
+
+
+<section class="dashboard-grid">
+
+
+<div class="widget">
+
+
+<h2>
+
+📊 Subject Mastery
+
+</h2>
+
+
+<p>
+Math:
+<span id="mathMastery">
+0%
+</span>
+</p>
+
+
+
+<p>
+English:
+<span id="englishMastery">
+0%
+</span>
+</p>
+
+
+
+<p>
+Science:
+<span id="scienceMastery">
+0%
+</span>
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+</main>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- JAVASCRIPT -->
+
+
+<script src="js/app.js"></script>
+
+<script src="js/storage.js"></script>
+
+<script src="js/auth.js"></script>
+
+<script src="js/paces.js"></script>
+
+
+
+</body>
+
+
+</html>

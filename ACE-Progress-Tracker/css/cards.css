@@ -1,0 +1,297 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Dashboard Cards
+========================================== */
+
+
+/* ==========================================
+   STAT CARDS
+========================================== */
+
+
+.stat-card {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.06);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+.stat-card:hover {
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,0.12);
+
+}
+
+
+
+.stat-card::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#2563eb;
+
+}
+
+
+
+.stat-card h3 {
+
+    color:#64748b;
+
+    font-size:15px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.stat-card h2 {
+
+    color:#1d4ed8;
+
+    font-size:32px;
+
+}
+
+
+
+
+
+/* ==========================================
+   WIDGET CARDS
+========================================== */
+
+
+.widget {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.widget:hover {
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+.widget h2 {
+
+    font-size:20px;
+
+    margin-bottom:15px;
+
+    color:#1e293b;
+
+}
+
+
+
+.widget p {
+
+    color:#64748b;
+
+}
+
+
+
+
+
+/* ==========================================
+   CHART PLACEHOLDER
+========================================== */
+
+
+.chart-placeholder {
+
+    height:250px;
+
+    background:#f8fafc;
+
+    border-radius:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+/* ==========================================
+   AI COACH
+========================================== */
+
+
+.ai-card {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #eff6ff,
+        white
+    );
+
+}
+
+
+
+.ai-card p {
+
+    line-height:1.7;
+
+}
+
+
+
+
+
+/* ==========================================
+   HONOR ROLL
+========================================== */
+
+
+.honor-card {
+
+    border-left:5px solid #fbbf24;
+
+}
+
+
+
+.honor-card p {
+
+    font-weight:600;
+
+}
+
+
+
+
+
+/* ==========================================
+   SCRIPTURE
+========================================== */
+
+
+blockquote {
+
+    background:#f8fafc;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    border-left:5px solid #fbbf24;
+
+    font-style:italic;
+
+    color:#475569;
+
+}
+
+
+
+
+
+/* ==========================================
+   TASKS
+========================================== */
+
+
+.widget ul {
+
+    list-style:none;
+
+}
+
+
+
+.widget li {
+
+    background:#f8fafc;
+
+    padding:12px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    transition:.3s;
+
+}
+
+
+
+.widget li:hover {
+
+    background:#dbeafe;
+
+    transform:translateX(5px);
+
+}
+
+
+
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+
+.primary-btn:hover {
+
+    transform:scale(1.05);
+
+}

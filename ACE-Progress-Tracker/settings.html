@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Settings | ACE Progress Tracker</title>
+
+
+<link rel="manifest" href="manifest.json">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet" href="css/sidebar.css">
+
+<link rel="stylesheet" href="css/settings.css">
+
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<div class="logo-icon">
+📘
+</div>
+
+
+<div>
+
+<h2>
+ACE Tracker
+</h2>
+
+<small>
+Student Portal
+</small>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<ul class="menu">
+
+
+<li>
+
+<a href="dashboard.html">
+
+🏠 Dashboard
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="paces.html">
+
+📚 PACEs
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="profile.html">
+
+👤 Profile
+
+</a>
+
+</li>
+
+
+
+<li class="active">
+
+<a href="settings.html">
+
+⚙️ Settings
+
+</a>
+
+</li>
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+
+
+
+<!-- CONTENT -->
+
+<main class="content">
+
+
+
+<header class="topbar">
+
+<h2>
+⚙️ Settings
+</h2>
+
+</header>
+
+
+
+
+
+
+
+<section class="settings-container">
+
+
+
+
+
+<!-- DARK MODE -->
+
+
+<div class="settings-card">
+
+
+<h2>
+🌙 Appearance
+</h2>
+
+
+<div class="setting-row">
+
+
+<div>
+
+<h3>
+Dark Mode
+</h3>
+
+
+<p>
+Change the app theme.
+</p>
+
+
+</div>
+
+
+
+<label class="switch">
+
+
+<input 
+type="checkbox"
+id="darkModeToggle">
+
+
+<span class="slider"></span>
+
+
+</label>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- NOTIFICATIONS -->
+
+
+<div class="settings-card">
+
+
+<h2>
+🔔 Notifications
+</h2>
+
+
+
+<div class="setting-row">
+
+
+<div>
+
+<h3>
+Study Reminders
+</h3>
+
+
+<p>
+Receive daily study reminders.
+</p>
+
+
+</div>
+
+
+
+<label class="switch">
+
+
+<input
+type="checkbox"
+id="studyNotifications"
+checked>
+
+
+<span class="slider"></span>
+
+
+</label>
+
+
+</div>
+
+
+
+
+
+<div class="setting-row">
+
+
+<div>
+
+<h3>
+Achievement Alerts
+</h3>
+
+
+<p>
+Get notified about badges and milestones.
+</p>
+
+
+</div>
+
+
+
+<label class="switch">
+
+
+<input
+type="checkbox"
+id="achievementNotifications"
+checked>
+
+
+<span class="slider"></span>
+
+
+</label>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ACCOUNT -->
+
+
+<div class="settings-card">
+
+
+<h2>
+👤 Account Preferences
+</h2>
+
+
+
+<label>
+
+Student Name
+
+</label>
+
+
+<input
+id="accountName"
+placeholder="Name">
+
+
+
+
+
+<label>
+
+Email
+
+</label>
+
+
+<input
+id="accountEmail"
+placeholder="Email">
+
+
+
+
+
+<button class="secondary-btn">
+
+Update Account
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- CUSTOMIZATION -->
+
+
+<div class="settings-card">
+
+
+<h2>
+🎨 App Customization
+</h2>
+
+
+
+
+<label>
+
+Theme Color
+
+</label>
+
+
+
+<select id="themeColor">
+
+
+<option value="blue">
+Blue
+</option>
+
+
+<option value="purple">
+Purple
+</option>
+
+
+<option value="pink">
+Pink
+</option>
+
+
+<option value="green">
+Green
+</option>
+
+
+</select>
+
+
+
+
+
+
+<label>
+
+Font Size
+
+</label>
+
+
+
+<select id="fontSize">
+
+
+<option value="normal">
+Normal
+</option>
+
+
+<option value="large">
+Large
+</option>
+
+
+<option value="extra">
+Extra Large
+</option>
+
+
+</select>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<button 
+class="primary-btn save-settings"
+onclick="saveSettingsPage()">
+
+Save Settings
+
+</button>
+
+
+
+
+
+</section>
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+<script src="js/app.js"></script>
+
+<script src="js/storage.js"></script>
+
+<script src="js/settings.js"></script>
+
+
+
+</body>
+
+</html>

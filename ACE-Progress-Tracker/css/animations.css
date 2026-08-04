@@ -1,0 +1,233 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Animations
+========================================== */
+
+
+/* PAGE LOAD */
+
+.content {
+
+    animation: fadeIn 0.6s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* SIDEBAR */
+
+.sidebar {
+
+    animation: slideSidebar .5s ease;
+
+}
+
+
+@keyframes slideSidebar {
+
+    from {
+
+        transform:translateX(-40px);
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+/* CARDS */
+
+.stat-card,
+.widget {
+
+    animation: cardRise .5s ease;
+
+}
+
+
+
+@keyframes cardRise {
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* HOVER EFFECTS */
+
+
+.stat-card:hover,
+.widget:hover {
+
+    transition:.3s ease;
+
+}
+
+
+
+.menu a:hover {
+
+    transform:translateX(5px);
+
+}
+
+
+
+.primary-btn {
+
+    transition:.3s ease;
+
+}
+
+
+
+.primary-btn:hover {
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 8px 20px rgba(37,99,235,.25);
+
+}
+
+
+
+/* PROFILE HOVER */
+
+
+.profile img {
+
+    transition:.3s ease;
+
+}
+
+
+
+.profile img:hover {
+
+    transform:scale(1.1);
+
+}
+
+
+
+/* ICON FLOAT */
+
+
+.logo-icon {
+
+    animation: floatIcon 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes floatIcon {
+
+    0% {
+
+        transform:translateY(0);
+
+    }
+
+
+    50% {
+
+        transform:translateY(-5px);
+
+    }
+
+
+    100% {
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* LOADING EFFECT */
+
+
+.loading {
+
+    animation:pulse 1.5s infinite;
+
+}
+
+
+
+@keyframes pulse {
+
+    0% {
+
+        opacity:.5;
+
+    }
+
+
+    50% {
+
+        opacity:1;
+
+    }
+
+
+    100% {
+
+        opacity:.5;
+
+    }
+
+}

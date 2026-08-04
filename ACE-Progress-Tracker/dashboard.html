@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | ACE Progress Tracker</title>
+
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2563eb">
+
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar">
+
+
+<div class="logo">
+
+<div class="logo-icon">
+📘
+</div>
+
+
+<div>
+
+<h2>
+ACE Tracker
+</h2>
+
+<small>
+Student Portal
+</small>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<ul class="menu">
+
+
+<li class="active">
+
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="paces.html">
+📚 My PACEs
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="goals.html">
+🎯 Goals
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="achievements.html">
+🏆 Achievements
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="ai-coach.html">
+🤖 AI Coach
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="profile.html">
+👤 Profile
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="settings.html">
+⚙️ Settings
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+
+
+<button class="logout-btn">
+
+Logout
+
+</button>
+
+
+</aside>
+
+
+
+
+
+
+
+
+<!-- MAIN CONTENT -->
+
+
+<main class="content">
+
+
+
+
+
+
+<!-- TOP BAR -->
+
+
+<header class="topbar">
+
+
+<button class="menu-btn">
+
+☰
+
+</button>
+
+
+
+<div class="search-box">
+
+
+🔍
+
+
+<input
+
+type="text"
+
+placeholder="Search ACE Tracker...">
+
+
+</div>
+
+
+
+
+
+
+<div class="top-actions">
+
+
+
+<button class="notification-btn">
+
+🔔
+
+</button>
+
+
+
+<button class="dark-toggle">
+
+🌙
+
+</button>
+
+
+
+
+
+<a href="profile.html" class="profile">
+
+
+<img
+
+id="dashboardProfile"
+
+src="assets/images/profile.png"
+
+alt="Profile">
+
+
+
+<div>
+
+<h4 id="dashboardName">
+
+Student
+
+</h4>
+
+
+<small>
+
+ACE Student
+
+</small>
+
+
+</div>
+
+
+</a>
+
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+
+
+<!-- WELCOME CARD -->
+
+
+<section class="welcome-card">
+
+
+<div>
+
+<h1>
+
+Welcome Back, <span id="welcomeName">Student</span> 👋
+
+</h1>
+
+
+<p>
+
+Continue your ACE learning journey.
+
+</p>
+
+
+</div>
+
+
+
+<a href="paces.html">
+
+<button class="primary-btn">
+
+Continue Learning
+
+</button>
+
+</a>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<section class="stats-grid">
+
+
+
+<div class="stat-card">
+
+<h3>
+
+Average Score
+
+</h3>
+
+
+<h2 id="averageScore">
+
+0%
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h3>
+
+PACEs Completed
+
+</h3>
+
+
+<h2 id="completedPACEs">
+
+0
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h3>
+
+Study Streak
+
+</h3>
+
+
+<h2 id="studyStreak">
+
+🔥 0 Days
+
+</h2>
+
+
+</div>
+
+
+
+
+
+<div class="stat-card">
+
+<h3>
+
+Level
+
+</h3>
+
+
+<h2 id="studentLevel">
+
+Level 1
+
+</h2>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- DASHBOARD GRID -->
+
+
+<section class="dashboard-grid">
+
+
+
+
+
+
+
+<!-- PROGRESS CHART -->
+
+
+<div class="widget large">
+
+
+<h2>
+
+📈 Progress Overview
+
+</h2>
+
+
+<canvas id="progressChart">
+
+</canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SUBJECT CHART -->
+
+
+<div class="widget">
+
+
+<h2>
+
+📚 Subject Mastery
+
+</h2>
+
+
+<canvas id="subjectChart">
+
+</canvas>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- ACHIEVEMENTS -->
+
+
+<div class="widget achievement-widget">
+
+
+<h2>
+
+🏆 Achievements
+
+</h2>
+
+
+
+<h3 id="dashboardXP">
+
+XP: 0 ⭐
+
+</h3>
+
+
+
+<p id="dashboardLevel">
+
+Level 1
+
+</p>
+
+
+
+<div id="recentAchievements">
+
+<p>
+
+Complete PACEs to unlock badges 🏆
+
+</p>
+
+</div>
+
+
+
+<a href="achievements.html">
+
+View All Achievements →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- GOALS -->
+
+
+<div class="widget">
+
+
+<h2>
+
+🎯 Today's Goals
+
+</h2>
+
+
+
+<ul>
+
+
+<li>
+
+Complete PACE pages
+
+</li>
+
+
+<li>
+
+Review Checkup
+
+</li>
+
+
+<li>
+
+Study Scripture
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- AI COACH -->
+
+
+<div class="widget ai-card">
+
+
+<h2>
+
+🤖 AI Study Coach
+
+</h2>
+
+
+<p>
+
+Your personal study assistant is ready.
+
+</p>
+
+
+
+<a href="ai-coach.html">
+
+Open AI Coach →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SCRIPTURE -->
+
+
+<div class="widget">
+
+
+<h2>
+
+📖 Daily Scripture
+
+</h2>
+
+
+<blockquote>
+
+Commit thy works unto the Lord.
+
+</blockquote>
+
+
+</div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+
+</main>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SCRIPTS -->
+
+
+<script src="js/storage.js"></script>
+
+<script src="js/app.js"></script>
+
+<script src="js/auth.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script src="js/charts.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/dashboard-v2.js"></script>
+
+
+
+</body>
+
+
+</html>

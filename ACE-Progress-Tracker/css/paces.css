@@ -1,0 +1,381 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Multi-PACE Database Styling
+========================================== */
+
+
+/* PACE HEADER */
+
+.pace-card {
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #60a5fa
+    );
+
+    color:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.pace-card h1 {
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+
+
+.pace-card p {
+
+    opacity:.9;
+
+}
+
+
+
+
+
+
+
+/* FORM */
+
+.pace-form {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:22px;
+
+    display:grid;
+
+    gap:18px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.06);
+
+}
+
+
+
+.pace-form h2 {
+
+    color:#1e293b;
+
+}
+
+
+
+
+
+/* INPUT GROUP */
+
+.input-group {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+
+
+.input-group label {
+
+    font-weight:700;
+
+    color:#475569;
+
+}
+
+
+
+
+
+.input-group input,
+.input-group select {
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #cbd5e1;
+
+    outline:none;
+
+    font-size:15px;
+
+}
+
+
+
+.input-group input:focus,
+.input-group select:focus {
+
+    border-color:#2563eb;
+
+}
+
+
+
+
+
+
+
+/* CHECKBOXES */
+
+.checks {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(2,1fr);
+
+    gap:12px;
+
+}
+
+
+
+.checks label {
+
+    background:#f1f5f9;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+.checks input {
+
+    margin-right:8px;
+
+}
+
+
+
+
+
+
+
+
+/* PACE HISTORY */
+
+.pace-history {
+
+    margin-top:30px;
+
+}
+
+
+
+.pace-history h2 {
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+
+
+/* PACE ITEMS */
+
+#paceList {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+
+
+.pace-item {
+
+    background:white;
+
+    padding:22px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+
+.pace-item:hover {
+
+    transform:translateY(-5px);
+
+}
+
+
+
+
+
+.pace-item h3 {
+
+    color:#2563eb;
+
+    margin-bottom:12px;
+
+}
+
+
+
+.pace-item p {
+
+    color:#475569;
+
+    margin:8px 0;
+
+}
+
+
+
+
+
+
+
+/* SUBJECT MASTERY */
+
+.widget {
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 8px 20px rgba(0,0,0,.06);
+
+}
+
+
+
+.widget span {
+
+    font-weight:700;
+
+    color:#2563eb;
+
+}
+
+
+
+
+
+
+
+/* DARK MODE */
+
+body.dark .pace-form,
+body.dark .pace-item,
+body.dark .widget {
+
+    background:#1e293b;
+
+}
+
+
+
+body.dark .input-group label,
+body.dark .pace-item p {
+
+    color:#cbd5e1;
+
+}
+
+
+
+body.dark .input-group input,
+body.dark .input-group select {
+
+    background:#334155;
+
+    color:white;
+
+    border-color:#475569;
+
+}
+
+
+
+body.dark .checks label {
+
+    background:#334155;
+
+    color:#e2e8f0;
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+    .checks {
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .pace-card h1 {
+
+        font-size:24px;
+
+    }
+
+
+}

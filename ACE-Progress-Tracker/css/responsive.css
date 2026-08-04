@@ -1,0 +1,255 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Responsive Design
+========================================== */
+
+
+/* ==========================================
+   Large Tablets & Small Laptops
+========================================== */
+
+@media (max-width: 1200px) {
+
+
+    .stats-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    .search-box {
+
+        width: 250px;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   Tablets
+========================================== */
+
+@media (max-width: 900px) {
+
+
+    .sidebar {
+
+        transform: translateX(-100%);
+
+        transition: var(--transition);
+
+    }
+
+
+    .sidebar.active {
+
+        transform: translateX(0);
+
+    }
+
+
+    .content {
+
+        margin-left: 0;
+
+        width: 100%;
+
+        padding: 20px;
+
+    }
+
+
+    .menu-btn {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+    }
+
+
+    .topbar {
+
+        padding: 0 15px;
+
+    }
+
+
+    .welcome-card {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .large {
+
+        grid-column: span 1;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   Mobile Devices
+========================================== */
+
+@media (max-width: 600px) {
+
+
+    .content {
+
+        padding: 15px;
+
+    }
+
+
+    .topbar {
+
+        height: auto;
+
+        min-height: 70px;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+
+        padding: 15px;
+
+    }
+
+
+    .search-box {
+
+        order: 3;
+
+        width: 100%;
+
+    }
+
+
+    .top-actions {
+
+        gap: 8px;
+
+    }
+
+
+    .profile div {
+
+        display: none;
+
+    }
+
+
+    .welcome-card {
+
+        padding: 22px;
+
+    }
+
+
+    .welcome-card h1 {
+
+        font-size: 1.5rem;
+
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .stat-card {
+
+        padding: 20px;
+
+    }
+
+
+    .stat-card h2 {
+
+        font-size: 1.7rem;
+
+    }
+
+
+    .widget {
+
+        padding: 20px;
+
+    }
+
+
+    .widget h2 {
+
+        font-size: 1.1rem;
+
+    }
+
+
+}
+
+
+
+/* ==========================================
+   Small Phones
+========================================== */
+
+@media (max-width: 400px) {
+
+
+    .logo h2 {
+
+        font-size: 1rem;
+
+    }
+
+
+    .logo small {
+
+        display: none;
+
+    }
+
+
+    .icon-btn {
+
+        width: 36px;
+
+        height: 36px;
+
+    }
+
+
+}

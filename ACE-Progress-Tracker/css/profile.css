@@ -1,0 +1,194 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Student Profile Styling
+========================================== */
+
+
+
+/* PROFILE CARD */
+
+.profile-card {
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    max-width:700px;
+
+    margin:30px auto;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    text-align:center;
+
+}
+
+
+
+
+
+/* PROFILE IMAGE */
+
+.profile-card img {
+
+    width:140px;
+
+    height:140px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:5px solid #2563eb;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* IMAGE UPLOAD */
+
+.profile-card input[type="file"] {
+
+    display:block;
+
+    margin:15px auto 25px;
+
+}
+
+
+
+
+
+/* NAME */
+
+.profile-card h2 {
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+/* FORM */
+
+.profile-form {
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    text-align:left;
+
+}
+
+
+
+
+
+.profile-form label {
+
+    font-weight:600;
+
+    color:#475569;
+
+}
+
+
+
+
+
+.profile-form input,
+.profile-form textarea {
+
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #cbd5e1;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.profile-form textarea {
+
+    min-height:120px;
+
+    resize:none;
+
+}
+
+
+
+
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+
+
+    border-color:#2563eb;
+
+    box-shadow:
+    0 0 0 3px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+
+/* BUTTON */
+
+.profile-form .primary-btn {
+
+    margin-top:15px;
+
+    width:100%;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+
+    .profile-card {
+
+        margin:15px;
+
+        padding:25px;
+
+    }
+
+
+}

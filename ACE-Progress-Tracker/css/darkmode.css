@@ -1,0 +1,234 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Dark Mode Theme
+========================================== */
+
+
+/* MAIN BACKGROUND */
+
+body.dark {
+
+    background:#0f172a;
+
+    color:#e2e8f0;
+
+}
+
+
+
+/* SIDEBAR */
+
+body.dark .sidebar {
+
+    background:#111827;
+
+    border-color:#334155;
+
+    box-shadow:none;
+
+}
+
+
+body.dark .logo h2 {
+
+    color:#60a5fa;
+
+}
+
+
+body.dark .logo small {
+
+    color:#94a3b8;
+
+}
+
+
+
+/* MENU */
+
+body.dark .menu a {
+
+    color:#cbd5e1;
+
+}
+
+
+body.dark .menu a:hover {
+
+    background:#1e3a8a;
+
+    color:white;
+
+}
+
+
+body.dark .menu .active a {
+
+    background:#2563eb;
+
+    color:white;
+
+}
+
+
+
+/* MAIN CARDS */
+
+body.dark .topbar,
+body.dark .stat-card,
+body.dark .widget,
+body.dark .chart-container,
+body.dark .analytics-card {
+
+    background:#1e293b;
+
+    color:#e2e8f0;
+
+}
+
+
+
+/* TEXT */
+
+body.dark .stat-card h3,
+body.dark .widget p {
+
+    color:#94a3b8;
+
+}
+
+
+body.dark .stat-card h2 {
+
+    color:#60a5fa;
+
+}
+
+
+body.dark .widget h2 {
+
+    color:#f8fafc;
+
+}
+
+
+
+/* SEARCH */
+
+body.dark .search-box {
+
+    background:#334155;
+
+}
+
+
+body.dark .search-box input {
+
+    color:white;
+
+}
+
+
+body.dark .search-box input::placeholder {
+
+    color:#94a3b8;
+
+}
+
+
+
+/* PROFILE */
+
+body.dark .profile small {
+
+    color:#94a3b8;
+
+}
+
+
+
+/* WELCOME CARD */
+
+body.dark .welcome-card {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        #1e40af,
+        #2563eb
+    );
+
+}
+
+
+
+/* BUTTON */
+
+body.dark .primary-btn {
+
+    background:white;
+
+    color:#2563eb;
+
+}
+
+
+
+/* TASKS */
+
+body.dark .widget li {
+
+    background:#334155;
+
+    color:#e2e8f0;
+
+}
+
+
+body.dark .widget li:hover {
+
+    background:#1e40af;
+
+}
+
+
+
+/* SCRIPTURE */
+
+body.dark blockquote {
+
+    background:#334155;
+
+    color:#e2e8f0;
+
+}
+
+
+
+/* CHART CENTER */
+
+body.dark .progress-ring span {
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+
+
+/* SCROLLBAR */
+
+body.dark::-webkit-scrollbar-track {
+
+    background:#111827;
+
+}
+
+
+body.dark::-webkit-scrollbar-thumb {
+
+    background:#2563eb;
+
+}

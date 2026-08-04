@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Profile | ACE Tracker</title>
+
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/profile.css">
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<div class="logo-icon">
+📘
+</div>
+
+<div>
+<h2>ACE Tracker</h2>
+<small>Student Portal</small>
+</div>
+
+</div>
+
+
+<ul class="menu">
+
+<li>
+<a href="dashboard.html">
+🏠 Dashboard
+</a>
+</li>
+
+
+<li>
+<a href="paces.html">
+📚 PACEs
+</a>
+</li>
+
+
+<li class="active">
+<a href="profile.html">
+👤 Profile
+</a>
+</li>
+
+
+<li>
+<a href="settings.html">
+⚙️ Settings
+</a>
+</li>
+
+
+</ul>
+
+
+</aside>
+
+
+
+
+<main class="content">
+
+
+<header class="topbar">
+
+<h2>
+👤 Student Profile
+</h2>
+
+</header>
+
+
+
+
+<section class="profile-card">
+
+
+<img
+id="profileImage"
+src="assets/images/profile.png"
+alt="Profile">
+
+
+<input
+type="file"
+id="imageUpload"
+accept="image/*">
+
+
+
+<h2 id="studentName">
+Student Name
+</h2>
+
+
+
+<div class="profile-form">
+
+
+<label>
+Full Name
+</label>
+
+<input
+id="fullName"
+placeholder="Your name">
+
+
+
+<label>
+Grade
+</label>
+
+<input
+id="grade"
+placeholder="Grade">
+
+
+
+<label>
+School
+</label>
+
+<input
+id="school"
+placeholder="School name">
+
+
+
+<label>
+Bio
+</label>
+
+<textarea
+id="bio"
+placeholder="Tell us about yourself"></textarea>
+
+
+
+<button
+class="primary-btn"
+onclick="saveProfile()">
+
+Save Profile
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+</main>
+
+
+</div>
+
+
+<script src="js/storage.js"></script>
+<script src="js/profile.js"></script>
+
+
+</body>
+
+</html>

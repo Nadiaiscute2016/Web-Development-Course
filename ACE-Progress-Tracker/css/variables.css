@@ -1,0 +1,87 @@
+/* ==========================================
+   ACE Progress Tracker™
+   Design Variables
+========================================== */
+
+
+:root {
+
+    /* Brand Colors */
+
+    --primary: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #dbeafe;
+
+    --secondary: #f59e0b;
+    --gold: #fbbf24;
+
+    --success: #16a34a;
+    --danger: #dc2626;
+
+
+    /* Backgrounds */
+
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --surface-soft: #f1f5f9;
+
+
+    /* Text */
+
+    --text-main: #1e293b;
+    --text-secondary: #64748b;
+    --text-light: #94a3b8;
+
+
+    /* Borders */
+
+    --border: #e2e8f0;
+
+
+    /* Shadows */
+
+    --shadow-sm:
+    0 2px 8px rgba(15, 23, 42, 0.08);
+
+
+    --shadow-md:
+    0 8px 25px rgba(15, 23, 42, 0.12);
+
+
+    --shadow-lg:
+    0 20px 45px rgba(15, 23, 42, 0.15);
+
+
+
+    /* Rounded Corners */
+
+    --radius-sm: 10px;
+
+    --radius-md: 16px;
+
+    --radius-lg: 24px;
+
+
+
+    /* Layout */
+
+    --sidebar-width: 270px;
+
+    --header-height: 80px;
+
+
+
+    /* Animation */
+
+    --transition:
+    0.3s ease;
+
+
+    /* Font */
+
+    --font:
+    "Poppins",
+    "Segoe UI",
+    sans-serif;
+
+}
