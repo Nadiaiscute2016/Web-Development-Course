@@ -1,343 +1,112 @@
 /* ==========================================
    ACE Progress Tracker™
-   Dashboard V2 Controller
-========================================== */
-
-
-
-document.addEventListener(
-
-    "DOMContentLoaded",
-
-    () => {
-
-
-        setupSidebar();
-
-
-        setupDarkMode();
-
-
-        setupNotifications();
-
-
-        setupCounters();
-
-
-    }
-
-);
-
-
-
-
-
-/* ==========================================
-   Mobile Sidebar
-========================================== */
-
-
-function setupSidebar(){
-
-
-    const menuButton =
-
-        document.querySelector(
-            ".menu-btn"
-        );
-
-
-
-    const sidebar =
-
-        document.querySelector(
-            ".sidebar"
-        );
-
-
-
-    if(menuButton && sidebar){
-
-
-        menuButton.addEventListener(
-
-            "click",
-
-            () => {
-
-
-                sidebar.classList.toggle(
-                    "active"
-                );
-
-
-            }
-
-        );
-
-
-    }
-
-
-}
-
-
-
-
-
-/* ==========================================
-   Dark Mode
-========================================== */
-
-
-function setupDarkMode(){
-
-
-    const darkButton =
-
-        document.querySelector(
-            ".dark-toggle"
-        );
-
-
-
-    if(darkButton){
-
-
-        darkButton.addEventListener(
-
-            "click",
-
-            () => {
-
-
-                toggleTheme();
-
-
-            }
-
-        );
-
-
-    }
-
-
-}
-
-
-
-
-
-/* ==========================================
-   Notifications
-========================================== */
-
-
-function setupNotifications(){
-
-
-    const notificationButton =
-
-        document.querySelector(
-            ".notification-btn"
-        );
-
-
-
-    if(notificationButton){
-
-
-        notificationButton.addEventListener(
-
-            "click",
-
-            () => {
-
-
-                showMessage(
-                    "🔔 No new notifications"
-                );
-
-
-            }
-
-        );
-
-
-    }
-
-
-}
-
-
-
-
-
-/* ==========================================
-   Animated Numbers
-========================================== */
-
-
-function setupCounters(){
-
-
-    const counters =
-
-        document.querySelectorAll(
-            ".counter"
-        );
-
-
-
-    counters.forEach(
-
-        counter => {
-
-
-            const target =
-
-                Number(
-                    counter.dataset.value
-                );
-
-
-
-            let current = 0;
-
-
-
-            const speed =
-
-                Math.max(
-                    target / 80,
-                    1
-                );
-
-
-
-            function update(){
-
-
-                current += speed;
-
-
-
-                if(current < target){
-
-
-                    counter.textContent =
-
-                        Math.floor(
-                            current
-                        );
-
-
-                    requestAnimationFrame(
-                        update
-                    );
-
-
-                }
-
-                else {
-
-
-                    counter.textContent =
-                        target;
-
-
-                }
-
-
-            }
-
-
-
-            update();
-
-
-        }
-
-    );
-
-
-}
-
-
-
-
-
-/* ==========================================
-   Quick Actions
-========================================== */
-
-
-function openPACE(){
-
-
-    window.location.href =
-        "paces.html";
-
-
-}
-
-
-
-
-
-function openReports(){
-
-
-    window.location.href =
-        "reports.html";
-
-
-}
-
-
-
-
-
-console.log(
-    "Dashboard V2 Loaded ✨"
-);
-/* ==========================================
    Dashboard V2
-   Achievement Integration
 ========================================== */
 
 
 document.addEventListener(
-
 "DOMContentLoaded",
+loadDashboard
+);
 
-loadDashboardRewards
 
+
+function loadDashboard(){
+
+
+loadStudentProfile();
+
+loadPACEStats();
+
+loadGoalStats();
+
+loadAchievementStats();
+
+}
+
+
+
+
+
+/* ==========================================
+   Student Profile
+========================================== */
+
+
+function loadStudentProfile(){
+
+
+const profile =
+
+getData("studentProfile")
+||
+{};
+
+
+
+const nameBox =
+
+document.getElementById(
+"studentName"
+);
+
+
+
+const imageBox =
+
+document.getElementById(
+"profileImage"
 );
 
 
 
 
 
-function loadDashboardRewards(){
+if(nameBox){
 
+nameBox.textContent =
 
-const xp =
+profile.name
 
-getData(
-"xp"
-)
 ||
-0;
+
+"Student";
+
+}
 
 
 
 
-const achievements =
 
-getData(
-"achievements"
-)
+if(imageBox && profile.picture){
+
+imageBox.src = profile.picture;
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   PACE Statistics
+========================================== */
+
+
+function loadPACEStats(){
+
+
+const paces =
+
+getData("paceDatabase")
 ||
 [];
 
@@ -345,163 +114,206 @@ getData(
 
 
 
-const xpBox =
+const completed =
 
-document.getElementById(
-"dashboardXP"
-);
+paces.filter(
 
+pace =>
 
+pace.status === "Completed"
 
-
-const levelBox =
-
-document.getElementById(
-"dashboardLevel"
-);
+).length;
 
 
 
 
 
-if(xpBox){
 
+const average =
 
-xpBox.textContent =
+paces.length
 
-"XP: "
-+
-xp
-+
-" ⭐";
+?
 
+Math.round(
 
-}
+paces.reduce(
 
+(total,pace)=>
 
+total + Number(pace.score),
 
+0
 
-
-if(levelBox){
-
-
-levelBox.textContent =
-
-"Level "
-+
-(
-Math.floor(
-xp / 500
 )
-+
-1
-);
-
-
-}
-
-
-
-
-
-
-
-displayRecentBadges(
-achievements
-);
-
-
-}
-
-
-
-
-
-
-
-function displayRecentBadges(list){
-
-
-const container =
-
-document.getElementById(
-"recentAchievements"
-);
-
-
-
-
-if(!container)
-
-return;
-
-
-
-
-
-if(list.length===0){
-
-container.innerHTML=
-
-`
-
-<p>
-Complete PACEs to unlock badges 🏆
-</p>
-
-`;
-
-return;
-
-}
-
-
-
-
-
-container.innerHTML =
-
-`
-
-
-<p>
-🏅 ${list.length} Achievements Unlocked
-</p>
-
-
-<div class="badge-row">
-
-
-${
-
-list.slice(-3)
-
-.map(
-
-badge =>
-
-`
-
-<span class="badge">
-
-🏆
-
-</span>
-
-`
+/
+paces.length
 
 )
 
-.join("")
+:
+
+0;
+
+
+
+
+
+
+
+updateElement(
+
+"pacesCompleted",
+
+completed
+
+);
+
+
+
+updateElement(
+
+"averageScore",
+
+average + "%"
+
+);
+
+
 
 }
 
 
-</div>
 
 
-`;
+
+
+
+
+
+/* ==========================================
+   Goals
+========================================== */
+
+
+function loadGoalStats(){
+
+
+const goals =
+
+getData("goals")
+||
+[];
+
+
+
+
+
+const completedGoals =
+
+goals.filter(
+
+goal =>
+
+goal.completed === true
+
+).length;
+
+
+
+
+
+updateElement(
+
+"goalsCompleted",
+
+completedGoals
+
+);
 
 
 
 }
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   Achievements
+========================================== */
+
+
+function loadAchievementStats(){
+
+
+const achievements =
+
+getData("achievements")
+||
+[];
+
+
+
+
+
+updateElement(
+
+"achievementCount",
+
+achievements.length
+
+);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   Helper
+========================================== */
+
+
+function updateElement(id,value){
+
+
+
+const element =
+
+document.getElementById(id);
+
+
+
+
+
+if(element){
+
+element.textContent = value;
+
+}
+
+
+
+}
+document.addEventListener(
+"DOMContentLoaded",
+
+()=>{
+
+loadPACEStats();
+
+}
+
+);

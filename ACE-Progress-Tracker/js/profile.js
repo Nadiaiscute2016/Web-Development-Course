@@ -1,6 +1,6 @@
 /* ==========================================
    ACE Progress Tracker™
-   Student Profile
+   Student Profile System
 ========================================== */
 
 
@@ -11,80 +11,108 @@ loadProfile
 
 
 
-function loadProfile(){
 
 
-const profile =
-getData("studentProfile")
-||
-{};
+/* ==========================================
+   Profile Picture Upload
+========================================== */
 
 
-
-if(profile.image){
+const upload =
 
 document.getElementById(
-"profileImage"
-).src = profile.image;
-
-}
+"profileUpload"
+);
 
 
 
-document.getElementById(
-"fullName"
-).value =
-profile.name || "";
+if(upload){
 
 
+upload.addEventListener(
 
-document.getElementById(
-"grade"
-).value =
-profile.grade || "";
-
-
-
-document.getElementById(
-"school"
-).value =
-profile.school || "";
-
-
-
-document.getElementById(
-"bio"
-).value =
-profile.bio || "";
-
-}
-
-
-
-document
-.getElementById("imageUpload")
-.addEventListener(
 "change",
 
 function(event){
 
 
 const file =
+
 event.target.files[0];
 
 
+
+if(!file)
+
+return;
+
+
+
+
+
 const reader =
+
 new FileReader();
 
 
 
-reader.onload = function(){
 
+
+reader.onload =
+
+function(){
+
+
+
+const imageData =
+
+reader.result;
+
+
+
+
+
+const preview =
 
 document.getElementById(
-"profileImage"
-).src =
-reader.result;
+"profilePreview"
+);
+
+
+
+
+if(preview)
+
+preview.src = imageData;
+
+
+
+
+
+let profile =
+
+getData(
+"studentProfile"
+)
+||
+{};
+
+
+
+
+profile.image =
+
+imageData;
+
+
+
+saveData(
+
+"studentProfile",
+
+profile
+
+);
 
 
 
@@ -92,7 +120,12 @@ reader.result;
 
 
 
-reader.readAsDataURL(file);
+
+
+reader.readAsDataURL(
+file
+);
+
 
 
 }
@@ -101,65 +134,311 @@ reader.readAsDataURL(file);
 
 
 
+}
+
+
+
+
+
+
+
+
+/* ==========================================
+   Save Profile
+========================================== */
 
 
 function saveProfile(){
 
 
-const profile = {
+
+let profile =
+
+getData(
+"studentProfile"
+)
+||
+{};
 
 
-name:
+
+
+
+
+profile.name =
+
 document.getElementById(
-"fullName"
-).value,
+"studentName"
+).value;
 
 
-grade:
+
+
+
+profile.studentID =
+
 document.getElementById(
-"grade"
-).value,
+"studentID"
+).value;
 
 
-school:
+
+
+
+profile.classLevel =
+
 document.getElementById(
-"school"
-).value,
+"studentClass"
+).value;
 
 
-bio:
+
+
+
+profile.learningPreference =
+
 document.getElementById(
-"bio"
-).value,
+"learningPreference"
+).value;
 
 
-image:
+
+
+
+profile.theme =
+
 document.getElementById(
-"profileImage"
-).src
+"themePreference"
+).value;
 
 
-};
+
+
 
 
 
 saveData(
+
 "studentProfile",
+
 profile
+
 );
 
 
 
-document.getElementById(
-"studentName"
-).textContent =
-profile.name;
+
+
+applyTheme(
+profile.theme
+);
+
+
 
 
 
 alert(
-"Profile saved ✅"
+"Profile Saved Successfully 👤"
 );
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   Load Profile
+========================================== */
+
+
+function loadProfile(){
+
+
+
+const profile =
+
+getData(
+"studentProfile"
+)
+||
+{};
+
+
+
+
+
+
+if(
+document.getElementById(
+"studentName"
+)
+)
+
+document.getElementById(
+"studentName"
+).value =
+
+profile.name
+||
+"";
+
+
+
+
+
+
+
+if(
+document.getElementById(
+"studentID"
+)
+)
+
+document.getElementById(
+"studentID"
+).value =
+
+profile.studentID
+||
+"";
+
+
+
+
+
+
+
+if(
+document.getElementById(
+"studentClass"
+)
+)
+
+document.getElementById(
+"studentClass"
+).value =
+
+profile.classLevel
+||
+"";
+
+
+
+
+
+
+
+if(
+document.getElementById(
+"learningPreference"
+)
+)
+
+document.getElementById(
+"learningPreference"
+).value =
+
+profile.learningPreference
+||
+"Visual Learning";
+
+
+
+
+
+
+
+if(
+document.getElementById(
+"themePreference"
+)
+)
+
+document.getElementById(
+"themePreference"
+).value =
+
+profile.theme
+||
+"light";
+
+
+
+
+
+
+
+
+const preview =
+
+document.getElementById(
+"profilePreview"
+);
+
+
+
+
+
+if(
+preview &&
+profile.image
+){
+
+
+preview.src =
+
+profile.image;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   Theme Switch
+========================================== */
+
+
+function applyTheme(theme){
+
+
+
+if(theme==="dark"){
+
+
+document.body.classList.add(
+"dark"
+);
+
+
+}
+
+else{
+
+
+document.body.classList.remove(
+"dark"
+);
+
+
+}
 
 
 }

@@ -365,3 +365,373 @@ body.dark .secondary-btn {
 
 
 }
+/* ==========================================
+   ACE Progress Tracker™
+   Settings Page Styling
+========================================== */
+
+
+
+/* SETTINGS CONTAINER */
+
+
+.settings-container {
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(280px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+
+
+
+
+
+/* SETTINGS CARD */
+
+
+.settings-card {
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+
+
+
+.settings-card h2 {
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+}
+
+
+
+
+
+
+
+
+/* SETTING ROWS */
+
+
+.setting-item {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+
+
+.setting-item:last-child {
+
+    border-bottom:none;
+
+}
+
+
+
+
+
+
+
+.setting-item label {
+
+    font-weight:600;
+
+}
+
+
+
+
+
+
+
+
+/* INPUTS */
+
+
+.settings-card input,
+.settings-card select {
+
+
+    padding:12px;
+
+    border-radius:12px;
+
+    border:1px solid #cbd5e1;
+
+    outline:none;
+
+}
+
+
+
+
+
+.settings-card select:focus,
+.settings-card input:focus {
+
+    border-color:#2563eb;
+
+}
+
+
+
+
+
+
+
+
+
+/* TOGGLE SWITCH */
+
+
+.switch {
+
+    position:relative;
+
+    display:inline-block;
+
+    width:55px;
+
+    height:30px;
+
+}
+
+
+
+
+
+.switch input {
+
+    opacity:0;
+
+    width:0;
+
+    height:0;
+
+}
+
+
+
+
+.slider {
+
+    position:absolute;
+
+    cursor:pointer;
+
+    inset:0;
+
+    background:#cbd5e1;
+
+    border-radius:30px;
+
+    transition:.3s;
+
+}
+
+
+
+
+.slider:before {
+
+    content:"";
+
+    position:absolute;
+
+    height:24px;
+
+    width:24px;
+
+    left:3px;
+
+    bottom:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+}
+
+
+
+
+
+.switch input:checked + .slider {
+
+    background:#2563eb;
+
+}
+
+
+
+
+
+.switch input:checked + .slider:before {
+
+    transform:translateX(25px);
+
+}
+
+
+
+
+
+
+
+
+
+/* BUTTONS */
+
+
+.settings-btn {
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+.settings-btn:hover {
+
+    transform:translateY(-2px);
+
+}
+
+
+
+
+
+
+
+
+
+/* DANGER BUTTON */
+
+
+.delete-btn {
+
+    background:#dc2626;
+
+}
+
+
+
+
+
+
+
+
+
+/* DARK MODE */
+
+
+body.dark .settings-card {
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+
+
+
+
+body.dark .setting-item {
+
+    border-color:#334155;
+
+}
+
+
+
+
+
+body.dark .settings-card input,
+body.dark .settings-card select {
+
+    background:#334155;
+
+    color:white;
+
+    border-color:#475569;
+
+}
+
+
+
+
+
+
+
+/* MOBILE */
+
+
+@media(max-width:700px){
+
+
+.settings-container {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.settings-card {
+
+    padding:20px;
+
+}
+
+
+}

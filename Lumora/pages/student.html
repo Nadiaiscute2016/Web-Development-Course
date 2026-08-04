@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lumora Student Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="../style.css">
+
+</head>
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<nav>
+
+
+<div class="logo">
+💜 Lumora<span>Academy</span>
+</div>
+
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="courses.html">Courses</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="student.html">Student</a></li>
+
+<li><a href="blog.html">Blog</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
+
+
+<a href="index.html" class="nav-btn">
+Back Home
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+<section class="dashboard-page">
+
+
+<h1 class="title">
+
+🎓 Student Learning Dashboard
+
+</h1>
+
+
+<p class="subtitle">
+
+Track your progress, achievements, and learning journey.
+
+</p>
+
+
+
+
+
+
+
+<!-- PROFILE -->
+
+
+<div class="dashboard-grid">
+
+
+
+<div class="dashboard-card profile-card">
+
+
+<h2>
+
+👋 Welcome, Student
+
+</h2>
+
+
+<p>
+
+Level:
+<strong>Advanced Learner</strong>
+
+</p>
+
+
+
+<p>
+
+XP Points:
+<strong>850 / 1000</strong>
+
+</p>
+
+
+
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:85%">
+
+</div>
+
+</div>
+
+
+
+<p>
+
+🔥 Learning Streak:
+<strong>12 Days</strong>
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SUBJECT PROGRESS -->
+
+
+<div class="dashboard-card">
+
+
+<h2>
+
+📊 Subject Progress
+
+</h2>
+
+
+
+
+<div class="subject">
+
+Mathematics
+
+<span>
+85%
+</span>
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:85%">
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="subject">
+
+Science
+
+<span>
+92%
+</span>
+
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:92%">
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="subject">
+
+Coding
+
+<span>
+98%
+</span>
+
+
+<div class="progress-bar">
+
+<div class="progress-fill" style="width:98%">
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ACHIEVEMENTS -->
+
+
+<div class="dashboard-card">
+
+
+<h2>
+
+🏆 Achievements
+
+</h2>
+
+
+
+<span class="badge">
+
+⭐ Top Learner
+
+</span>
+
+
+
+<span class="badge">
+
+💻 Coding Hero
+
+</span>
+
+
+
+
+<span class="badge">
+
+📚 Reading Star
+
+</span>
+
+
+
+<span class="badge">
+
+🚀 Future Builder
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- COURSES -->
+
+
+<div class="dashboard-card">
+
+
+<h2>
+
+📚 My Courses
+
+</h2>
+
+
+
+<div class="course-item">
+
+💻 Web Development
+
+<br>
+
+Progress: 90%
+
+</div>
+
+
+
+
+<div class="course-item">
+
+📚 Mathematics Mastery
+
+<br>
+
+Progress: 85%
+
+</div>
+
+
+
+
+
+<div class="course-item">
+
+🔬 Science Academy
+
+<br>
+
+Progress: 92%
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- CERTIFICATE -->
+
+
+<div class="dashboard-card certificate-box">
+
+
+<h2>
+
+🎓 Certificates
+
+</h2>
+
+
+<p>
+
+Complete courses and earn official Lumora certificates.
+
+</p>
+
+
+
+<button class="btn primary">
+
+Generate Certificate
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- AI -->
+
+
+<div class="dashboard-card">
+
+
+<h2>
+
+🤖 Lumora AI Suggestion
+
+</h2>
+
+
+
+<p id="student-ai">
+
+You are doing great!
+Try revising one topic today to keep your streak.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- STUDENT LEADERBOARD -->
+
+<section id="leaderboard">
+
+
+<h2 class="title">
+
+🏆 Lumora Student Leaderboard
+
+</h2>
+
+
+<p class="subtitle">
+
+Celebrating students who show dedication,
+growth, and excellence.
+
+</p>
+
+
+
+
+
+<div class="leaderboard">
+
+
+
+<div class="leader-card champion">
+
+
+<div class="rank">
+
+🥇
+
+</div>
+
+
+<img src="https://randomuser.me/api/portraits/women/21.jpg">
+
+
+<h3>
+Sophia Anderson
+</h3>
+
+
+<p>
+
+⭐ 9,850 XP
+
+</p>
+
+
+<span class="badge">
+
+Top Scholar
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="leader-card">
+
+
+<div class="rank">
+
+🥈
+
+</div>
+
+
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+
+
+<h3>
+Noah Williams
+</h3>
+
+
+<p>
+
+⭐ 9,200 XP
+
+</p>
+
+
+<span class="badge">
+
+Coding Champion
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="leader-card">
+
+
+<div class="rank">
+
+🥉
+
+</div>
+
+
+<img src="https://randomuser.me/api/portraits/women/33.jpg">
+
+
+<h3>
+Maya Patel
+</h3>
+
+
+<p>
+
+⭐ 8,750 XP
+
+</p>
+
+
+<span class="badge">
+
+Science Star
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="leader-card">
+
+
+<div class="rank">
+
+4️⃣
+
+</div>
+
+
+<img src="https://randomuser.me/api/portraits/men/52.jpg">
+
+
+<h3>
+Ethan Brown
+</h3>
+
+
+<p>
+
+⭐ 8,300 XP
+
+</p>
+
+
+<span class="badge">
+
+Math Master
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+<!-- EVENTS CALENDAR -->
+
+<section id="events">
+
+
+<h2 class="title">
+
+📅 Lumora Events Calendar
+
+</h2>
+
+
+<p class="subtitle">
+
+Stay updated with academy activities,
+competitions, and important dates.
+
+</p>
+
+
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+<h3>
+💻 Coding Challenge
+</h3>
+
+
+<p>
+
+Date: August 15, 2026
+
+</p>
+
+
+<p>
+
+Create an innovative website project.
+
+</p>
+
+
+<span class="badge">
+
+Competition
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+🔬 Science Fair
+</h3>
+
+
+<p>
+
+Date: September 5, 2026
+
+</p>
+
+
+<p>
+
+Present creative science discoveries.
+
+</p>
+
+
+<span class="badge">
+
+Event
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+<h3>
+📚 Exam Preparation Week
+</h3>
+
+
+<p>
+
+Date: October 10, 2026
+
+</p>
+
+
+<p>
+
+Special revision sessions with coaches.
+
+</p>
+
+
+<span class="badge">
+
+Academic
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<!-- LUMORA AI -->
+
+<section id="ai">
+
+
+<h2 class="title">
+
+🤖 Lumora AI Study Assistant
+
+</h2>
+
+
+<p class="subtitle">
+
+Your digital learning companion.
+
+</p>
+
+
+
+
+<div class="card ai-box">
+
+
+<h3>
+
+Ask Lumora AI
+
+</h3>
+
+
+<input 
+id="aiQuestion"
+placeholder="Ask a study question..."
+>
+
+
+<button 
+class="btn primary"
+onclick="askLumora()">
+
+Ask
+
+</button>
+
+
+
+<h3 id="aiAnswer">
+
+</h3>
+
+
+
+</div>
+
+
+</section>
+<div class="card">
+
+<h3>
+🏆 Awards Ceremony
+</h3>
+
+
+<p>
+
+Date: December 20, 2026
+
+</p>
+
+
+<p>
+
+Celebrating student achievements.
+
+</p>
+
+
+<span class="badge">
+
+Celebration
+
+</span>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+<footer>
+
+
+<h3>
+💜 Lumora Academy
+</h3>
+
+
+<p>
+Where Bright Minds Rise.
+</p>
+
+
+</footer>
+
+
+
+
+
+
+<script src="../main.js"></script>
+
+
+</body>
+
+</html>

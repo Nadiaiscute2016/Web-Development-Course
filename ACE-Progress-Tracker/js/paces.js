@@ -1,18 +1,12 @@
 /* ==========================================
    ACE Progress Tracker™
-   Multi-PACE Database System
+   PACE Database System
 ========================================== */
 
 
 document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        displayPACEs();
-
-        updateMastery();
-
-    }
+"DOMContentLoaded",
+displayPACEs
 );
 
 
@@ -27,124 +21,80 @@ document.addEventListener(
 function addPACE(){
 
 
-    const pace = {
+const pace = {
 
 
-        id: Date.now(),
+id: Date.now(),
 
 
-        subject:
-        document.getElementById(
-            "subject"
-        ).value,
+subject:
 
-
-        paceNumber:
-        document.getElementById(
-            "paceNumber"
-        ).value,
-
-
-        pagesCompleted:
-        Number(
-            document.getElementById(
-                "pagesCompleted"
-            ).value
-        ),
-
-
-        totalPages:
-        Number(
-            document.getElementById(
-                "totalPages"
-            ).value
-        ),
-
-
-        score:
-        Number(
-            document.getElementById(
-                "finalScore"
-            ).value
-        ),
+document.getElementById(
+"paceSubject"
+).value,
 
 
 
-        selfTest:
-        document.getElementById(
-            "selfTest"
-        ).checked,
+paceNumber:
+
+document.getElementById(
+"paceNumber"
+).value,
 
 
 
-        checkup:
-        document.getElementById(
-            "checkup"
-        ).checked,
+score:
+
+Number(
+
+document.getElementById(
+"paceScore"
+).value
+
+),
 
 
 
-        goalCheck:
-        document.getElementById(
-            "goalCheck"
-        ).checked,
+status:
+
+document.getElementById(
+"paceStatus"
+).value,
 
 
 
-        finalTest:
-        document.getElementById(
-            "finalTest"
-        ).checked,
+date:
+
+document.getElementById(
+"paceDate"
+).value,
 
 
 
-        date:
-        new Date()
-        .toLocaleDateString()
+notes:
 
-    };
+document.getElementById(
+"paceNotes"
+).value
 
 
-
-    pace.progress =
-        calculateCompletion(
-            pace
-        );
+};
 
 
 
 
-    let database =
-
-        getData(
-            "paceDatabase"
-        )
-        ||
-        [];
 
 
-
-    database.push(
-        pace
-    );
+if(!pace.paceNumber || !pace.score){
 
 
-
-    saveData(
-        "paceDatabase",
-        database
-    );
+alert(
+"Please enter PACE number and score"
+);
 
 
+return;
 
-    displayPACEs();
-
-    updateMastery();
-
-
-    alert(
-        "PACE Added Successfully 📚"
-    );
 
 }
 
@@ -152,64 +102,70 @@ function addPACE(){
 
 
 
-/* ==========================================
-   Completion Calculator
-========================================== */
+if(pace.score < 0 || pace.score > 100){
 
 
-function calculateCompletion(pace){
+alert(
+"Score must be between 0 and 100"
+);
 
 
-    let completed = 0;
-
-
-    let total = 5;
-
-
-
-    if(
-        pace.pagesCompleted >=
-        pace.totalPages
-    )
-
-        completed++;
-
-
-
-    if(pace.selfTest)
-
-        completed++;
-
-
-
-    if(pace.checkup)
-
-        completed++;
-
-
-
-    if(pace.goalCheck)
-
-        completed++;
-
-
-
-    if(
-        pace.finalTest &&
-        pace.score >= 80
-    )
-
-        completed++;
-
-
-
-
-    return Math.round(
-        (completed / total) * 100
-    );
+return;
 
 
 }
+
+
+
+
+
+
+
+let database =
+
+getData(
+"paceDatabase"
+)
+||
+[];
+
+
+
+
+
+database.push(pace);
+
+
+
+
+
+saveData(
+
+"paceDatabase",
+
+database
+
+);
+
+
+
+
+
+clearPACEForm();
+
+displayPACEs();
+checkPACEAchievements();
+
+
+alert(
+"PACE Added Successfully 📚"
+);
+
+
+
+}
+
+
 
 
 
@@ -225,107 +181,100 @@ function calculateCompletion(pace){
 function displayPACEs(){
 
 
-    const list =
 
-        document.getElementById(
-            "paceList"
-        );
+const container =
 
-
-
-    if(!list)
-        return;
-
-
-
-    let database =
-
-        getData(
-            "paceDatabase"
-        )
-        ||
-        [];
-
-
-
-    list.innerHTML = "";
+document.getElementById(
+"paceList"
+);
 
 
 
 
 
-    database.forEach(
+if(!container)
 
-        pace => {
-
-
-            const card =
-            document.createElement(
-                "div"
-            );
-
-
-            card.className =
-            "pace-item";
+return;
 
 
 
-            card.innerHTML = `
-
-            <h3>
-            ${pace.subject}
-            PACE ${pace.paceNumber}
-            </h3>
 
 
-            <p>
-            Pages:
-            ${pace.pagesCompleted}/${pace.totalPages}
-            </p>
+let database =
 
-
-            <p>
-            Score:
-            ${pace.score}%
-            </p>
-
-
-            <p>
-            Progress:
-            ${pace.progress}%
-            </p>
-
-
-            <p>
-            Status:
-            ${getStatus(pace)}
-            </p>
+getData(
+"paceDatabase"
+)
+||
+[];
 
 
 
-            <button onclick="editPACE(${pace.id})">
-            ✏️ Edit
-            </button>
 
 
-            <button onclick="deletePACE(${pace.id})">
-            🗑 Delete
-            </button>
+const search =
+
+document.getElementById(
+"searchPACE"
+)
+?.value
+.toLowerCase()
+||
+"";
 
 
-            `;
 
 
 
-            list.appendChild(
-                card
-            );
 
 
-        }
+database = database.filter(
 
-    );
+pace =>
 
+
+pace.paceNumber
+.toLowerCase()
+.includes(search)
+
+||
+
+pace.subject
+.toLowerCase()
+.includes(search)
+
+
+
+);
+
+
+
+
+
+
+
+container.innerHTML="";
+
+
+
+
+
+
+
+if(database.length===0){
+
+
+container.innerHTML =
+
+`
+
+<p>
+No PACEs found 📚
+</p>
+
+`;
+
+return;
 
 }
 
@@ -333,30 +282,95 @@ function displayPACEs(){
 
 
 
+database.forEach(
+
+pace => {
 
 
-/* ==========================================
-   Status
-========================================== */
+
+container.innerHTML +=
 
 
-function getStatus(pace){
+`
+
+<div class="pace-item">
 
 
-    if(
-        pace.finalTest &&
-        pace.score >=80
-    ){
-
-        return "✅ Completed";
-
-    }
+<div>
 
 
-    return "📖 In Progress";
+<h3>
+
+${pace.subject}
+
+</h3>
+
+
+
+<p>
+
+${pace.paceNumber}
+
+</p>
+
+
+
+<p>
+
+Score: 
+
+<strong>
+
+${pace.score}%
+
+</strong>
+
+</p>
+
+
+
+<p>
+
+Status:
+
+${pace.status}
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<button
+
+onclick="deletePACE(${pace.id})">
+
+Delete
+
+</button>
+
+
+
+</div>
+
+
+`;
+
 
 
 }
+
+);
+
+
+
+}
+
+
 
 
 
@@ -372,37 +386,45 @@ function getStatus(pace){
 function deletePACE(id){
 
 
-    let database =
 
-        getData(
-            "paceDatabase"
-        )
-        ||
-        [];
+let database =
 
-
-
-    database =
-
-        database.filter(
-
-            pace =>
-            pace.id !== id
-
-        );
+getData(
+"paceDatabase"
+)
+||
+[];
 
 
 
-    saveData(
-        "paceDatabase",
-        database
-    );
+
+
+database = database.filter(
+
+pace =>
+
+pace.id !== id
+
+);
 
 
 
-    displayPACEs();
 
-    updateMastery();
+
+saveData(
+
+"paceDatabase",
+
+database
+
+);
+
+
+
+
+
+displayPACEs();
+
 
 
 }
@@ -413,76 +435,33 @@ function deletePACE(id){
 
 
 
+
+
 /* ==========================================
-   Edit PACE
+   Clear Form
 ========================================== */
 
 
-function editPACE(id){
-
-
-    let database =
-
-        getData(
-            "paceDatabase"
-        )
-        ||
-        [];
+function clearPACEForm(){
 
 
 
-    const pace =
-
-        database.find(
-
-            item =>
-            item.id === id
-
-        );
+document.getElementById(
+"paceNumber"
+).value="";
 
 
 
-    if(!pace)
-        return;
+document.getElementById(
+"paceScore"
+).value="";
 
 
 
-    document.getElementById(
-        "subject"
-    ).value =
-    pace.subject;
+document.getElementById(
+"paceNotes"
+).value="";
 
-
-
-    document.getElementById(
-        "paceNumber"
-    ).value =
-    pace.paceNumber;
-
-
-
-    document.getElementById(
-        "pagesCompleted"
-    ).value =
-    pace.pagesCompleted;
-
-
-
-    document.getElementById(
-        "totalPages"
-    ).value =
-    pace.totalPages;
-
-
-
-    document.getElementById(
-        "finalScore"
-    ).value =
-    pace.score;
-
-
-
-    deletePACE(id);
 
 
 }
@@ -493,105 +472,61 @@ function editPACE(id){
 
 
 
+
+
 /* ==========================================
-   Subject Mastery
+   Calculate Average
 ========================================== */
 
 
-function updateMastery(){
-
-
-    const database =
-
-        getData(
-            "paceDatabase"
-        )
-        ||
-        [];
+function getPACEAverage(){
 
 
 
-    const subjects = [
+const database =
 
-        "Math",
-
-        "English",
-
-        "Science"
-
-    ];
+getData(
+"paceDatabase"
+)
+||
+[];
 
 
 
 
-    subjects.forEach(
 
-        subject => {
+if(database.length===0)
 
-
-
-            const items =
-
-            database.filter(
-
-                pace =>
-                pace.subject === subject
-
-            );
+return 0;
 
 
 
-            let average = 0;
 
 
 
-            if(items.length){
+const total =
 
+database.reduce(
 
-                average = Math.round(
+(sum,pace)=>
 
-                    items.reduce(
+sum + pace.score,
 
-                        (sum,item)=>
+0
 
-                        sum + item.score,
-
-                        0
-
-                    )
-                    /
-                    items.length
-
-                );
-
-
-            }
+);
 
 
 
-            const element =
-
-            document.getElementById(
-
-                subject.toLowerCase()
-                +
-                "Mastery"
-
-            );
 
 
 
-            if(element){
+return Math.round(
 
-                element.textContent =
-                average + "%";
+total / database.length
 
-            }
+);
 
-
-        }
-
-    );
 
 
 }

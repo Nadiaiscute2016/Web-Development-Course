@@ -440,3 +440,48 @@
     font-size:25px;
 
 }
+.student-mini-profile {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+
+.student-mini-profile img {
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #2563eb;
+
+}
+
+
+
+.student-info h3 {
+
+    margin:0;
+
+}
+
+
+
+.student-info p {
+
+    margin:3px 0;
+
+    font-size:13px;
+
+    opacity:.8;
+
+}

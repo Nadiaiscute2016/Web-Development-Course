@@ -415,3 +415,123 @@ total/database.length
 
 
 }
+function checkPACEAchievements(){
+
+
+
+const paces =
+
+getData(
+"paceDatabase"
+)
+||
+[];
+
+
+
+
+let achievements =
+
+getData(
+"achievements"
+)
+||
+[];
+
+
+
+
+
+
+
+function unlock(name,icon){
+
+
+if(!achievements.some(a=>a.name===name)){
+
+
+achievements.push({
+
+name:name,
+
+icon:icon,
+
+date:new Date().toLocaleDateString()
+
+});
+
+
+}
+
+
+}
+
+
+
+
+
+
+if(paces.length >= 1)
+
+unlock(
+
+"First PACE Completed",
+
+"🥇"
+
+);
+
+
+
+if(paces.length >= 10)
+
+unlock(
+
+"PACE Explorer",
+
+
+
+);
+
+
+
+if(paces.length >= 25)
+
+unlock(
+
+"PACE Champion",
+
+
+
+);
+
+
+
+
+
+
+if(paces.length >= 50)
+
+unlock(
+
+"ACE Master",
+
+
+
+);
+
+
+
+
+
+
+saveData(
+
+"achievements",
+
+achievements
+
+);
+
+
+}

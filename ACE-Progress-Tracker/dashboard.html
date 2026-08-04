@@ -7,17 +7,23 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Dashboard | ACE Progress Tracker</title>
+<title>Dashboard | ACE Tracker</title>
 
 
 <link rel="manifest" href="manifest.json">
 
-<meta name="theme-color" content="#2563eb">
-
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/sidebar.css">
+<link rel="stylesheet" href="css/dashboard-v2.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/charts.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/darkmode.css">
+
 
 </head>
+
 
 
 <body>
@@ -34,6 +40,7 @@
 
 <div class="logo">
 
+
 <div class="logo-icon">
 📘
 </div>
@@ -45,14 +52,17 @@
 ACE Tracker
 </h2>
 
+
 <small>
 Student Portal
 </small>
 
+
 </div>
 
 
 </div>
+
 
 
 
@@ -119,7 +129,11 @@ Student Portal
 
 </li>
 
-
+<li>
+<a href="reports.html">
+📊 Reports
+</a>
+</li>
 
 <li>
 
@@ -136,11 +150,14 @@ Student Portal
 
 
 
+
+
 <button class="logout-btn">
 
 Logout
 
 </button>
+
 
 
 </aside>
@@ -152,8 +169,8 @@ Logout
 
 
 
-<!-- MAIN CONTENT -->
 
+<!-- MAIN -->
 
 <main class="content">
 
@@ -162,63 +179,20 @@ Logout
 
 
 
-<!-- TOP BAR -->
-
-
 <header class="topbar">
 
 
-<button class="menu-btn">
 
-☰
-
-</button>
-
-
-
-<div class="search-box">
-
-
-🔍
-
-
-<input
-
-type="text"
-
-placeholder="Search ACE Tracker...">
-
-
-</div>
+<h2>
+Student Dashboard
+</h2>
 
 
 
 
 
+<div class="student-mini-profile">
 
-<div class="top-actions">
-
-
-
-<button class="notification-btn">
-
-🔔
-
-</button>
-
-
-
-<button class="dark-toggle">
-
-🌙
-
-</button>
-
-
-
-
-
-<a href="profile.html" class="profile">
 
 
 <img
@@ -231,30 +205,39 @@ alt="Profile">
 
 
 
-<div>
 
-<h4 id="dashboardName">
+
+<div class="student-info">
+
+
+<h3 id="dashboardName">
 
 Student
 
-</h4>
+</h3>
 
 
-<small>
+<p id="dashboardClass">
 
-ACE Student
+Class Level
 
-</small>
+</p>
+
+
+<p id="dashboardPreference">
+
+Learning Style
+
+</p>
 
 
 </div>
 
 
-</a>
-
-
 
 </div>
+
+
 
 
 </header>
@@ -267,29 +250,29 @@ ACE Student
 
 
 
-<!-- WELCOME CARD -->
+<!-- WELCOME -->
 
 
 <section class="welcome-card">
 
 
-<div>
-
 <h1>
 
-Welcome Back, <span id="welcomeName">Student</span> 👋
+Welcome back,
+<span id="welcomeName">
+Student
+</span>
+👋
 
 </h1>
 
 
+
 <p>
 
-Continue your ACE learning journey.
+Track your learning progress and achieve your goals.
 
 </p>
-
-
-</div>
 
 
 
@@ -300,6 +283,7 @@ Continue your ACE learning journey.
 Continue Learning
 
 </button>
+
 
 </a>
 
@@ -314,7 +298,7 @@ Continue Learning
 
 
 
-<!-- STATISTICS -->
+<!-- STATS -->
 
 
 <section class="stats-grid">
@@ -324,9 +308,7 @@ Continue Learning
 <div class="stat-card">
 
 <h3>
-
 Average Score
-
 </h3>
 
 
@@ -346,11 +328,8 @@ Average Score
 <div class="stat-card">
 
 <h3>
-
 PACEs Completed
-
 </h3>
-
 
 <h2 id="completedPACEs">
 
@@ -368,15 +347,13 @@ PACEs Completed
 <div class="stat-card">
 
 <h3>
-
-Study Streak
-
+XP Points
 </h3>
 
 
-<h2 id="studyStreak">
+<h2 id="dashboardXP">
 
-🔥 0 Days
+0 ⭐
 
 </h2>
 
@@ -390,9 +367,7 @@ Study Streak
 <div class="stat-card">
 
 <h3>
-
 Level
-
 </h3>
 
 
@@ -406,6 +381,7 @@ Level 1
 </div>
 
 
+
 </section>
 
 
@@ -416,7 +392,7 @@ Level 1
 
 
 
-<!-- DASHBOARD GRID -->
+<!-- MAIN WIDGETS -->
 
 
 <section class="dashboard-grid">
@@ -425,9 +401,6 @@ Level 1
 
 
 
-
-
-<!-- PROGRESS CHART -->
 
 
 <div class="widget large">
@@ -440,9 +413,7 @@ Level 1
 </h2>
 
 
-<canvas id="progressChart">
-
-</canvas>
+<canvas id="progressChart"></canvas>
 
 
 </div>
@@ -452,9 +423,6 @@ Level 1
 
 
 
-
-
-<!-- SUBJECT CHART -->
 
 
 <div class="widget">
@@ -467,9 +435,7 @@ Level 1
 </h2>
 
 
-<canvas id="subjectChart">
-
-</canvas>
+<canvas id="subjectChart"></canvas>
 
 
 </div>
@@ -481,9 +447,6 @@ Level 1
 
 
 
-<!-- ACHIEVEMENTS -->
-
-
 <div class="widget achievement-widget">
 
 
@@ -492,15 +455,6 @@ Level 1
 🏆 Achievements
 
 </h2>
-
-
-
-<h3 id="dashboardXP">
-
-XP: 0 ⭐
-
-</h3>
-
 
 
 <p id="dashboardLevel">
@@ -514,10 +468,9 @@ Level 1
 <div id="recentAchievements">
 
 <p>
-
 Complete PACEs to unlock badges 🏆
-
 </p>
+
 
 </div>
 
@@ -525,7 +478,7 @@ Complete PACEs to unlock badges 🏆
 
 <a href="achievements.html">
 
-View All Achievements →
+View Achievements →
 
 </a>
 
@@ -539,45 +492,34 @@ View All Achievements →
 
 
 
-<!-- GOALS -->
-
-
 <div class="widget">
 
 
 <h2>
 
-🎯 Today's Goals
+🎯 Goals
 
 </h2>
 
 
 
-<ul>
+<div id="dashboardGoals">
 
 
-<li>
-
-Complete PACE pages
-
-</li>
+<p>
+No active goals yet.
+</p>
 
 
-<li>
-
-Review Checkup
-
-</li>
+</div>
 
 
-<li>
 
-Study Scripture
+<a href="goals.html">
 
-</li>
+Manage Goals →
 
-
-</ul>
+</a>
 
 
 </div>
@@ -587,9 +529,6 @@ Study Scripture
 
 
 
-
-
-<!-- AI COACH -->
 
 
 <div class="widget ai-card">
@@ -604,7 +543,7 @@ Study Scripture
 
 <p>
 
-Your personal study assistant is ready.
+Get personalised study advice based on your progress.
 
 </p>
 
@@ -612,7 +551,7 @@ Your personal study assistant is ready.
 
 <a href="ai-coach.html">
 
-Open AI Coach →
+Open Coach →
 
 </a>
 
@@ -626,24 +565,36 @@ Open AI Coach →
 
 
 
-<!-- SCRIPTURE -->
-
-
 <div class="widget">
 
 
 <h2>
 
-📖 Daily Scripture
+📖 Scripture Tracker
 
 </h2>
 
 
-<blockquote>
 
-Commit thy works unto the Lord.
+<p>
 
-</blockquote>
+Monthly Scriptures:
+
+<span id="scriptureCount">
+
+0
+
+</span>
+
+</p>
+
+
+
+<a href="#">
+
+Open Tracker →
+
+</a>
 
 
 </div>
@@ -653,6 +604,7 @@ Commit thy works unto the Lord.
 
 
 </section>
+
 
 
 
@@ -673,7 +625,7 @@ Commit thy works unto the Lord.
 
 
 
-<!-- SCRIPTS -->
+<!-- JAVASCRIPT -->
 
 
 <script src="js/storage.js"></script>
@@ -695,6 +647,5 @@ Commit thy works unto the Lord.
 
 
 </body>
-
 
 </html>
