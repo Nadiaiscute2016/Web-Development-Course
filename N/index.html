@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Color Match Challenge</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(135deg,#ffd6ea,#ffffff);
+    text-align:center;
+    color:#9b1b5a;
+}
+
+h1{
+    font-size:40px;
+}
+
+.game{
+    max-width:700px;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:30px;
+    box-shadow:0 10px 30px #ddd;
+}
+
+.colorBox{
+    width:220px;
+    height:120px;
+    margin:20px auto;
+    border-radius:20px;
+    border:5px solid #eee;
+}
+
+input{
+    width:80%;
+}
+
+.slider{
+    margin:20px;
+}
+
+button{
+    background:#ff69b4;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:25px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+.stats{
+    display:flex;
+    justify-content:space-around;
+    margin:20px;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🎨 Color Match Challenge</h1>
+
+<div class="game">
+
+<h2>Match This Color</h2>
+
+<div id="target" class="colorBox"></div>
+
+
+<h2>Your Color</h2>
+
+<div id="player" class="colorBox"></div>
+
+
+<div class="slider">
+Red
+<input id="r" type="range" min="0" max="255">
+</div>
+
+
+<div class="slider">
+Green
+<input id="g" type="range" min="0" max="255">
+</div>
+
+
+<div class="slider">
+Blue
+<input id="b" type="range" min="0" max="255">
+</div>
+
+
+<button onclick="checkColor()">
+MATCH!
+</button>
+
+
+<div class="stats">
+
+<div>
+🏆 Score
+<br>
+<span id="score">0</span>
+</div>
+
+
+<div>
+🔥 Streak
+<br>
+<span id="streak">0</span>
+</div>
+
+
+<div>
+⏱ Time
+<br>
+<span id="time">120</span>
+</div>
+
+
+</div>
+
+
+<h2 id="result"></h2>
+
+
+</div>
+
+
+
+
+<script>
+
+let target={};
+let score=0;
+let streak=0;
+let time=120;
+let level=1;
+
+
+function newColor(){
+
+target={
+r:Math.floor(Math.random()*256),
+g:Math.floor(Math.random()*256),
+b:Math.floor(Math.random()*256)
+};
+
+document.getElementById("target").style.background=
+`rgb(${target.r},${target.g},${target.b})`;
+
+}
+
+
+function update(){
+
+let r=document.getElementById("r").value;
+let g=document.getElementById("g").value;
+let b=document.getElementById("b").value;
+
+
+document.getElementById("player").style.background=
+`rgb(${r},${g},${b})`;
+
+}
+
+
+function checkColor(){
+
+let r=+document.getElementById("r").value;
+let g=+document.getElementById("g").value;
+let b=+document.getElementById("b").value;
+
+
+let difference=
+Math.abs(r-target.r)+
+Math.abs(g-target.g)+
+Math.abs(b-target.b);
+
+
+let accuracy=
+Math.max(0,100-Math.floor(difference/7));
+
+
+score+=accuracy;
+document.getElementById("score").innerHTML=score;
+
+
+if(accuracy>=90){
+
+streak++;
+
+}else{
+
+streak=0;
+
+}
+
+
+document.getElementById("streak").innerHTML=streak;
+
+
+document.getElementById("result").innerHTML=
+accuracy+"% Match!";
+
+
+newColor();
+
+}
+
+
+
+setInterval(()=>{
+
+if(time>0){
+
+time--;
+
+document.getElementById("time").innerHTML=time;
+
+}else{
+
+alert("Game Over! Score: "+score);
+
+location.reload();
+
+}
+
+},1000);
+
+
+
+document.querySelectorAll("input")
+.forEach(x=>x.oninput=update);
+
+
+
+newColor();
+
+update();
+
+</script>
+
+</body>
+</html>

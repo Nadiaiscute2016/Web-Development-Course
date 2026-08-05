@@ -1,0 +1,459 @@
+*{
+    box-sizing:border-box;
+    font-family:"Poppins",Arial,sans-serif;
+}
+
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    background:
+    radial-gradient(circle at top,#30005f,#05000c);
+
+    color:white;
+
+    text-align:center;
+
+}
+
+
+
+
+
+header{
+
+    padding:35px;
+
+    background:
+    linear-gradient(135deg,#ff0080,#7000ff);
+
+    box-shadow:
+    0 0 40px #ff0080;
+
+}
+
+
+
+header h1{
+
+    margin:0;
+
+    font-size:45px;
+
+}
+
+
+
+
+
+section{
+
+    padding:30px;
+
+}
+
+
+
+
+
+h2{
+
+    color:#00eaff;
+
+    text-shadow:
+    0 0 15px #00eaff;
+
+}
+
+
+
+
+
+
+
+/* BUTTONS */
+
+
+button{
+
+    background:#17002e;
+
+    color:white;
+
+    border:2px solid #00eaff;
+
+    padding:15px 25px;
+
+    margin:8px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    transition:.25s;
+
+}
+
+
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    background:#320064;
+
+    box-shadow:
+    0 0 25px #00eaff;
+
+}
+
+
+
+
+
+
+/* GARAGE */
+
+
+.car-selection,
+.track-selection{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    max-width:1000px;
+
+    margin:25px auto;
+
+}
+
+
+
+
+.car-selection button{
+
+    height:130px;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.car-selection button.selected{
+
+    border-color:#ff0080;
+
+    box-shadow:
+    0 0 30px #ff0080;
+
+}
+
+
+
+
+
+#weatherChoice{
+
+    margin:20px;
+
+}
+
+
+
+
+
+
+/* GAME HUD */
+
+
+.hud{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+
+.hud div{
+
+    background:#130025;
+
+    border:2px solid #00eaff;
+
+    padding:15px 30px;
+
+    border-radius:20px;
+
+    font-size:20px;
+
+}
+
+
+
+
+
+.race-info{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    margin:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+
+.race-info div{
+
+    background:#22003d;
+
+    padding:10px 20px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+
+
+/* CANVAS */
+
+
+#raceCanvas{
+
+    background:#111;
+
+    border-radius:30px;
+
+    border:5px solid #00eaff;
+
+    box-shadow:
+
+    0 0 40px #00eaff;
+
+}
+
+
+
+
+
+
+
+/* NITRO */
+
+
+#nitroEffect{
+
+    position:absolute;
+
+    font-size:70px;
+
+    opacity:0;
+
+    animation:nitro 0.5s infinite alternate;
+
+}
+
+
+
+
+
+@keyframes nitro{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+
+    to{
+
+        transform:scale(1.3);
+
+    }
+
+}
+
+
+
+
+
+
+/* CONTROLS */
+
+
+.controls{
+
+    margin:25px;
+
+}
+
+
+
+.controls button{
+
+    width:90px;
+
+    height:60px;
+
+    font-size:30px;
+
+}
+
+
+
+
+
+
+/* CHAMPIONSHIP */
+
+
+#championship{
+
+    max-width:1000px;
+
+    margin:auto;
+
+}
+
+
+
+
+
+.race-card{
+
+    display:inline-block;
+
+    width:260px;
+
+    padding:25px;
+
+    margin:12px;
+
+    background:#17002e;
+
+    border:2px solid #ff0080;
+
+    border-radius:25px;
+
+    font-size:20px;
+
+}
+
+
+
+.locked{
+
+    opacity:.5;
+
+}
+
+
+
+
+
+
+/* NOTIFICATION */
+
+
+#notification{
+
+    position:fixed;
+
+    top:90px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#130025;
+
+    border:2px solid #00eaff;
+
+    padding:15px 30px;
+
+    border-radius:25px;
+
+    opacity:0;
+
+    transition:.3s;
+
+    z-index:100;
+
+}
+
+
+
+#notification.show{
+
+    opacity:1;
+
+}
+
+
+
+
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+
+
+
+@media(max-width:600px){
+
+
+header h1{
+
+    font-size:32px;
+
+}
+
+
+#raceCanvas{
+
+    width:95%;
+
+    height:auto;
+
+}
+
+
+}
