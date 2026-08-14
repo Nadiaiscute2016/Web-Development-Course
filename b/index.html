@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glam Rush 💄</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  background: linear-gradient(135deg, #fff0f6, #ffe0ec, #f7e9ff);
+  color: #4d3040;
+  min-height: 100vh;
+}
+
+/* ================= TOP BAR ================= */
+
+.topbar {
+  background: rgba(255,255,255,.94);
+  padding: 14px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(100,50,80,.12);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: #e94f91;
+}
+
+.stats {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  font-weight: 700;
+}
+
+.stat {
+  background: #fff4f8;
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+#timerBox {
+  min-width: 100px;
+  text-align: center;
+}
+
+.timerDanger {
+  color: #e53935;
+  animation: pulse .6s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* ================= ORDER ================= */
+
+.orderPanel {
+  width: min(1100px, 94%);
+  margin: 20px auto 12px;
+  background: white;
+  border-radius: 24px;
+  padding: 18px 22px;
+  box-shadow: 0 8px 30px rgba(100,50,80,.12);
+}
+
+.orderTitle {
+  text-align: center;
+  color: #e94f91;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.customerName {
+  text-align: center;
+  font-size: 23px;
+  font-weight: 800;
+  margin: 3px 0 10px;
+}
+
+.requestGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.request {
+  background: #fff5f9;
+  border-radius: 14px;
+  padding: 9px 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.request span {
+  display: block;
+  font-size: 21px;
+}
+
+/* ================= GAME ================= */
+
+.game {
+  width: min(1100px, 94%);
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 18px;
+}
+
+/* ================= CHARACTER ================= */
+
+.characterArea {
+  background: linear-gradient(180deg,#fff,#fff3f8);
+  border-radius: 28px;
+  min-height: 580px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(100,50,80,.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mirror {
+  position: absolute;
+  width: 84%;
+  height: 92%;
+  border: 12px solid #f4bdd4;
+  border-radius: 48% 48% 35% 35%;
+  background: linear-gradient(180deg,#eaf8ff,#fff);
+  box-shadow: inset 0 0 30px rgba(255,255,255,.9);
+}
+
+.character {
+  position: relative;
+  width: 270px;
+  height: 470px;
+  z-index: 2;
+}
+
+/* neck */
+
+.neck {
+  position: absolute;
+  width: 75px;
+  height: 95px;
+  background: #f1b894;
+  left: 98px;
+  top: 315px;
+  border-radius: 20px;
+}
+
+/* body */
+
+.body {
+  position: absolute;
+  width: 210px;
+  height: 150px;
+  background: #f48fb1;
+  left: 30px;
+  top: 375px;
+  border-radius: 100px 100px 30px 30px;
+}
+
+.shirtDecoration {
+  position:absolute;
+  width:80px;
+  height:20px;
+  background:#ffd1e2;
+  border-radius:20px;
+  top:35px;
+  left:65px;
+}
+
+/* ears */
+
+.ear {
+  position: absolute;
+  width: 42px;
+  height: 60px;
+  background: #f1b894;
+  top: 172px;
+  border-radius: 50%;
+}
+
+.ear.left { left: 24px; }
+.ear.right { right: 24px; }
+
+/* face */
+
+.face {
+  position: absolute;
+  width: 190px;
+  height: 220px;
+  background: #f1b894;
+  left: 40px;
+  top: 125px;
+  border-radius: 48% 48% 45% 45%;
+  z-index: 4;
+}
+
+/* hair */
+
+.hairBack {
+  position: absolute;
+  width: 225px;
+  height: 300px;
+  left: 22px;
+  top: 80px;
+  border-radius: 48% 48% 35% 35%;
+  z-index: 1;
+}
+
+.hairFront {
+  position: absolute;
+  width: 210px;
+  height: 125px;
+  left: 30px;
+  top: 80px;
+  border-radius: 55% 55% 25% 25%;
+  z-index: 6;
+}
+
+.bangs {
+  position:absolute;
+  width:170px;
+  height:70px;
+  left:50px;
+  top:125px;
+  z-index:7;
+  border-radius:0 0 50% 50%;
+}
+
+/* eyes */
+
+.eye {
+  position: absolute;
+  width: 42px;
+  height: 24px;
+  top: 207px;
+  z-index: 8;
+}
+
+.eye.left { left: 70px; }
+.eye.right { right: 70px; }
+
+.eyeWhite {
+  position:absolute;
+  width:34px;
+  height:18px;
+  background:white;
+  border-radius:50%;
+  left:4px;
+}
+
+.pupil {
+  position:absolute;
+  width:12px;
+  height:12px;
+  background:#3b2530;
+  border-radius:50%;
+  left:15px;
+  top:3px;
+}
+
+.lash {
+  position:absolute;
+  width:45px;
+  height:15px;
+  border-top:4px solid #3b2530;
+  border-radius:50%;
+  top:-3px;
+  left:0;
+}
+
+/* eyeshadow */
+
+.eyeshadow {
+  position:absolute;
+  width:48px;
+  height:20px;
+  border-radius:50%;
+  top:193px;
+  z-index:7;
+  opacity:.8;
+}
+
+.eyeshadow.left { left:66px; }
+.eyeshadow.right { right:66px; }
+
+/* nose */
+
+.nose {
+  position:absolute;
+  width:10px;
+  height:25px;
+  border-right:2px solid rgba(130,70,50,.35);
+  border-radius:50%;
+  left:90px;
+  top:232px;
+  z-index:8;
+}
+
+/* blush */
+
+.blush {
+  position:absolute;
+  width:42px;
+  height:25px;
+  border-radius:50%;
+  top:260px;
+  z-index:7;
+  opacity:.65;
+}
+
+.blush.left { left:50px; }
+.blush.right { right:50px; }
+
+/* lips */
+
+.lips {
+  position:absolute;
+  width:48px;
+  height:27px;
+  left:71px;
+  top:275px;
+  z-index:9;
+  border-radius:50%;
+}
+
+.lips:before,
+.lips:after {
+  content:"";
+  position:absolute;
+  width:28px;
+  height:17px;
+  top:5px;
+  background:inherit;
+}
+
+.lips:before {
+  left:0;
+  border-radius:100% 0 100% 80%;
+}
+
+.lips:after {
+  right:0;
+  border-radius:0 100% 80% 100%;
+}
+
+/* earrings */
+
+.earring {
+  position:absolute;
+  width:15px;
+  height:22px;
+  border-radius:50%;
+  top:220px;
+  z-index:9;
+}
+
+.earring.left { left:27px; }
+.earring.right { right:27px; }
+
+/* nails preview */
+
+.nailsPreview {
+  position:absolute;
+  bottom:15px;
+  right:18px;
+  z-index:10;
+  display:flex;
+  gap:3px;
+}
+
+.nail {
+  width:14px;
+  height:22px;
+  border-radius:8px 8px 4px 4px;
+}
+
+/* ================= CONTROLS ================= */
+
+.controls {
+  background:white;
+  border-radius:28px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(100,50,80,.12);
+  max-height:580px;
+  overflow-y:auto;
+}
+
+.section {
+  margin-bottom:18px;
+}
+
+.sectionTitle {
+  font-size:15px;
+  font-weight:800;
+  margin-bottom:9px;
+  color:#713e56;
+}
+
+.options {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.option {
+  border:2px solid #f3d4e1;
+  background:#fff8fb;
+  border-radius:13px;
+  padding:8px 10px;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:12px;
+  font-weight:600;
+  transition:.15s;
+  position:relative;
+}
+
+.option:hover {
+  transform:translateY(-2px);
+  border-color:#e94f91;
+}
+
+.option.selected {
+  border-color:#e94f91;
+  background:#ffe0ed;
+  box-shadow:0 0 0 3px rgba(233,79,145,.12);
+}
+
+.option.locked {
+  opacity:.48;
+}
+
+.option.locked:after {
+  content:"🔒";
+  margin-left:4px;
+}
+
+/* ================= BUTTON ================= */
+
+.finishBtn {
+  width:100%;
+  border:0;
+  background:linear-gradient(135deg,#e94f91,#c83c78);
+  color:white;
+  padding:15px;
+  border-radius:17px;
+  font-family:inherit;
+  font-size:17px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 7px 15px rgba(201,60,120,.25);
+  margin-top:5px;
+}
+
+.finishBtn:hover {
+  transform:translateY(-2px);
+}
+
+.resetBtn {
+  width:100%;
+  margin-top:8px;
+  padding:9px;
+  border:0;
+  border-radius:12px;
+  background:#f5edf1;
+  color:#80566a;
+  cursor:pointer;
+  font-family:inherit;
+}
+
+/* ================= HEARTS ================= */
+
+.happiness {
+  text-align:center;
+  margin:5px 0 13px;
+}
+
+.heart {
+  font-size:25px;
+  margin:0 2px;
+}
+
+.emptyHeart {
+  filter:grayscale(1);
+  opacity:.35;
+}
+
+/* ================= MODAL ================= */
+
+.overlay {
+  position:fixed;
+  inset:0;
+  background:rgba(55,20,40,.55);
+  z-index:100;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.modal {
+  width:min(430px,95%);
+  background:white;
+  border-radius:28px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+  animation:pop .25s ease;
+}
+
+@keyframes pop {
+  from { transform:scale(.75); opacity:0; }
+  to { transform:scale(1); opacity:1; }
+}
+
+.modalEmoji {
+  font-size:65px;
+}
+
+.modal h2 {
+  font-size:27px;
+  margin:5px 0;
+}
+
+.modal p {
+  color:#765666;
+  margin-bottom:18px;
+}
+
+.modalBtn {
+  border:0;
+  background:#e94f91;
+  color:white;
+  padding:13px 28px;
+  border-radius:14px;
+  font-family:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+
+/* ================= CUSTOMER ================= */
+
+.customerBubble {
+  position:absolute;
+  top:20px;
+  left:20px;
+  right:20px;
+  z-index:12;
+  background:white;
+  border-radius:18px;
+  padding:10px 15px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  font-size:12px;
+  font-weight:600;
+}
+
+.customerBubble strong {
+  color:#e94f91;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:800px) {
+  .game {
+    grid-template-columns:1fr;
+  }
+
+  .characterArea {
+    min-height:520px;
+  }
+
+  .requestGrid {
+    grid-template-columns:repeat(3,1fr);
+  }
+
+  .controls {
+    max-height:none;
+  }
+
+  .stats {
+    gap:5px;
+    font-size:11px;
+  }
+
+  .logo {
+    font-size:18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="logo">💄 Glam Rush</div>
+
+  <div class="stats">
+    <div class="stat">🪙 <span id="coins">100</span></div>
+    <div class="stat">🏆 <span id="score">0</span></div>
+    <div class="stat">🔥 <span id="streak">0</span></div>
+    <div class="stat" id="timerBox">⏱️ <span id="timer">60</span></div>
+  </div>
+</header>
+
+<!-- ORDER -->
+<section class="orderPanel">
+
+  <div class="orderTitle">CUSTOMER REQUEST</div>
+
+  <div class="customerName" id="customerName">
+    Welcome!
+  </div>
+
+  <div class="happiness">
+    <span class="heart" id="heart1">❤️</span>
+    <span class="heart" id="heart2">❤️</span>
+    <span class="heart" id="heart3">❤️</span>
+  </div>
+
+  <div class="requestGrid">
+    <div class="request">
+      <span>💋</span>
+      <div id="requestLip">Pink</div>
+    </div>
+
+    <div class="request">
+      <span>👁️</span>
+      <div id="requestEye">Gold</div>
+    </div>
+
+    <div class="request">
+      <span>🌸</span>
+      <div id="requestBlush">Rose</div>
+    </div>
+
+    <div class="request">
+      <span>💅</span>
+      <div id="requestNail">Pink</div>
+    </div>
+
+    <div class="request">
+      <span>✨</span>
+      <div id="requestStyle">Classic</div>
+    </div>
+
+    <div class="request">
+      <span>💇</span>
+      <div id="requestHair">Brown</div>
+    </div>
+  </div>
+
+</section>
+
+<main class="game">
+
+  <!-- CHARACTER -->
+  <section class="characterArea">
+
+    <div class="customerBubble">
+      💬 "<strong id="customerQuote">I want something pretty!</strong>"
+    </div>
+
+    <div class="mirror"></div>
+
+    <div class="character">
+
+      <div class="hairBack" id="hairBack"></div>
+
+      <div class="neck"></div>
+
+      <div class="body">
+        <div class="shirtDecoration"></div>
+      </div>
+
+      <div class="ear left"></div>
+      <div class="ear right"></div>
+
+      <div class="face"></div>
+
+      <div class="hairFront" id="hairFront"></div>
+      <div class="bangs" id="bangs"></div>
+
+      <div class="eyeshadow left" id="shadowLeft"></div>
+      <div class="eyeshadow right" id="shadowRight"></div>
+
+      <div class="eye left">
+        <div class="eyeWhite"></div>
+        <div class="pupil"></div>
+        <div class="lash"></div>
+      </div>
+
+      <div class="eye right">
+        <div class="eyeWhite"></div>
+        <div class="pupil"></div>
+        <div class="lash"></div>
+      </div>
+
+      <div class="nose"></div>
+
+      <div class="blush left" id="blushLeft"></div>
+      <div class="blush right" id="blushRight"></div>
+
+      <div class="lips" id="lips"></div>
+
+      <div class="earring left" id="earringLeft"></div>
+      <div class="earring right" id="earringRight"></div>
+
+      <div class="nailsPreview" id="nailsPreview">
+        <div class="nail"></div>
+        <div class="nail"></div>
+        <div class="nail"></div>
+        <div class="nail"></div>
+        <div class="nail"></div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls">
+
+    <div class="section">
+      <div class="sectionTitle">💋 Lipstick</div>
+      <div class="options" id="lipOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">👁️ Eyeshadow</div>
+      <div class="options" id="eyeOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">🌸 Blush</div>
+      <div class="options" id="blushOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">💅 Nail Color</div>
+      <div class="options" id="nailOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">✨ Nail Style</div>
+      <div class="options" id="nailStyleOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">💇 Hair Color</div>
+      <div class="options" id="hairOptions"></div>
+    </div>
+
+    <div class="section">
+      <div class="sectionTitle">💇 Hairstyle</div>
+      <div class="options" id="hairStyleOptions"></div>
+    </div>
+
+    <button class="finishBtn" onclick="finishOrder()">
+      ✅ Finish Order
+    </button>
+
+    <button class="resetBtn" onclick="resetLook()">
+      ↩️ Reset Look
+    </button>
+
+  </section>
+
+</main>
+
+<!-- RESULT MODAL -->
+<div class="overlay" id="resultOverlay">
+
+  <div class="modal">
+
+    <div class="modalEmoji" id="modalEmoji">🎉</div>
+
+    <h2 id="modalTitle">Perfect!</h2>
+
+    <p id="modalText">
+      The customer loved your makeover!
+    </p>
+
+    <button class="modalBtn" id="modalButton" onclick="nextCustomer()">
+      Next Customer ➡️
+    </button>
+
+  </div>
+
+</div>
+
+<script>
+
+/* =========================================================
+   DATA
+========================================================= */
+
+const cosmetics = {
+
+  lipstick: [
+    {id:"pink", name:"Pink", color:"#f05a91", cost:0},
+    {id:"red", name:"Ruby Red", color:"#d9274b", cost:0},
+    {id:"coral", name:"Coral", color:"#ff6f61", cost:40},
+    {id:"berry", name:"Berry", color:"#9b315d", cost:70},
+    {id:"plum", name:"Plum", color:"#71365f", cost:100}
+  ],
+
+  eyeshadow: [
+    {id:"gold", name:"Gold", color:"#e8b84a", cost:0},
+    {id:"pink", name:"Rose Pink", color:"#e879a5", cost:0},
+    {id:"purple", name:"Purple", color:"#9b72c4", cost:50},
+    {id:"blue", name:"Ocean Blue", color:"#68a8d8", cost:80},
+    {id:"silver", name:"Silver", color:"#aab4c5", cost:120}
+  ],
+
+  blush: [
+    {id:"rose", name:"Rose", color:"#ef829d", cost:0},
+    {id:"peach", name:"Peach", color:"#f5a078", cost:0},
+    {id:"berry", name:"Berry", color:"#d65c79", cost:50},
+    {id:"coral", name:"Coral Glow", color:"#ff806c", cost:80}
+  ],
+
+  nails: [
+    {id:"pink", name:"Pink", color:"#f58aaa", cost:0},
+    {id:"red", name:"Red", color:"#d83250", cost:0},
+    {id:"white", name:"Pearl", color:"#f8edf3", cost:40},
+    {id:"purple", name:"Lavender", color:"#aa7cc4", cost:60},
+    {id:"blue", name:"Sky Blue", color:"#73b9db", cost:90},
+    {id:"gold", name:"Golden", color:"#d8a63d", cost:120}
+  ],
+
+  nailStyles: [
+    {id:"classic", name:"Classic", cost:0},
+    {id:"square", name:"Square", cost:30},
+    {id:"almond", name:"Almond", cost:60},
+    {id:"star", name:"⭐ Star", cost:100}
+  ],
+
+  hair: [
+    {id:"brown", name:"Brown", color:"#6b3d2c", cost:0},
+    {id:"black", name:"Black", color:"#292329", cost:0},
+    {id:"blonde", name:"Blonde", color:"#e6b85c", cost:50},
+    {id:"pink", name:"Pink", color:"#ed77a9", cost:80},
+    {id:"purple", name:"Purple", color:"#8257a8", cost:110},
+    {id:"blue", name:"Blue", color:"#548dbb", cost:150}
+  ],
+
+  hairStyles: [
+    {id:"long", name:"Long", cost:0},
+    {id:"bob", name:"Bob", cost:50},
+    {id:"ponytail", name:"Ponytail", cost:80},
+    {id:"curly", name:"Curly", cost:110},
+    {id:"princess", name:"Princess", cost:150}
+  ]
+};
+
+
+/* =========================================================
+   GAME STATE
+========================================================= */
+
+let game = JSON.parse(localStorage.getItem("glamRushSave")) || {
+
+  coins:100,
+  score:0,
+  streak:0,
+  misses:0,
+
+  unlocked: {
+    pink:true,
+    red:true,
+    gold:true,
+    rose:true,
+    peach:true,
+
+    nailPink:true,
+    nailRed:true,
+
+    classic:true,
+
+    brown:true,
+    black:true,
+
+    long:true
+  }
+
+};
+
+let currentCustomer = null;
+
+let selected = {
+  lipstick:"pink",
+  eyeshadow:"gold",
+  blush:"rose",
+  nails:"pink",
+  nailStyle:"classic",
+  hair:"brown",
+  hairStyle:"long"
+};
+
+let timer = 60;
+let timerInterval;
+
+
+/* =========================================================
+   CUSTOMERS
+========================================================= */
+
+const customers = [
+  {
+    name:"Sofia",
+    quote:"I want something soft and pretty!",
+    lip:"pink",
+    eye:"gold",
+    blush:"rose",
+    nail:"pink",
+    nailStyle:"classic",
+    hair:"brown",
+    hairStyle:"long"
+  },
+
+  {
+    name:"Maya",
+    quote:"Give me a bold red-carpet look!",
+    lip:"red",
+    eye:"purple",
+    blush:"berry",
+    nail:"red",
+    nailStyle:"almond",
+    hair:"black",
+    hairStyle:"bob"
+  },
+
+  {
+    name:"Lily",
+    quote:"Can you make me look like a princess?",
+    lip:"coral",
+    eye:"gold",
+    blush:"peach",
+    nail:"white",
+    nailStyle:"star",
+    hair:"blonde",
+    hairStyle:"princess"
+  },
+
+  {
+    name:"Amara",
+    quote:"I want something colorful!",
+    lip:"berry",
+    eye:"blue",
+    blush:"coral",
+    nail:"blue",
+    nailStyle:"square",
+    hair:"pink",
+    hairStyle:"curly"
+  },
+
+  {
+    name:"Chloe",
+    quote:"Make it elegant and mysterious.",
+    lip:"plum",
+    eye:"silver",
+    blush:"berry",
+    nail:"purple",
+    nailStyle:"almond",
+    hair:"purple",
+    hairStyle:"bob"
+  },
+
+  {
+    name:"Zara",
+    quote:"I want a glamorous golden look!",
+    lip:"coral",
+    eye:"gold",
+    blush:"peach",
+    nail:"gold",
+    nailStyle:"star",
+    hair:"blonde",
+    hairStyle:"ponytail"
+  },
+
+  {
+    name:"Nia",
+    quote:"Surprise me with a cool ocean look!",
+    lip:"pink",
+    eye:"blue",
+    blush:"peach",
+    nail:"blue",
+    nailStyle:"square",
+    hair:"blue",
+    hairStyle:"long"
+  }
+];
+
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function saveGame() {
+  localStorage.setItem("glamRushSave", JSON.stringify(game));
+}
+
+
+/* =========================================================
+   UI CREATION
+========================================================= */
+
+function createOptions(type, containerId, unlockPrefix="") {
+
+  const container = document.getElementById(containerId);
+  container.innerHTML="";
+
+  cosmetics[type].forEach(item => {
+
+    let unlocked = isUnlocked(type,item.id);
+
+    const button = document.createElement("button");
+
+    button.className = "option";
+
+    if(!unlocked) {
+      button.classList.add("locked");
+    }
+
+    button.innerHTML =
+      item.name +
+      (item.cost > 0 && !unlocked ? ` · ${item.cost}🪙` : "");
+
+    button.onclick = () => {
+
+      if(!unlocked) {
+        buyItem(type,item);
+        return;
+      }
+
+      selected[type] = item.id;
+
+      document
+        .querySelectorAll(`#${containerId} .option`)
+        .forEach(x=>x.classList.remove("selected"));
+
+      button.classList.add("selected");
+
+      updateCharacter();
+    };
+
+    container.appendChild(button);
+
+  });
+
+  highlightSelected(type,containerId);
+}
+
+
+function isUnlocked(type,id) {
+
+  if(type==="nails") return game.unlocked["nail"+capitalize(id)] === true;
+
+  return game.unlocked[id] === true;
+}
+
+
+function unlockKey(type,id) {
+
+  if(type==="nails") return "nail"+capitalize(id);
+
+  return id;
+}
+
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase()+str.slice(1);
+}
+
+
+function highlightSelected(type,containerId) {
+
+  const buttons =
+    document.querySelectorAll(`#${containerId} .option`);
+
+  buttons.forEach((button,i)=>{
+
+    if(cosmetics[type][i].id === selected[type]) {
+      button.classList.add("selected");
+    }
+
+  });
+}
+
+
+/* =========================================================
+   BUY
+========================================================= */
+
+function buyItem(type,item) {
+
+  if(game.coins < item.cost) {
+
+    showTemporaryMessage(
+      "Not enough coins!",
+      `You need ${item.cost} 🪙 to unlock ${item.name}.`
+    );
+
+    return;
+  }
+
+  game.coins -= item.cost;
+
+  game.unlocked[unlockKey(type,item.id)] = true;
+
+  saveGame();
+
+  updateStats();
+
+  createAllOptions();
+
+  showTemporaryMessage(
+    "✨ Unlocked!",
+    `${item.name} is now yours!`
+  );
+}
+
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+function createAllOptions() {
+
+  createOptions("lipstick","lipOptions");
+  createOptions("eyeshadow","eyeOptions");
+  createOptions("blush","blushOptions");
+  createOptions("nails","nailOptions");
+  createOptions("nailStyles","nailStyleOptions");
+  createOptions("hair","hairOptions");
+  createOptions("hairStyles","hairStyleOptions");
+
+}
+
+
+/* =========================================================
+   CHARACTER
+========================================================= */
+
+function updateCharacter() {
+
+  const lip =
+    cosmetics.lipstick.find(x=>x.id===selected.lipstick);
+
+  const eye =
+    cosmetics.eyeshadow.find(x=>x.id===selected.eyeshadow);
+
+  const blush =
+    cosmetics.blush.find(x=>x.id===selected.blush);
+
+  const nail =
+    cosmetics.nails.find(x=>x.id===selected.nails);
+
+  const hair =
+    cosmetics.hair.find(x=>x.id===selected.hair);
+
+  const nailStyle =
+    cosmetics.nailStyles.find(x=>x.id===selected.nailStyle);
+
+  /* lipstick */
+
+  document.getElementById("lips").style.background = lip.color;
+
+  /* eyeshadow */
+
+  document.getElementById("shadowLeft").style.background = eye.color;
+  document.getElementById("shadowRight").style.background = eye.color;
+
+  /* blush */
+
+  document.getElementById("blushLeft").style.background = blush.color;
+  document.getElementById("blushRight").style.background = blush.color;
+
+  /* hair */
+
+  document.getElementById("hairBack").style.background = hair.color;
+  document.getElementById("hairFront").style.background = hair.color;
+  document.getElementById("bangs").style.background = hair.color;
+
+  /* hairstyle */
+
+  applyHairStyle();
+
+  /* earrings */
+
+  document.getElementById("earringLeft").style.background = nail.color;
+  document.getElementById("earringRight").style.background = nail.color;
+
+  /* nails */
+
+  const nails = document.querySelectorAll(".nail");
+
+  nails.forEach(n=>{
+    n.style.background=nail.color;
+
+    if(nailStyle.id==="square") {
+      n.style.borderRadius="3px";
+    }
+    else if(nailStyle.id==="almond") {
+      n.style.borderRadius="50%";
+    }
+    else if(nailStyle.id==="star") {
+      n.innerHTML="★";
+      n.style.color="#fff";
+      n.style.textAlign="center";
+      n.style.fontSize="10px";
+      n.style.paddingTop="4px";
+    }
+    else {
+      n.innerHTML="";
+      n.style.borderRadius="8px 8px 4px 4px";
+    }
+  });
+}
+
+
+function applyHairStyle() {
+
+  const back = document.getElementById("hairBack");
+  const front = document.getElementById("hairFront");
+  const bangs = document.getElementById("bangs");
+
+  back.style.height="300px";
+  back.style.width="225px";
+  back.style.left="22px";
+  back.style.top="80px";
+
+  front.style.height="125px";
+  front.style.width="210px";
+  front.style.left="30px";
+  front.style.top="80px";
+
+  bangs.style.width="170px";
+  bangs.style.left="50px";
+  bangs.style.top="125px";
+
+  switch(selected.hairStyle) {
+
+    case "bob":
+      back.style.height="205px";
+      back.style.width="210px";
+      back.style.left="30px";
+      front.style.height="110px";
+      bangs.style.width="180px";
+      break;
+
+    case "ponytail":
+      back.style.height="250px";
+      back.style.width="180px";
+      back.style.left="45px";
+      back.style.borderRadius="45% 45% 20% 20%";
+      front.style.height="120px";
+      break;
+
+    case "curly":
+      back.style.height="320px";
+      back.style.width="240px";
+      back.style.left="15px";
+      back.style.borderRadius="50%";
+      front.style.height="135px";
+      bangs.style.width="185px";
+      break;
+
+    case "princess":
+      back.style.height="340px";
+      back.style.width="245px";
+      back.style.left="12px";
+      back.style.borderRadius="50% 50% 30% 30%";
+      front.style.height="135px";
+      bangs.style.width="185px";
+      break;
+
+    default:
+      break;
+  }
+}
+
+
+/* =========================================================
+   CUSTOMER
+========================================================= */
+
+function newCustomer() {
+
+  clearInterval(timerInterval);
+
+  currentCustomer =
+    customers[Math.floor(Math.random()*customers.length)];
+
+  document.getElementById("customerName").textContent =
+    currentCustomer.name;
+
+  document.getElementById("customerQuote").textContent =
+    currentCustomer.quote;
+
+  document.getElementById("requestLip").textContent =
+    findName("lipstick",currentCustomer.lip);
+
+  document.getElementById("requestEye").textContent =
+    findName("eyeshadow",currentCustomer.eye);
+
+  document.getElementById("requestBlush").textContent =
+    findName("blush",currentCustomer.blush);
+
+  document.getElementById("requestNail").textContent =
+    findName("nails",currentCustomer.nail);
+
+  document.getElementById("requestStyle").textContent =
+    findName("nailStyles",currentCustomer.nailStyle);
+
+  document.getElementById("requestHair").textContent =
+    findName("hair",currentCustomer.hair);
+
+  selected = {
+    lipstick:"pink",
+    eyeshadow:"gold",
+    blush:"rose",
+    nails:"pink",
+    nailStyle:"classic",
+    hair:"brown",
+    hairStyle:"long"
+  };
+
+  createAllOptions();
+  updateCharacter();
+
+  startTimer();
+
+}
+
+
+function findName(type,id) {
+
+  const item =
+    cosmetics[type].find(x=>x.id===id);
+
+  return item ? item.name : id;
+}
+
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+function startTimer() {
+
+  timer = Math.max(35,60-(game.score*2));
+
+  updateTimer();
+
+  timerInterval = setInterval(()=>{
+
+    timer--;
+
+    updateTimer();
+
+    if(timer<=0) {
+
+      clearInterval(timerInterval);
+
+      timeOut();
+
+    }
+
+  },1000);
+}
+
+
+function updateTimer() {
+
+  const timerElement =
+    document.getElementById("timer");
+
+  timerElement.textContent=timer;
+
+  const box =
+    document.getElementById("timerBox");
+
+  if(timer<=10)
+    box.classList.add("timerDanger");
+  else
+    box.classList.remove("timerDanger");
+}
+
+
+function timeOut() {
+
+  game.misses++;
+
+  game.streak=0;
+
+  saveGame();
+
+  updateStats();
+  updateHearts();
+
+  if(game.misses>=3) {
+
+    gameOver("⏰","Time ran out too many times!");
+
+  } else {
+
+    showResult(
+      "😰",
+      "Too Slow!",
+      "The customer got tired of waiting!",
+      "Next Customer ➡️",
+      nextCustomer
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   FINISH ORDER
+========================================================= */
+
+function finishOrder() {
+
+  clearInterval(timerInterval);
+
+  let matches=0;
+
+  if(selected.lipstick===currentCustomer.lip) matches++;
+  if(selected.eyeshadow===currentCustomer.eye) matches++;
+  if(selected.blush===currentCustomer.blush) matches++;
+  if(selected.nails===currentCustomer.nail) matches++;
+  if(selected.nailStyle===currentCustomer.nailStyle) matches++;
+  if(selected.hair===currentCustomer.hair) matches++;
+  if(selected.hairStyle===currentCustomer.hairStyle) matches++;
+
+  if(matches===7) {
+
+    perfectOrder();
+
+  } else {
+
+    wrongOrder(matches);
+
+  }
+
+}
+
+
+/* =========================================================
+   CORRECT
+========================================================= */
+
+function perfectOrder() {
+
+  const reward =
+    20 + Math.min(game.streak*5,50);
+
+  game.coins += reward;
+  game.score++;
+  game.streak++;
+
+  saveGame();
+
+  updateStats();
+
+  showResult(
+    "😍",
+    "PERFECT!",
+    `${currentCustomer.name} loved the makeover! +${reward} 🪙`,
+    "Next Customer ➡️",
+    nextCustomer
+  );
+
+}
+
+
+/* =========================================================
+   WRONG
+========================================================= */
+
+function wrongOrder(matches) {
+
+  game.misses++;
+  game.streak=0;
+
+  saveGame();
+
+  updateStats();
+  updateHearts();
+
+  if(game.misses>=3) {
+
+    gameOver(
+      "💥",
+      "Three customers were disappointed!"
+    );
+
+    return;
+  }
+
+  showResult(
+    "😭",
+    "Customer Disappointed!",
+    `You matched ${matches}/7 items. Be more careful next time!`,
+    "Try Next Customer ➡️",
+    nextCustomer
+  );
+
+}
+
+
+/* =========================================================
+   HEARTS
+========================================================= */
+
+function updateHearts() {
+
+  const hearts = [
+    document.getElementById("heart1"),
+    document.getElementById("heart2"),
+    document.getElementById("heart3")
+  ];
+
+  hearts.forEach((heart,index)=>{
+
+    if(index < 3-game.misses) {
+
+      heart.textContent="❤️";
+      heart.classList.remove("emptyHeart");
+
+    } else {
+
+      heart.textContent="🖤";
+      heart.classList.add("emptyHeart");
+
+    }
+
+  });
+
+}
+
+
+/* =========================================================
+   MODALS
+========================================================= */
+
+function showResult(emoji,title,text,buttonText,action) {
+
+  document.getElementById("modalEmoji").textContent=emoji;
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("modalText").textContent=text;
+
+  const button =
+    document.getElementById("modalButton");
+
+  button.textContent=buttonText;
+
+  button.onclick=action;
+
+  document.getElementById("resultOverlay").style.display="flex";
+
+}
+
+
+function showTemporaryMessage(title,text) {
+
+  document.getElementById("modalEmoji").textContent="✨";
+  document.getElementById("modalTitle").textContent=title;
+  document.getElementById("modalText").textContent=text;
+
+  const button =
+    document.getElementById("modalButton");
+
+  button.textContent="Got it!";
+  button.onclick=()=>{
+    document.getElementById("resultOverlay").style.display="none";
+  };
+
+  document.getElementById("resultOverlay").style.display="flex";
+
+}
+
+
+/* =========================================================
+   GAME OVER
+========================================================= */
+
+function gameOver(emoji,message) {
+
+  clearInterval(timerInterval);
+
+  document.getElementById("modalEmoji").textContent=emoji;
+
+  document.getElementById("modalTitle").textContent=
+    "GAME OVER 💥";
+
+  document.getElementById("modalText").innerHTML=
+    `${message}<br><br>
+     🏆 Score: <strong>${game.score}</strong><br>
+     🔥 Best streak this game: <strong>${game.streak}</strong><br>
+     🪙 Coins: <strong>${game.coins}</strong>`;
+
+  const button =
+    document.getElementById("modalButton");
+
+  button.textContent="Play Again 🔄";
+
+  button.onclick=restartGame;
+
+  document.getElementById("resultOverlay").style.display="flex";
+
+}
+
+
+/* =========================================================
+   NEXT CUSTOMER
+========================================================= */
+
+function nextCustomer() {
+
+  document.getElementById("resultOverlay").style.display="none";
+
+  newCustomer();
+
+}
+
+
+/* =========================================================
+   RESET LOOK
+========================================================= */
+
+function resetLook() {
+
+  selected = {
+    lipstick:"pink",
+    eyeshadow:"gold",
+    blush:"rose",
+    nails:"pink",
+    nailStyle:"classic",
+    hair:"brown",
+    hairStyle:"long"
+  };
+
+  createAllOptions();
+  updateCharacter();
+
+}
+
+
+/* =========================================================
+   RESTART
+========================================================= */
+
+function restartGame() {
+
+  game.score=0;
+  game.streak=0;
+  game.misses=0;
+
+  saveGame();
+
+  updateStats();
+  updateHearts();
+
+  document.getElementById("resultOverlay").style.display="none";
+
+  newCustomer();
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+function updateStats() {
+
+  document.getElementById("coins").textContent=game.coins;
+  document.getElementById("score").textContent=game.score;
+  document.getElementById("streak").textContent=game.streak;
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+createAllOptions();
+
+updateStats();
+
+updateHearts();
+
+newCustomer();
+
+</script>
+
+</body>
+</html>

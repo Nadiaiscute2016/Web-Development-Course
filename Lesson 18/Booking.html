@@ -1,130 +1,233 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
-<title>Booking - Sapphire Shores Resort 💎</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking | Sapphire Shores Resort 💎</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    background:#0b0b0b;
-    color:white;
-    font-family:"Playfair Display", serif;
-}
 
-h1, h2, h3 {
-    font-family:"Great Vibes", cursive;
+* {
+    box-sizing: border-box;
 }
 
 body {
-    background:#0b0b0b;
-    color:white;
-    font-family:"Great Vibes", cursive;
+    margin: 0;
+    background: #0b0b0b;
+    color: white;
+    font-family: "Playfair Display", serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Great Vibes", cursive;
 }
 
 .navbar {
-    background:#000;
-    border-bottom:2px solid #d4af37;
+    background: #000;
+    border-bottom: 2px solid #d4af37;
 }
 
 .navbar-brand,
 .nav-link {
-    color:#d4af37 !important;
-    font-weight:bold;
+    color: #d4af37 !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 7px;
+}
+
+.nav-link:hover {
+    color: #f5d76e !important;
+}
+
+.booking-hero {
+    background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
+        url("https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1400");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 90px 30px;
+    text-align: center;
+
+    border-radius: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.booking-hero h1 {
+    color: #d4af37;
+    font-size: 65px;
+}
+
+.booking-hero p {
+    font-size: 20px;
 }
 
 .booking-box {
-    background:#161616;
-    border:1px solid #d4af37;
-    border-radius:25px;
-    padding:40px;
-    box-shadow:0 5px 20px rgba(212,175,55,.2);
+    background: #161616;
+    border: 1px solid #d4af37;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 10px 35px rgba(212,175,55,.12);
 }
 
-h1,h2,h3 {
-    color:#d4af37;
-}
-
-.room-choice {
-    background:#111;
-    border:1px solid #d4af37;
-    border-radius:20px;
-    padding:25px;
-    margin-bottom:25px;
+.form-label {
+    color: #d4af37;
+    font-weight: bold;
 }
 
 .form-control,
 .form-select {
-    background:#222;
-    color:white;
-    border:1px solid #d4af37;
+    background: #0b0b0b;
+    color: white;
+    border: 1px solid #777;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: #111;
+    color: white;
+    border-color: #d4af37;
+    box-shadow: 0 0 8px rgba(212,175,55,.3);
 }
 
 .form-control::placeholder {
-    color:#aaa;
+    color: #aaa;
+}
+
+.form-select option {
+    background: #111;
+    color: white;
+}
+
+.section-title {
+    color: #d4af37;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.category-box {
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.category-box h3 {
+    color: #d4af37;
+    font-size: 30px;
 }
 
 .btn-gold {
-    background:#d4af37;
-    color:black;
-    font-weight:bold;
+    background: #d4af37;
+    color: #000;
+    border: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 10px;
 }
 
 .btn-gold:hover {
-    background:#f5d76e;
+    background: #f5d76e;
+    color: #000;
+}
+
+.btn-outline-gold {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    background: transparent;
+    font-weight: bold;
+}
+
+.btn-outline-gold:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+.price-display {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.selection-info {
+    background: #0b0b0b;
+    border: 1px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+.selection-info h3 {
+    color: #d4af37;
+}
+
+.total-box {
+    background: #000;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.total-box h3 {
+    color: #d4af37;
+    font-size: 32px;
+}
+
+.total-price {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.success-box {
+    display: none;
+    background: #101010;
+    border: 2px solid #d4af37;
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.success-box h2 {
+    color: #d4af37;
+    font-size: 45px;
 }
 
 footer {
-    background:#000;
-    color:#d4af37;
-    border-top:2px solid #d4af37;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-}
-label{
-    display:block;
-    margin-top:20px;
-    margin-bottom:8px;
-    color:#d4af37;
-    font-weight:bold;
+    background: #000;
+    color: #d4af37;
+    border-top: 2px solid #d4af37;
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
 }
 
-input,
-select,
-textarea{
-    width:100%;
-    padding:14px;
-    background:#1f1f1f;
-    color:white;
-    border:1px solid #d4af37;
-    border-radius:10px;
-    font-size:18px;
-    box-sizing:border-box;
-}
-
-input::placeholder,
-textarea::placeholder{
-    color:#bdbdbd;
-}
-
-input:focus,
-select:focus,
-textarea:focus{
-    outline:none;
-    border-color:#f5d76e;
-    box-shadow:0 0 8px rgba(212,175,55,.5);
-}
-body {
-    background:#0b0b0b;
-    color:white;
-    font-family:"Playfair Display", serif;
-}
-
-h1, h2, h3 {
-    font-family:"Great Vibes", cursive;
+.small-note {
+    color: #aaa;
+    font-size: 14px;
 }
 
 </style>
@@ -135,6 +238,10 @@ h1, h2, h3 {
 <body>
 
 
+<!-- =========================
+     NAVBAR
+========================= -->
+
 <nav class="navbar navbar-expand-lg">
 
 <div class="container">
@@ -143,7 +250,8 @@ h1, h2, h3 {
 Sapphire Shores Resort 💎
 </a>
 
-<button class="navbar-toggler bg-warning"
+<button
+class="navbar-toggler bg-warning"
 type="button"
 data-bs-toggle="collapse"
 data-bs-target="#navbarNav">
@@ -154,61 +262,33 @@ data-bs-target="#navbarNav">
 
 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-<a class="nav-link d-inline" href="Sapphire Shores Resort.html">
-🏠 Home
-</a>
+<a class="nav-link" href="Sapphire Shores Resort.html">🏠 Home</a>
 
-<a class="nav-link d-inline" href="About Us.html">
-ℹ️ About Us
-</a>
+<a class="nav-link" href="About Us.html">ℹ️ About Us</a>
 
-<a class="nav-link d-inline" href="Rooms.html">
-🛏️ Rooms
-</a>
+<a class="nav-link" href="Rooms.html">🛏️ Rooms</a>
 
-<a class="nav-link d-inline" href="Booking.html">
-📅 Booking
-</a>
+<a class="nav-link" href="Booking.html">📅 Booking</a>
 
-<a class="nav-link d-inline" href="The Golden Bite.html">
-🍽️ The Golden Bite
-</a>
+<a class="nav-link" href="The Golden Bite.html">🍽️ The Golden Bite</a>
 
-<a class="nav-link d-inline" href="Tours.html">
-🌴 Tours & Activities
-</a>
+<a class="nav-link" href="Tours.html">🌴 Tours</a>
 
-<a class="nav-link d-inline" href="Infinity Pool.html">
-🏊 Infinity Pool
-</a>
+<a class="nav-link" href="Infinity Pool.html">🏊 Pool</a>
 
-<a class="nav-link d-inline" href="Boutique.html">
-🛍️ Boutique
-</a>
+<a class="nav-link" href="Boutique.html">🛍️ Boutique</a>
 
-<a class="nav-link d-inline" href="VIP.html">
-👑 VIP Club
-</a>
+<a class="nav-link" href="VIP.html">👑 VIP Club</a>
 
-<a class="nav-link d-inline" href="AI Concierge.html">
-🤖 Lumi AI
-</a>
+<a class="nav-link" href="AI Concierge.html">🤖 Lumi AI</a>
 
-<a class="nav-link d-inline" href="Customer Reviews.html">
-⭐ Reviews
-</a>
+<a class="nav-link" href="Customer Reviews.html">⭐ Reviews</a>
 
-<a class="nav-link d-inline" href="Contact Us.html">
-📞 Contact
-</a>
+<a class="nav-link" href="Contact Us.html">📞 Contact</a>
 
-<a class="nav-link d-inline" href="More.html">
-➕ More
-</a>
+<a class="nav-link" href="Gallery.html">📸 Gallery</a>
 
-<a class="nav-link d-inline" href="Gallery.html">
-Gallery 📸
-</a>
+<a class="nav-link" href="More.html">➕ More</a>
 
 </div>
 
@@ -217,353 +297,154 @@ Gallery 📸
 </nav>
 
 
-</div>
-
-</div>
-
-</nav>
+<div class="container">
 
 
+<!-- =========================
+     HERO
+========================= -->
 
+<section class="booking-hero">
 
-<div class="container my-5">
+<h1>Reserve Your Sapphire Experience 💎</h1>
 
-<div class="booking-box">
-
-
-<h1 class="text-center">
-Reserve Your Luxury Stay 💎
-</h1>
-
-
-<p class="text-center">
-Choose your room and enter your details below.
+<p>
+Book your luxury room, thrilling adventure, relaxing experience,
+or unforgettable Sapphire Shores getaway.
 </p>
 
-
-<hr>
-
+</section>
 
 
-<h2>
-Available Rooms 🌊
+<!-- =========================
+     BOOKING FORM
+========================= -->
+
+<section class="booking-box">
+
+<h2 class="section-title">
+📅 Reservation Details
 </h2>
 
 
+<form id="bookingForm">
 
-<div class="room-choice">
 
-<h3>
-Sapphire Royal Suite 💎
-</h3>
+<!-- NAME -->
 
-<p>
-Elegant suite with ocean views, luxury furnishings,
-private lounge area, and premium room service.
-</p>
+<div class="mb-4">
 
-<h4>
-$1800 / Night
-</h4>
+<label for="name" class="form-label">
+👤 Guest Name
+</label>
 
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Sapphire Royal Suite 💎')">
-
-Select Room
-
-</button>
+<input
+id="name"
+type="text"
+class="form-control"
+placeholder="Enter your full name"
+required>
 
 </div>
 
 
+<!-- EMAIL -->
 
+<div class="mb-4">
 
-<div class="room-choice">
+<label for="email" class="form-label">
+📧 Email Address
+</label>
 
-<h3>
-Ocean Pearl Villa 🦪
-</h3>
-
-<p>
-A private beachfront villa with a personal pool,
-beautiful views, and peaceful surroundings.
-</p>
-
-<h4>
-$2500 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Ocean Pearl Villa 🦪')">
-
-Select Room
-
-</button>
+<input
+id="email"
+type="email"
+class="form-control"
+placeholder="Enter your email address"
+required>
 
 </div>
 
 
+<!-- PHONE -->
 
+<div class="mb-4">
 
-<div class="room-choice">
+<label for="phone" class="form-label">
+📱 Phone Number
+</label>
 
-<h3>
-Golden Sunset Suite 🌅
-</h3>
-
-<p>
-Enjoy stunning sunset views, a spacious bedroom,
-and a relaxing private balcony.
-</p>
-
-<h4>
-$1400 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Golden Sunset Suite 🌅')">
-
-Select Room
-
-</button>
+<input
+id="phone"
+type="tel"
+class="form-control"
+placeholder="Enter your phone number"
+required>
 
 </div>
 
 
+<!-- CATEGORY -->
 
+<div class="mb-4">
 
-<div class="room-choice">
+<label for="category" class="form-label">
+✨ What are you booking?
+</label>
 
-<h3>
-Crystal Lagoon Villa 🏝️
-</h3>
+<select id="category" class="form-select" required>
 
-<p>
-Luxury villa surrounded by tropical gardens,
-with a private pool and lagoon views.
-</p>
+<option value="">Choose a category</option>
 
-<h4>
-$2800 / Night
-</h4>
+<option value="room">🏨 Room / Suite</option>
 
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Crystal Lagoon Villa 🏝️')">
+<option value="water">🌊 Water Sports</option>
 
-Select Room
+<option value="land">🏝️ Land Adventures</option>
 
-</button>
+<option value="sightseeing">🌅 Sightseeing</option>
 
-</div>
+<option value="family">👨‍👩‍👧 Family Adventures</option>
 
+<option value="vip">👑 VIP Experiences</option>
 
+<option value="other">✨ Other Resort Experience</option>
 
-
-<div class="room-choice">
-
-<h3>
-Royal Sapphire Residence 👑
-</h3>
-
-<p>
-A grand luxury residence featuring multiple rooms,
-private dining, and VIP services.
-</p>
-
-<h4>
-$5000 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Royal Sapphire Residence 👑')">
-
-Select VIP Room
-
-</button>
+</select>
 
 </div>
 
 
+<!-- EXPERIENCE -->
 
+<div class="mb-4">
 
-<div class="room-choice">
-
-<h3>
-Palm Garden Suite 🌴
-</h3>
-
-<p>
-A peaceful tropical suite surrounded by gardens
-with a private outdoor relaxation area.
-</p>
-
-<h4>
-$1000 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Palm Garden Suite 🌴')">
-
-Select Room
-
-</button>
-
-</div>
-
-
-
-
-<div class="room-choice">
-
-<h3>
-Azure Sky Suite ☁️
-</h3>
-
-<p>
-Modern luxury suite with panoramic ocean views
-and a comfortable private lounge.
-</p>
-
-<h4>
-$1600 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Azure Sky Suite ☁️')">
-
-Select Room
-
-</button>
-
-</div>
-
-
-
-
-<div class="room-choice">
-
-<h3>
-Coral Paradise Villa 🪸
-</h3>
-
-<p>
-A tropical villa featuring beach access,
-luxury interiors, and private relaxation spaces.
-</p>
-
-<h4>
-$2200 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Coral Paradise Villa 🪸')">
-
-Select Room
-
-</button>
-
-</div>
-
-
-
-
-<div class="room-choice">
-
-<h3>
-Diamond Ocean Residence 💎🌊
-</h3>
-
-<p>
-Exclusive residence with premium ocean views,
-private dining, and elite services.
-</p>
-
-<h4>
-$4500 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Diamond Ocean Residence 💎🌊')">
-
-Select VIP Room
-
-</button>
-
-</div>
-
-
-
-
-<div class="room-choice">
-
-<h3>
-Moonlit Beach Villa 🌙🏝️
-</h3>
-
-<p>
-A romantic beachfront villa with evening ocean
-views and luxury amenities.
-</p>
-
-<h4>
-$3200 / Night
-</h4>
-
-<button type="button"
-class="btn btn-gold"
-onclick="selectRoom('Moonlit Beach Villa 🌙🏝️')">
-
-Select Room
-
-</button>
-
-</div>
-
-<h2 class="mt-5">
-Guest Information ✨
-</h2>
-
-
-<form>
-
-
-<label>🏨 Select Room</label>
+<label for="room" class="form-label">
+🏨 Select Room or Experience
+</label>
 
 <input
 id="room"
 type="text"
 list="rooms"
-placeholder="Type your room or experience"
+class="form-control"
+placeholder="Type or select your room / experience"
 required
+autocomplete="off"
 >
 
 <datalist id="rooms">
 
+<!-- ROOMS -->
+
 <option value="Sapphire Ocean Suite 🌊">
-
 <option value="Royal Coral Villa 🐚">
-
 <option value="Diamond Presidential Suite 👑">
-
 <option value="VIP Sapphire Penthouse 👑💎">
-
 <option value="Moonlight Honeymoon Suite 🌙">
-
 <option value="Cloud Nine Penthouse ☁️">
-
 <option value="Sapphire Royal Suite 💎">
-
 <option value="Ocean Pearl Villa 🦪">
-
 <option value="Golden Sunset Suite 🌅">
 <option value="Crystal Lagoon Villa 🏝️">
 <option value="Royal Sapphire Residence 👑">
@@ -572,255 +453,270 @@ required
 <option value="Coral Paradise Villa 🪸">
 <option value="Diamond Ocean Residence 💎🌊">
 <option value="Moonlit Beach Villa 🌙🏝️">
-<option value="Private Yacht Escape 🛥️">
-<option value="Luxury Safari 🦁">
+
+<!-- WATER -->
+
+<option value="Surfing Lessons 🏄">
+<option value="Parasailing 🪂">
+<option value="Snorkeling Safari 🐠">
+<option value="Kayaking Adventure 🛶">
+<option value="Paddleboarding 🏄">
+<option value="Private Jet Ski Adventure 🌊">
+<option value="Coral Reef Diving 🤿">
+<option value="Glass-Bottom Boat Tour 🛥️">
+<option value="Deep-Sea Fishing 🎣">
+
+<!-- LAND -->
+
+<option value="Zipline Adventure 🪂">
 <option value="Beach Horseback Riding 🐎">
-<option value="Royal Dining 🍽️">
+<option value="Mountain Hiking Expedition 🏞️">
+<option value="Island Cycling Tour 🚲">
+<option value="Outdoor Archery 🏹">
+<option value="Cliffside Adventure 🧗">
+<option value="Tropical Garden Tour 🌺">
+<option value="Hidden Island Expedition 🧭">
+
+<!-- SIGHTSEEING -->
+
+<option value="Coastal Sightseeing Tour 🏙️">
+<option value="Photography Safari 📸">
+<option value="Stargazing Cruise 🌌">
+<option value="Private Beach Picnic 🏖️">
+<option value="Mangrove Exploration 🌿">
+
+<!-- FAMILY -->
+
 <option value="Dolphin Discovery Tour 🐬">
-
 <option value="Treasure Island Explorer 🏝️">
-
 <option value="Marine Discovery Class 🐢">
 
+<!-- VIP -->
+
 <option value="Ocean Helicopter Tour 🚁">
-
-<option value="Private Jet Ski Adventure 🌊">
-
+<option value="Luxury Safari Expedition 🦁">
 <option value="Sapphire Yacht Cruise 🛥️">
-
-<option value="Coral Reef Diving 🐠">
-
 <option value="Sunset Island Escape 🌅">
+
+<!-- OTHER -->
+
+<option value="Private Yacht Escape 🛥️">
+<option value="Royal Dining 🍽️">
+<option value="Sapphire Spa Retreat ✨">
+<option value="Private Island Day 🏝️">
+<option value="Sky Adventure 🚁">
+<option value="Relaxing Massages 🧖">
+<option value="Island Adventure Tour 🚁">
+<option value="Luxury Spa 🧖">
+<option value="Events & Celebrations 🎉">
+<option value="Transportation 🚘">
+<option value="Kids' Corner 🧸">
+<option value="Special Offers 🎁">
+<option value="Sunset Viewing Deck 🌅">
+<option value="Fitness Center 🏋️">
+<option value="Photo Spots 📸">
+
 </datalist>
 
-<button type="button" class="btn btn-gold" onclick="checkRoom()">
-Continue
-</button>
-<script>
+</div>
 
-function checkRoom(){
 
-    let room = document.getElementById("room").value.trim();
+<!-- DATE -->
 
-    let available = [
+<div class="row">
 
-        "Sapphire Ocean Suite 🌊",
+<div class="col-md-6 mb-4">
 
-        "Royal Coral Villa 🐚",
-
-        "Diamond Presidential Suite 👑",
-
-        "VIP Sapphire Penthouse 👑💎",
-
-        "Moonlight Honeymoon Suite 🌙",
-
-        "Cloud Nine Penthouse ☁️",
-
-        "Sapphire Royal Suite 💎",
-
-        "Ocean Pearl Villa 🦪",
-
-        "Golden Sunset Suite 🌅",
-
-        "Crystal Lagoon Villa 🏝️",
-
-        "Royal Sapphire Residence 👑",
-
-        "Palm Garden Suite 🌴",
-
-        "Azure Sky Suite ☁️",
-
-        "Coral Paradise Villa 🪸",
-
-        "Diamond Ocean Residence 💎🌊",
-
-        "Moonlit Beach Villa 🌙🏝️",
-
-
-        "Private Yacht Escape 🛥️",
-
-        "Luxury Safari 🦁",
-
-        "Beach Horseback Riding 🐎",
-
-        "Royal Dining 🍽️",
-        "Dolphin Discovery Tour 🐬",
-        "Treasure Island Explorer 🏝️",
-        "Marine Discovery Class 🐢",
-        "Ocean Helicopter Tour 🚁",
-        "Private Jet Ski Adventure 🌊",
-        "Sapphire Yacht Cruise 🛥️",
-        "Coral Reef Diving 🐠",
-        "Sunset Island Escape 🌅",
-        "Sapphire Spa Retreat ✨",
-
-        "Private Island Day 🏝️",
-
-      "Sky Adventure 🚁",
-
-"Relaxing Massages 🧖",
-
-"Island Adventure Tour 🚁",
-
-"Luxury Spa 🧖",
-
-"Events & Celebrations 🎉",
-
-"Transportation 🚘",
-
-"Kids' Corner 🧸",
-
-"Special Offers 🎁",
-
-"Sunset Viewing Deck 🌅",
-
-"Fitness Center 🏋️",
-
-"Photo Spots 📸"
-
-    ];
-
-
-    if(available.includes(room)){
-
-        alert("✅ Great choice!\n\n" + room + " is available.\n\nWelcome to Sapphire Shores Resort 💎🌊");
-
-    }
-
-    else{
-
-        alert("❌ Sorry!\n\n'" + room + "' does not exist.\n\nPlease choose one of our available rooms or experiences.");
-
-        document.getElementById("room").focus();
-
-    }
-
-}
-
-
-
-function selectRoom(roomName){
-
-    document.getElementById("room").value = roomName;
-
-}
-
-
-
-function confirmBooking(){
-
-    let room = document.getElementById("room").value;
-
-    let name = document.getElementById("name").value;
-
-
-    if(room == ""){
-
-        alert("Please select a room first 💎");
-
-    }
-
-    else if(name == ""){
-
-        alert("Please enter your name ✨");
-
-    }
-
-    else{
-
-        alert("Thank you " + name + "! Your " + room + " reservation has been received.\n\nWelcome to Sapphire Shores Resort 💎🌊");
-
-    }
-
-}
-
-</script>
-
-</script>
-<label class="form-label">
-Full Name
-</label>
-<input id="name"
-class="form-control mb-3"
-placeholder="Enter your full name">
-
-
-
-<label class="form-label">
-Email Address
+<label for="checkin" class="form-label">
+📅 Check-in / Activity Date
 </label>
 
-<input id="email"
-type="email"
-class="form-control mb-3"
-placeholder="Enter your email">
-
-
-
-<label class="form-label">
-Check-in Date
-</label>
-
-<input id="checkin"
+<input
+id="checkin"
 type="date"
-class="form-control mb-3">
+class="form-control"
+required
+>
+
+</div>
 
 
+<div class="col-md-6 mb-4">
 
-<label class="form-label">
-Check-out Date
+<label for="checkout" class="form-label">
+📅 Check-out Date
 </label>
 
-<input id="checkout"
+<input
+id="checkout"
 type="date"
-class="form-control mb-3">
+class="form-control"
+>
+
+</div>
+
+</div>
 
 
+<!-- GUESTS -->
 
-<label class="form-label">
-Number of Guests
+<div class="mb-4">
+
+<label for="guests" class="form-label">
+👨‍👩‍👧 Number of Guests
 </label>
 
-<select class="form-select mb-3">
+<select id="guests" class="form-select" required>
 
-<option>1 Guest</option>
-<option>2 Guests</option>
-<option>3 Guests</option>
-<option>4 Guests</option>
-<option>5+ Guests</option>
+<option value="">Select number of guests</option>
+
+<option value="1">1 Guest</option>
+<option value="2">2 Guests</option>
+<option value="3">3 Guests</option>
+<option value="4">4 Guests</option>
+<option value="5">5 Guests</option>
+<option value="6">6 Guests</option>
+<option value="7">7 Guests</option>
+<option value="8">8 Guests</option>
+<option value="9">9 Guests</option>
+<option value="10">10 Guests</option>
 
 </select>
 
+</div>
 
 
+<!-- SPECIAL REQUEST -->
 
-<button type="button"
-class="btn btn-gold btn-lg"
-onclick="confirmBooking()">
+<div class="mb-4">
 
-Confirm Reservation ✨
+<label for="requests" class="form-label">
+✨ Special Requests
+</label>
+
+<textarea
+id="requests"
+class="form-control"
+rows="4"
+placeholder="Birthday, honeymoon, accessibility request, celebration, etc."
+></textarea>
+
+</div>
+
+
+<!-- SELECTION INFO -->
+
+<div id="selectionInfo" class="selection-info">
+
+<h3>💎 Your Selection</h3>
+
+<p id="selectionName"></p>
+
+<p id="selectionPrice"></p>
+
+</div>
+
+
+<!-- TOTAL -->
+
+<div class="total-box">
+
+<h3>Estimated Total</h3>
+
+<div class="total-price" id="totalPrice">
+$0
+</div>
+
+<p class="small-note">
+Final pricing and availability are confirmed by Sapphire Shores staff.
+</p>
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="text-center mt-4">
+
+<button
+type="button"
+class="btn btn-gold btn-lg me-2"
+onclick="checkBooking()">
+
+✨ Check Selection
 
 </button>
 
 
-<a href="Sapphire Shores Resort.html"
-class="btn btn-outline-light btn-lg">
+<button
+type="submit"
+class="btn btn-outline-gold btn-lg">
 
-Back Home
+📅 Confirm Reservation
 
-</a>
+</button>
 
+</div>
 
 </form>
 
 
-</div>
+<!-- SUCCESS -->
+
+<div id="successBox" class="success-box">
+
+<h2>🎉 Reservation Received!</h2>
+
+<p id="successMessage"></p>
+
+<p>
+Thank you for choosing
+<strong>Sapphire Shores Resort 💎🌊</strong>.
+</p>
+
+<a href="Sapphire Shores Resort.html" class="btn btn-gold">
+🏠 Back Home
+</a>
 
 </div>
 
 
+</section>
 
 
+<!-- =========================
+     BOOKING INFORMATION
+========================= -->
+
+<section class="my-5">
+
+<div class="category-box">
+
+<h3>🛡️ Important Booking Information</h3>
+
+<p>
+Your reservation request is submitted for review. A room or activity
+is not considered fully confirmed until Sapphire Shores Resort staff
+confirm availability.
+</p>
+
+<p>
+Some activities may have additional participation requirements,
+weather restrictions, age restrictions, or safety requirements.
+Please confirm these details with the resort before participating.
+</p>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -829,47 +725,1045 @@ Back Home
 </footer>
 
 
-
-
-
 <script>
 
-function selectRoom(roomName){
 
-document.getElementById("room").value = roomName;
+// =====================================================
+// SAPPHIRE SHORES BOOKING DATA
+// =====================================================
+
+const bookings = {
+
+    // =========================
+    // ROOMS
+    // =========================
+
+    "Sapphire Ocean Suite 🌊": {
+        category: "room",
+        price: 450,
+        unit: "night"
+    },
+
+    "Royal Coral Villa 🐚": {
+        category: "room",
+        price: 900,
+        unit: "night"
+    },
+
+    "Diamond Presidential Suite 👑": {
+        category: "room",
+        price: 2000,
+        unit: "night"
+    },
+
+    "VIP Sapphire Penthouse 👑💎": {
+        category: "room",
+        price: 2500,
+        unit: "night"
+    },
+
+    "Moonlight Honeymoon Suite 🌙": {
+        category: "room",
+        price: 1200,
+        unit: "night"
+    },
+
+    "Cloud Nine Penthouse ☁️": {
+        category: "room",
+        price: 1800,
+        unit: "night"
+    },
+
+    "Sapphire Royal Suite 💎": {
+        category: "room",
+        price: 1500,
+        unit: "night"
+    },
+
+    "Ocean Pearl Villa 🦪": {
+        category: "room",
+        price: 1100,
+        unit: "night"
+    },
+
+    "Golden Sunset Suite 🌅": {
+        category: "room",
+        price: 950,
+        unit: "night"
+    },
+
+    "Crystal Lagoon Villa 🏝️": {
+        category: "room",
+        price: 1300,
+        unit: "night"
+    },
+
+    "Royal Sapphire Residence 👑": {
+        category: "room",
+        price: 2200,
+        unit: "night"
+    },
+
+    "Palm Garden Suite 🌴": {
+        category: "room",
+        price: 700,
+        unit: "night"
+    },
+
+    "Azure Sky Suite ☁️": {
+        category: "room",
+        price: 850,
+        unit: "night"
+    },
+
+    "Coral Paradise Villa 🪸": {
+        category: "room",
+        price: 1400,
+        unit: "night"
+    },
+
+    "Diamond Ocean Residence 💎🌊": {
+        category: "room",
+        price: 2800,
+        unit: "night"
+    },
+
+    "Moonlit Beach Villa 🌙🏝️": {
+        category: "room",
+        price: 1600,
+        unit: "night"
+    },
+
+
+    // =========================
+    // WATER SPORTS
+    // =========================
+
+    "Surfing Lessons 🏄": {
+        category: "water",
+        price: 120,
+        unit: "person"
+    },
+
+    "Parasailing 🪂": {
+        category: "water",
+        price: 180,
+        unit: "person"
+    },
+
+    "Snorkeling Safari 🐠": {
+        category: "water",
+        price: 175,
+        unit: "person"
+    },
+
+    "Kayaking Adventure 🛶": {
+        category: "water",
+        price: 90,
+        unit: "person"
+    },
+
+    "Paddleboarding 🏄": {
+        category: "water",
+        price: 75,
+        unit: "person"
+    },
+
+    "Private Jet Ski Adventure 🌊": {
+        category: "water",
+        price: 300,
+        unit: "person"
+    },
+
+    "Coral Reef Diving 🤿": {
+        category: "water",
+        price: 500,
+        unit: "person"
+    },
+
+    "Glass-Bottom Boat Tour 🛥️": {
+        category: "water",
+        price: 140,
+        unit: "person"
+    },
+
+    "Deep-Sea Fishing 🎣": {
+        category: "water",
+        price: 350,
+        unit: "person"
+    },
+
+
+    // =========================
+    // LAND ADVENTURES
+    // =========================
+
+    "Zipline Adventure 🪂": {
+        category: "land",
+        price: 200,
+        unit: "person"
+    },
+
+    "Beach Horseback Riding 🐎": {
+        category: "land",
+        price: 150,
+        unit: "person"
+    },
+
+    "Mountain Hiking Expedition 🏞️": {
+        category: "land",
+        price: 180,
+        unit: "person"
+    },
+
+    "Island Cycling Tour 🚲": {
+        category: "land",
+        price: 80,
+        unit: "person"
+    },
+
+    "Outdoor Archery 🏹": {
+        category: "land",
+        price: 70,
+        unit: "person"
+    },
+
+    "Cliffside Adventure 🧗": {
+        category: "land",
+        price: 220,
+        unit: "person"
+    },
+
+    "Tropical Garden Tour 🌺": {
+        category: "land",
+        price: 90,
+        unit: "person"
+    },
+
+    "Hidden Island Expedition 🧭": {
+        category: "land",
+        price: 450,
+        unit: "person"
+    },
+
+
+    // =========================
+    // SIGHTSEEING
+    // =========================
+
+    "Coastal Sightseeing Tour 🏙️": {
+        category: "sightseeing",
+        price: 180,
+        unit: "person"
+    },
+
+    "Photography Safari 📸": {
+        category: "sightseeing",
+        price: 250,
+        unit: "person"
+    },
+
+    "Stargazing Cruise 🌌": {
+        category: "sightseeing",
+        price: 300,
+        unit: "person"
+    },
+
+    "Private Beach Picnic 🏖️": {
+        category: "sightseeing",
+        price: 275,
+        unit: "group"
+    },
+
+    "Mangrove Exploration 🌿": {
+        category: "sightseeing",
+        price: 130,
+        unit: "person"
+    },
+
+
+    // =========================
+    // FAMILY
+    // =========================
+
+    "Dolphin Discovery Tour 🐬": {
+        category: "family",
+        price: 250,
+        unit: "family"
+    },
+
+    "Treasure Island Explorer 🏝️": {
+        category: "family",
+        price: 150,
+        unit: "child"
+    },
+
+    "Marine Discovery Class 🐢": {
+        category: "family",
+        price: 100,
+        unit: "child"
+    },
+
+
+    // =========================
+    // VIP
+    // =========================
+
+    "Ocean Helicopter Tour 🚁": {
+        category: "vip",
+        price: 1500,
+        unit: "flight"
+    },
+
+    "Luxury Safari Expedition 🦁": {
+        category: "vip",
+        price: 1200,
+        unit: "trip"
+    },
+
+    "Sapphire Yacht Cruise 🛥️": {
+        category: "vip",
+        price: 2000,
+        unit: "cruise"
+    },
+
+    "Sunset Island Escape 🌅": {
+        category: "vip",
+        price: 900,
+        unit: "trip"
+    },
+
+
+    // =========================
+    // OTHER EXPERIENCES
+    // =========================
+
+    "Private Yacht Escape 🛥️": {
+        category: "other",
+        price: 1000,
+        unit: "trip"
+    },
+
+    "Royal Dining 🍽️": {
+        category: "other",
+        price: 250,
+        unit: "experience"
+    },
+
+    "Sapphire Spa Retreat ✨": {
+        category: "other",
+        price: 300,
+        unit: "person"
+    },
+
+    "Private Island Day 🏝️": {
+        category: "other",
+        price: 750,
+        unit: "group"
+    },
+
+    "Sky Adventure 🚁": {
+        category: "other",
+        price: 850,
+        unit: "person"
+    },
+
+    "Relaxing Massages 🧖": {
+        category: "other",
+        price: 120,
+        unit: "person"
+    },
+
+    "Island Adventure Tour 🚁": {
+        category: "other",
+        price: 400,
+        unit: "person"
+    },
+
+    "Luxury Spa 🧖": {
+        category: "other",
+        price: 200,
+        unit: "person"
+    },
+
+    "Events & Celebrations 🎉": {
+        category: "other",
+        price: 500,
+        unit: "event"
+    },
+
+    "Transportation 🚘": {
+        category: "other",
+        price: 100,
+        unit: "transfer"
+    },
+
+    "Kids' Corner 🧸": {
+        category: "other",
+        price: 50,
+        unit: "child"
+    },
+
+    "Special Offers 🎁": {
+        category: "other",
+        price: 0,
+        unit: "offer"
+    },
+
+    "Sunset Viewing Deck 🌅": {
+        category: "other",
+        price: 50,
+        unit: "person"
+    },
+
+    "Fitness Center 🏋️": {
+        category: "other",
+        price: 30,
+        unit: "person"
+    },
+
+    "Photo Spots 📸": {
+        category: "other",
+        price: 25,
+        unit: "person"
+    }
+
+};
+
+
+// =====================================================
+// ROOM / EXPERIENCE INPUT
+// =====================================================
+
+const roomInput = document.getElementById("room");
+const categoryInput = document.getElementById("category");
+const guestsInput = document.getElementById("guests");
+
+
+// =====================================================
+// DISPLAY SELECTION
+// =====================================================
+
+function updateSelection() {
+
+    const selected = roomInput.value.trim();
+
+    const info = bookings[selected];
+
+    const infoBox = document.getElementById("selectionInfo");
+    const selectionName = document.getElementById("selectionName");
+    const selectionPrice = document.getElementById("selectionPrice");
+    const totalPrice = document.getElementById("totalPrice");
+
+    if (!info) {
+
+        infoBox.style.display = "none";
+        totalPrice.textContent = "$0";
+
+        return;
+
+    }
+
+    infoBox.style.display = "block";
+
+    selectionName.innerHTML =
+        "<strong>Selection:</strong> " + selected;
+
+    selectionPrice.innerHTML =
+        "<strong>Price:</strong> $" +
+        info.price.toLocaleString() +
+        " / " +
+        info.unit;
+
+    calculateTotal();
 
 }
 
 
-function confirmBooking(){
+// =====================================================
+// CALCULATE TOTAL
+// =====================================================
 
-let room = document.getElementById("room").value;
-let name = document.getElementById("name").value;
+function calculateTotal() {
+
+    const selected = roomInput.value.trim();
+
+    const info = bookings[selected];
+
+    const guests = parseInt(guestsInput.value) || 1;
+
+    const totalPrice = document.getElementById("totalPrice");
+
+    if (!info) {
+
+        totalPrice.textContent = "$0";
+
+        return;
+
+    }
 
 
-if(room == ""){
+    let total = info.price;
 
-alert("Please select a room first 💎");
+
+    // Rooms are charged per night.
+    // Experiences are charged according to their unit.
+
+    if (
+        info.unit === "person" ||
+        info.unit === "child"
+    ) {
+
+        total = info.price * guests;
+
+    }
+
+
+    if (info.unit === "group") {
+
+        total = info.price;
+
+    }
+
+
+    if (info.unit === "night") {
+
+        let nights = 1;
+
+        const checkin =
+            document.getElementById("checkin").value;
+
+        const checkout =
+            document.getElementById("checkout").value;
+
+
+        if (checkin && checkout) {
+
+            const start =
+                new Date(checkin);
+
+            const end =
+                new Date(checkout);
+
+            const difference =
+                end - start;
+
+            const calculatedNights =
+                Math.ceil(
+                    difference /
+                    (1000 * 60 * 60 * 24)
+                );
+
+
+            if (calculatedNights > 0) {
+
+                nights = calculatedNights;
+
+            }
+
+        }
+
+
+        total = info.price * nights;
+
+    }
+
+
+    totalPrice.textContent =
+        "$" + total.toLocaleString();
 
 }
 
-else if(name == ""){
 
-alert("Please enter your name ✨");
+// =====================================================
+// CHECK BOOKING
+// =====================================================
+
+function checkBooking() {
+
+    const selected =
+        roomInput.value.trim();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const category =
+        categoryInput.value;
+
+    const date =
+        document.getElementById("checkin").value;
+
+    const guests =
+        guestsInput.value;
+
+
+    if (!name) {
+
+        alert("👤 Please enter your name.");
+
+        document.getElementById("name").focus();
+
+        return;
+
+    }
+
+
+    if (!email) {
+
+        alert("📧 Please enter your email address.");
+
+        document.getElementById("email").focus();
+
+        return;
+
+    }
+
+
+    if (!phone) {
+
+        alert("📱 Please enter your phone number.");
+
+        document.getElementById("phone").focus();
+
+        return;
+
+    }
+
+
+    if (!category) {
+
+        alert("✨ Please choose what you are booking.");
+
+        categoryInput.focus();
+
+        return;
+
+    }
+
+
+    if (!selected) {
+
+        alert(
+            "🏨 Please select a room or experience."
+        );
+
+        roomInput.focus();
+
+        return;
+
+    }
+
+
+    if (!bookings[selected]) {
+
+        alert(
+            "❌ That room or experience is not available.\n\n" +
+            "Please select an option from the Sapphire Shores list."
+        );
+
+        roomInput.focus();
+
+        return;
+
+    }
+
+
+    if (!date) {
+
+        alert("📅 Please choose your date.");
+
+        document.getElementById("checkin").focus();
+
+        return;
+
+    }
+
+
+    if (!guests) {
+
+        alert("👨‍👩‍👧 Please select the number of guests.");
+
+        guestsInput.focus();
+
+        return;
+
+    }
+
+
+    const info = bookings[selected];
+
+
+    alert(
+        "✅ Selection Available!\n\n" +
+        "💎 " + selected +
+        "\n\n" +
+        "Price: $" +
+        info.price.toLocaleString() +
+        " / " +
+        info.unit +
+        "\n\n" +
+        "Your reservation details are ready."
+    );
+
+
+    updateSelection();
 
 }
 
-else{
 
-alert("Thank you " + name + "! Your " + room + " reservation has been received. Welcome to Sapphire Shores Resort 💎🌊");
+// =====================================================
+// FORM SUBMISSION
+// =====================================================
 
-}
+document
+.getElementById("bookingForm")
+.addEventListener("submit", function(event) {
 
-}
+    event.preventDefault();
+
+
+    const selected =
+        roomInput.value.trim();
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const phone =
+        document.getElementById("phone").value.trim();
+
+    const category =
+        categoryInput.value;
+
+    const checkin =
+        document.getElementById("checkin").value;
+
+    const checkout =
+        document.getElementById("checkout").value;
+
+    const guests =
+        parseInt(guestsInput.value);
+
+    const requests =
+        document.getElementById("requests").value.trim();
+
+
+    if (!bookings[selected]) {
+
+        alert(
+            "❌ Please select a valid Sapphire Shores room or experience."
+        );
+
+        roomInput.focus();
+
+        return;
+
+    }
+
+
+    if (!name || !email || !phone || !category || !checkin || !guests) {
+
+        alert(
+            "✨ Please complete all required booking fields."
+        );
+
+        return;
+
+    }
+
+
+    // CHECKOUT VALIDATION FOR ROOMS
+
+    if (
+        bookings[selected].unit === "night" &&
+        !checkout
+    ) {
+
+        alert(
+            "📅 Please select a check-out date for your room."
+        );
+
+        document.getElementById("checkout").focus();
+
+        return;
+
+    }
+
+
+    if (checkout && checkin) {
+
+        const start =
+            new Date(checkin);
+
+        const end =
+            new Date(checkout);
+
+
+        if (end <= start) {
+
+            alert(
+                "❌ Check-out must be after check-in."
+            );
+
+            document
+            .getElementById("checkout")
+            .focus();
+
+            return;
+
+        }
+
+    }
+
+
+    // CALCULATE TOTAL
+
+    const info =
+        bookings[selected];
+
+    let total =
+        info.price;
+
+
+    if (
+        info.unit === "person" ||
+        info.unit === "child"
+    ) {
+
+        total =
+            info.price * guests;
+
+    }
+
+
+    if (info.unit === "night") {
+
+        const start =
+            new Date(checkin);
+
+        const end =
+            new Date(checkout);
+
+        const nights =
+            Math.ceil(
+                (end - start) /
+                (1000 * 60 * 60 * 24)
+            );
+
+        total =
+            info.price * nights;
+
+    }
+
+
+    if (info.unit === "group") {
+
+        total =
+            info.price;
+
+    }
+
+
+    // SHOW SUCCESS
+
+    const successBox =
+        document.getElementById("successBox");
+
+    const successMessage =
+        document.getElementById("successMessage");
+
+
+    successMessage.innerHTML =
+
+        "Thank you, <strong>" +
+        name +
+        "</strong>! 💎<br><br>" +
+
+        "Your reservation request for:<br>" +
+
+        "<strong>" +
+        selected +
+        "</strong><br><br>" +
+
+        "👥 Guests: " +
+        guests +
+        "<br>" +
+
+        "📅 Date: " +
+        checkin +
+
+        (checkout
+            ? " → " + checkout
+            : "") +
+
+        "<br><br>" +
+
+        "💰 Estimated Total: <strong>$" +
+        total.toLocaleString() +
+        "</strong><br><br>" +
+
+        "📧 Confirmation details will be associated with " +
+        email +
+        ".<br><br>" +
+
+        "Sapphire Shores staff will confirm availability before the reservation is finalized.";
+
+
+    successBox.style.display =
+        "block";
+
+
+    successBox.scrollIntoView({
+        behavior: "smooth"
+    });
+
+
+    // SAVE REQUEST LOCALLY
+
+    const reservation = {
+
+        name: name,
+
+        email: email,
+
+        phone: phone,
+
+        selection: selected,
+
+        category: category,
+
+        checkin: checkin,
+
+        checkout: checkout,
+
+        guests: guests,
+
+        specialRequests: requests,
+
+        estimatedTotal: total,
+
+        createdAt:
+            new Date().toISOString()
+
+    };
+
+
+    let reservations =
+        JSON.parse(
+            localStorage.getItem(
+                "SapphireShoresReservations"
+            )
+        ) || [];
+
+
+    reservations.push(reservation);
+
+
+    localStorage.setItem(
+        "SapphireShoresReservations",
+        JSON.stringify(reservations)
+    );
+
+
+});
+
+
+// =====================================================
+// LIVE UPDATES
+// =====================================================
+
+roomInput.addEventListener(
+    "input",
+    updateSelection
+);
+
+categoryInput.addEventListener(
+    "change",
+    function() {
+
+        const selected =
+            roomInput.value.trim();
+
+        if (
+            bookings[selected] &&
+            bookings[selected].category !==
+            categoryInput.value
+        ) {
+
+            roomInput.value = "";
+
+        }
+
+        updateSelection();
+
+    }
+);
+
+guestsInput.addEventListener(
+    "change",
+    calculateTotal
+);
+
+document
+.getElementById("checkin")
+.addEventListener(
+    "change",
+    calculateTotal
+);
+
+document
+.getElementById("checkout")
+.addEventListener(
+    "change",
+    calculateTotal
+);
+
+
+// =====================================================
+// SET MINIMUM DATE TO TODAY
+// =====================================================
+
+const today =
+    new Date().toISOString().split("T")[0];
+
+document
+.getElementById("checkin")
+.min = today;
+
+document
+.getElementById("checkout")
+.min = today;
+
+
+// Keep checkout after check-in
+
+document
+.getElementById("checkin")
+.addEventListener(
+    "change",
+    function() {
+
+        document
+        .getElementById("checkout")
+        .min = this.value;
+
+    }
+);
 
 </script>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
+```

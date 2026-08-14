@@ -1,119 +1,148 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Sapphire Tours - Sapphire Shores Resort 💎</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
 <style>
 
 body {
-    background:#0b0b0b;
-    color:white;
-    font-family: "Great Vibes", cursive;
-}
-
-
-.navbar {
-    background:#000;
-    border-bottom:2px solid #d4af37;
-}
-
-
-.navbar-brand,
-.nav-link {
-    color:#d4af37 !important;
-    font-weight:bold;
-}
-
-
-.hero {
-
-    background:
-    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
-    url("https://images.unsplash.com/photo-1544550285-f813152fb2fd?w=1200");
-
-    background-size:cover;
-    background-position:center;
-    padding:90px 40px;
-    border-radius:25px;
-    text-align:center;
-
-}
-
-
-.hero h1 {
-
-    color:#d4af37;
-    font-size:55px;
-
-}
-
-
-.tour-card {
-
-    background:#161616;
-    border:1px solid #d4af37;
-    border-radius:20px;
-    padding:25px;
-    height:100%;
-
-}
-
-
-.tour-card h3 {
-
-    color:#d4af37;
-
-}
-
-
-.price {
-
-    color:#d4af37;
-    font-size:22px;
-    font-weight:bold;
-
-}
-
-
-.btn-gold {
-
-    background:#d4af37;
-    color:black;
-    font-weight:bold;
-
-}
-
-
-.btn-gold:hover {
-
-    background:#f5d76e;
-
-}
-
-
-
-footer {
-
-    background:#000;
-    color:#d4af37;
-    border-top:2px solid #d4af37;
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-
-}
-body {
-    background:#0b0b0b;
-    color:white;
-    font-family:"Playfair Display", serif;
+    background: #0b0b0b;
+    color: white;
+    font-family: "Playfair Display", serif;
 }
 
 h1, h2, h3 {
-    font-family:"Great Vibes", cursive;
+    font-family: "Great Vibes", cursive;
+}
+
+.navbar {
+    background: #000;
+    border-bottom: 2px solid #d4af37;
+}
+
+.navbar-brand,
+.nav-link {
+    color: #d4af37 !important;
+    font-weight: bold;
+}
+
+.nav-link {
+    margin-left: 8px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #f5d76e !important;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+        url("https://images.unsplash.com/photo-1544550285-f813152fb2fd?w=1200");
+
+    background-size: cover;
+    background-position: center;
+    padding: 100px 40px;
+    border-radius: 25px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.hero h1 {
+    color: #d4af37;
+    font-size: 60px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+.section-title {
+    color: #d4af37;
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+
+.tour-card {
+    background: #161616;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    padding: 25px;
+    height: 100%;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.tour-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(212,175,55,.25);
+}
+
+.tour-card h3 {
+    color: #d4af37;
+    font-size: 30px;
+}
+
+.tour-card p {
+    color: #eee;
+}
+
+.price {
+    color: #d4af37 !important;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.btn-gold {
+    background: #d4af37;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+
+.btn-gold:hover {
+    background: #f5d76e;
+    color: black;
+}
+
+.category-intro {
+    text-align: center;
+    color: #ccc;
+    max-width: 850px;
+    margin: -15px auto 35px;
+}
+
+.favorite {
+    border: 2px solid #d4af37;
+}
+
+.badge-gold {
+    background: #d4af37;
+    color: #000;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+footer {
+    background: #000;
+    color: #d4af37;
+    border-top: 2px solid #d4af37;
+    text-align: center;
+    padding: 20px;
+    margin-top: 70px;
 }
 
 </style>
@@ -121,8 +150,10 @@ h1, h2, h3 {
 </head>
 
 
-
 <body>
+
+
+<!-- NAVBAR -->
 
 <nav class="navbar navbar-expand-lg">
 
@@ -141,64 +172,35 @@ data-bs-target="#navbarNav">
 
 </button>
 
-
 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-<a class="nav-link d-inline" href="Sapphire Shores Resort.html">
-🏠 Home
-</a>
+<a class="nav-link" href="Sapphire Shores Resort.html">🏠 Home</a>
 
-<a class="nav-link d-inline" href="About Us.html">
-ℹ️ About Us
-</a>
+<a class="nav-link" href="About Us.html">ℹ️ About Us</a>
 
-<a class="nav-link d-inline" href="Rooms.html">
-🛏️ Rooms
-</a>
+<a class="nav-link" href="Rooms.html">🛏️ Rooms</a>
 
-<a class="nav-link d-inline" href="Booking.html">
-📅 Booking
-</a>
+<a class="nav-link" href="Booking.html">📅 Booking</a>
 
-<a class="nav-link d-inline" href="The Golden Bite.html">
-🍽️ The Golden Bite
-</a>
+<a class="nav-link" href="The Golden Bite.html">🍽️ The Golden Bite</a>
 
-<a class="nav-link d-inline" href="Tours.html">
-🌴 Tours & Activities
-</a>
+<a class="nav-link" href="Tours.html">🌴 Tours</a>
 
-<a class="nav-link d-inline" href="Infinity Pool.html">
-🏊 Infinity Pool
-</a>
+<a class="nav-link" href="Infinity Pool.html">🏊 Pool</a>
 
-<a class="nav-link d-inline" href="Boutique.html">
-🛍️ Boutique
-</a>
+<a class="nav-link" href="Boutique.html">🛍️ Boutique</a>
 
-<a class="nav-link d-inline" href="VIP.html">
-👑 VIP Club
-</a>
+<a class="nav-link" href="VIP.html">👑 VIP Club</a>
 
-<a class="nav-link d-inline" href="AI Concierge.html">
-🤖 Lumi AI
-</a>
+<a class="nav-link" href="AI Concierge.html">🤖 Lumi AI</a>
 
-<a class="nav-link d-inline" href="Customer Reviews.html">
-⭐ Reviews
-</a>
+<a class="nav-link" href="Customer Reviews.html">⭐ Reviews</a>
 
-<a class="nav-link d-inline" href="Contact Us.html">
-📞 Contact
-</a>
+<a class="nav-link" href="Contact Us.html">📞 Contact</a>
 
-<a class="nav-link d-inline" href="Gallery.html">
-📸 Gallery
-</a>
+<a class="nav-link" href="Gallery.html">📸 Gallery</a>
 
-<a class="nav-link d-inline" href="More.html">
-➕ More
-</a>
+<a class="nav-link" href="More.html">➕ More</a>
 
 </div>
 
@@ -206,52 +208,55 @@ data-bs-target="#navbarNav">
 
 </nav>
 
+
 <div class="container my-5">
 
 
+<!-- HERO -->
 
 <section class="hero">
 
-
-<h1>
-Sapphire Adventure Tours 🏝️💎
-</h1>
-
+<h1>Sapphire Adventure Tours 🏝️💎</h1>
 
 <p>
 Discover unforgettable adventures beyond the waves.
 </p>
 
-
 <a href="Booking.html" class="btn btn-gold btn-lg">
 Reserve Adventure ✨
 </a>
+
+</section>
+
+
+<!-- WATER SPORTS -->
+
 <section class="my-5">
 
-<h2 class="text-center" style="color:#d4af37;">
-Family & Kids Adventures 🧒🌊
-</h2>
+<h2 class="section-title">🌊 Water Sports & Ocean Adventures</h2>
+
+<p class="category-intro">
+Dive, paddle, surf and soar across the sparkling Sapphire Shores coastline.
+</p>
+
+<div class="row g-4">
 
 
-<div class="row mt-4">
+<!-- 1 -->
 
+<div class="col-md-4">
 
+<div class="tour-card favorite">
 
-<div class="col-md-4 mb-4">
+<span class="badge-gold">⭐ Guest Favorite</span>
 
-<div class="tour-card">
-
-<h3>
-🐬 Dolphin Discovery Tour
-</h3>
+<h3>🏄 Surfing Lessons</h3>
 
 <p>
-A safe family adventure where children can learn about ocean life and enjoy unforgettable dolphin encounters.
+Learn to ride the waves with an experienced instructor and discover the thrill of surfing.
 </p>
 
-<p class="price">
-$250 / Family
-</p>
+<p class="price">$120 / Person</p>
 
 <a href="Booking.html" class="btn btn-gold">
 Book Adventure
@@ -262,24 +267,19 @@ Book Adventure
 </div>
 
 
+<!-- 2 -->
 
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🏝️ Treasure Island Explorer
-</h3>
+<h3>🪂 Parasailing</h3>
 
 <p>
-A fun kids adventure with beach games, exploration activities, and a friendly guide leading the journey.
+Rise above the ocean and enjoy spectacular coastal views during an unforgettable parasailing experience.
 </p>
 
-<p class="price">
-$150 / Child
-</p>
+<p class="price">$180 / Person</p>
 
 <a href="Booking.html" class="btn btn-gold">
 Book Adventure
@@ -290,24 +290,19 @@ Book Adventure
 </div>
 
 
+<!-- 3 -->
 
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🐢 Marine Discovery Class
-</h3>
+<h3>🐠 Snorkeling Safari</h3>
 
 <p>
-Children learn about sea animals, coral reefs, and ocean conservation through exciting activities.
+Explore beautiful underwater scenery and discover colorful marine life during a guided snorkeling adventure.
 </p>
 
-<p class="price">
-$100 / Child
-</p>
+<p class="price">$175 / Person</p>
 
 <a href="Booking.html" class="btn btn-gold">
 Book Adventure
@@ -318,98 +313,312 @@ Book Adventure
 </div>
 
 
-</div>
+<!-- 4 -->
 
-</section>
-
-
-
-
-<section class="my-5">
-
-<h2 class="text-center" style="color:#d4af37;">
-Guest Favorites ⭐
-</h2>
-
-
-<div class="tour-card text-center mt-4">
-
-<p>
-🏆 Most Popular: Sapphire Yacht Cruise
-</p>
-
-<p>
-👨‍👩‍👧 Best Family Choice: Dolphin Discovery Tour
-</p>
-
-<p>
-🌅 Best Sunset Experience: Sunset Island Escape
-</p>
-
-</div>
-
-</section>
-
-
-
-
-
-<section class="my-5">
-
-<div class="tour-card text-center">
-
-<h3>
-🛡️ Safe & Premium Experiences
-</h3>
-
-<p>
-All Sapphire Shores tours include trained guides, premium equipment, and carefully planned experiences for guests of all ages.
-</p>
-
-</div>
-
-</section>
-
-</section>
-
-
-
-
-
-
-
-<section class="my-5">
-
-
-<h2 class="text-center" style="color:#d4af37;">
-Exclusive VIP Tours 👑
-</h2>
-
-
-
-<div class="row mt-4">
-
-
-
-
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🚁 Ocean Helicopter Tour
-</h3>
+<h3>🛶 Kayaking Adventure</h3>
 
 <p>
-Fly above Sapphire Shores and enjoy breathtaking views of islands, beaches, and crystal-clear waters.
+Paddle through beautiful coastal waters while taking in the scenery around Sapphire Shores.
 </p>
 
-<p class="price">
-$1500 / Flight
+<p class="price">$90 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 5 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏄 Paddleboarding</h3>
+
+<p>
+Enjoy a relaxing paddleboarding adventure across calm sapphire waters.
 </p>
 
+<p class="price">$75 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 6 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🚤 Private Jet Ski Adventure</h3>
+
+<p>
+Race across the ocean with professional guides and premium equipment.
+</p>
+
+<p class="price">$300 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 7 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🤿 Coral Reef Diving</h3>
+
+<p>
+Discover an underwater world filled with colorful coral and fascinating marine life with trained instructors.
+</p>
+
+<p class="price">$500 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 8 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🛥️ Glass-Bottom Boat Tour</h3>
+
+<p>
+See the underwater world without getting wet aboard a relaxing glass-bottom boat.
+</p>
+
+<p class="price">$140 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 9 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🎣 Deep-Sea Fishing</h3>
+
+<p>
+Head into deeper waters for an exciting guided fishing expedition.
+</p>
+
+<p class="price">$350 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LAND ADVENTURES -->
+
+<section class="my-5">
+
+<h2 class="section-title">🏝️ Land & Outdoor Adventures</h2>
+
+<p class="category-intro">
+Trade the beach chair for an adventure and explore the world beyond the resort.
+</p>
+
+<div class="row g-4">
+
+
+<!-- 10 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🪂 Zipline Adventure</h3>
+
+<p>
+Soar above the landscape on an exciting zipline experience surrounded by spectacular scenery.
+</p>
+
+<p class="price">$200 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 11 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🐎 Beach Horseback Riding</h3>
+
+<p>
+Enjoy a scenic horseback adventure along beautiful coastal trails and sandy beaches.
+</p>
+
+<p class="price">$150 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 12 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏞️ Mountain Hiking Expedition</h3>
+
+<p>
+Explore scenic trails and breathtaking viewpoints with an experienced guide.
+</p>
+
+<p class="price">$180 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 13 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🚲 Island Cycling Tour</h3>
+
+<p>
+Cycle through scenic island routes while discovering hidden corners and beautiful views.
+</p>
+
+<p class="price">$80 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 14 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏹 Outdoor Archery</h3>
+
+<p>
+Test your aim during a fun outdoor archery experience suitable for adventure-loving guests.
+</p>
+
+<p class="price">$70 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 15 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🧗 Cliffside Adventure</h3>
+
+<p>
+Experience an exciting guided outdoor adventure among dramatic coastal landscapes.
+</p>
+
+<p class="price">$220 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 16 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🌺 Tropical Garden Tour</h3>
+
+<p>
+Wander through beautiful tropical gardens while learning about the region's plants and natural environment.
+</p>
+
+<p class="price">$90 / Person</p>
 
 <a href="Booking.html" class="btn btn-gold">
 Book Tour
@@ -420,27 +629,59 @@ Book Tour
 </div>
 
 
+<!-- 17 -->
 
-
-
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🌊 Private Jet Ski Adventure
-</h3>
+<h3>🧭 Hidden Island Expedition</h3>
 
 <p>
-Race across the sapphire ocean waves with professional guides and VIP equipment.
+Set off on an exciting guided journey to discover secluded island scenery and hidden coastal treasures.
 </p>
 
-<p class="price">
-$300 / Person
+<p class="price">$450 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Expedition
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SIGHTSEEING -->
+
+<section class="my-5">
+
+<h2 class="section-title">🌅 Sightseeing & Scenic Experiences</h2>
+
+<p class="category-intro">
+Slow down, look around and experience the most beautiful views Sapphire Shores has to offer.
 </p>
 
+<div class="row g-4">
+
+
+<!-- 18 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏙️ Coastal Sightseeing Tour</h3>
+
+<p>
+Discover breathtaking coastal landmarks, beaches and viewpoints with a knowledgeable guide.
+</p>
+
+<p class="price">$180 / Person</p>
 
 <a href="Booking.html" class="btn btn-gold">
 Book Tour
@@ -451,30 +692,222 @@ Book Tour
 </div>
 
 
+<!-- 19 -->
 
-
-
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🦁 Luxury Safari Expedition
-</h3>
+<h3>📸 Photography Safari</h3>
+
+<p>
+Capture spectacular landscapes, wildlife and unforgettable holiday moments with a guided photography experience.
+</p>
+
+<p class="price">$250 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Experience
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 20 -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🌌 Stargazing Cruise</h3>
+
+<p>
+Sail away from the resort and enjoy an unforgettable evening beneath the stars.
+</p>
+
+<p class="price">$300 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Cruise
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BONUS -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏖️ Private Beach Picnic</h3>
+
+<p>
+Relax on a beautiful private beach with a specially prepared picnic and peaceful ocean views.
+</p>
+
+<p class="price">$275 / Group</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Experience
+</a>
+
+</div>
+
+</div>
+
+
+<!-- BONUS -->
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🌿 Mangrove Exploration</h3>
+
+<p>
+Explore fascinating coastal ecosystems by water and discover a different side of the Sapphire Shores environment.
+</p>
+
+<p class="price">$130 / Person</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FAMILY -->
+
+<section class="my-5">
+
+<h2 class="section-title">👨‍👩‍👧 Family & Kids Adventures</h2>
+
+<div class="row g-4">
+
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🐬 Dolphin Discovery Tour</h3>
+
+<p>
+A family-friendly ocean experience where children can learn about marine life and enjoy an unforgettable adventure.
+</p>
+
+<p class="price">$250 / Family</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🏝️ Treasure Island Explorer</h3>
+
+<p>
+A fun adventure featuring beach games, exploration activities and a friendly guide.
+</p>
+
+<p class="price">$150 / Child</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🐢 Marine Discovery Class</h3>
+
+<p>
+Learn about sea animals, coral reefs and ocean conservation through engaging activities.
+</p>
+
+<p class="price">$100 / Child</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book Adventure
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- VIP -->
+
+<section class="my-5">
+
+<h2 class="section-title">👑 Exclusive VIP Experiences</h2>
+
+<div class="row g-4">
+
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🚁 Ocean Helicopter Tour</h3>
+
+<p>
+Fly above Sapphire Shores and enjoy breathtaking views of islands, beaches and crystal-clear waters.
+</p>
+
+<p class="price">$1,500 / Flight</p>
+
+<a href="Booking.html" class="btn btn-gold">
+Book VIP Tour
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-md-4">
+
+<div class="tour-card">
+
+<h3>🦁 Luxury Safari Expedition</h3>
 
 <p>
 Explore incredible wildlife landscapes with a private guide and premium safari vehicle.
 </p>
 
-<p class="price">
-$1200 / Trip
-</p>
-
+<p class="price">$1,200 / Trip</p>
 
 <a href="Booking.html" class="btn btn-gold">
-Book Tour
+Book VIP Tour
 </a>
 
 </div>
@@ -482,31 +915,20 @@ Book Tour
 </div>
 
 
-
-
-
-
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🛥️ Sapphire Yacht Cruise
-</h3>
+<h3>🛥️ Sapphire Yacht Cruise</h3>
 
 <p>
-Sail across the ocean with gourmet dining, sunset views, and exclusive service.
+Sail across the ocean with gourmet dining, sunset views and exclusive service.
 </p>
 
-<p class="price">
-$2000 / Cruise
-</p>
-
+<p class="price">$2,000 / Cruise</p>
 
 <a href="Booking.html" class="btn btn-gold">
-Book Tour
+Book VIP Tour
 </a>
 
 </div>
@@ -514,83 +936,95 @@ Book Tour
 </div>
 
 
-
-
-
-
-
-
-<div class="col-md-4 mb-4">
+<div class="col-md-4">
 
 <div class="tour-card">
 
-<h3>
-🐠 Coral Reef Diving
-</h3>
-
-<p>
-Discover colorful underwater worlds with trained diving instructors.
-</p>
-
-<p class="price">
-$500 / Person
-</p>
-
-
-<a href="Booking.html" class="btn btn-gold">
-Book Tour
-</a>
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-<div class="col-md-4 mb-4">
-
-<div class="tour-card">
-
-<h3>
-🌅 Sunset Island Escape
-</h3>
+<h3>🌅 Sunset Island Escape</h3>
 
 <p>
 Enjoy a private island visit with luxury meals and unforgettable ocean scenery.
 </p>
 
-<p class="price">
-$900 / Trip
-</p>
-
+<p class="price">$900 / Trip</p>
 
 <a href="Booking.html" class="btn btn-gold">
-Book Tour
+Book VIP Tour
 </a>
 
 </div>
 
 </div>
 
-
-
-
 </div>
-
 
 </section>
 
 
+<!-- GUEST FAVORITES -->
+
+<section class="my-5">
+
+<h2 class="section-title">⭐ Guest Favorites</h2>
+
+<div class="tour-card text-center">
+
+<p>🏆 <strong>Most Popular:</strong> Sapphire Yacht Cruise</p>
+
+<p>👨‍👩‍👧 <strong>Best Family Choice:</strong> Dolphin Discovery Tour</p>
+
+<p>🌅 <strong>Best Sunset Experience:</strong> Sunset Island Escape</p>
+
+<p>🌊 <strong>Best Water Adventure:</strong> Snorkeling Safari</p>
+
+<p>🐎 <strong>Best Land Adventure:</strong> Beach Horseback Riding</p>
+
+<p>🪂 <strong>Biggest Thrill:</strong> Zipline Adventure</p>
 
 </div>
 
+</section>
 
 
+<!-- SAFETY -->
+
+<section class="my-5">
+
+<div class="tour-card text-center">
+
+<h3>🛡️ Safe & Premium Experiences</h3>
+
+<p>
+Sapphire Shores adventures are designed with guest safety and enjoyment in mind.
+Where applicable, trained guides and appropriate safety equipment are provided.
+Guests should follow all activity-specific instructions and requirements.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- BOOKING CTA -->
+
+<section class="hero">
+
+<h2 style="color:#d4af37; font-family:'Great Vibes', cursive; font-size:50px;">
+Ready for Your Sapphire Adventure?
+</h2>
+
+<p>
+Choose your experience and make your stay unforgettable. 🌊💎
+</p>
+
+<a href="Booking.html" class="btn btn-gold btn-lg">
+📅 Start Your Booking
+</a>
+
+</section>
+
+
+</div>
 
 
 <footer>
@@ -599,8 +1033,10 @@ Book Tour
 
 </footer>
 
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
-</html>>>
+</html>
+```
