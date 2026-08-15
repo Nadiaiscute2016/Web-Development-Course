@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2>JavaScript Objects Data Structure and Array</h2>
+
+  <script>
+    // 6. Create an object variable inside the <script> tag.
+    var student = {
+      name: 'Nadia',
+      age: '10',
+      Grade: '9',
+      hobbies: 'Drawing',
+      fav_sport: 'Badminton'
+    };
+
+    // 7. Create an array inside the <script> tag
+    var color = ["white", "black", "red", "pink", "blue"];
+
+    // 8. Print student object properties
+    document.write("Student's name is  " + student.name,
+    "<br>","Student's favorite sport is  "
+    +student.fav_sport);
+
+    // 9. Print the array created by joining a special character in between the array values.
+    document.write("<br>Before Popping the colors are " +
+    color.join("^"));
+
+    // 10. Print any of the array values by accessing its index number.
+    document.write("<br>My favorite color is  " + color[3]);
+
+    // 11. Pop the array by using .pop() method and print the array by adding some special character in between the array values.
+    color.pop();
+    document.write("<br>After Popping the colors are  " + color.join("*"));
+  </script>
+</body>
+</html>
