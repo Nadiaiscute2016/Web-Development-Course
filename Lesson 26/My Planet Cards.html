@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+  <title>My Planet Cards</title>
+
+  <style>
+
+    body {
+      font-family: Arial;
+      background: #f0f4ff;
+      padding: 30px;
+      text-align: center;
+    }
+
+
+    h1 { 
+      color: #ff5a43; 
+    }
+
+
+    p { 
+      color: #555; 
+    }
+
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+
+    .card {
+      background: white;
+      border: 3px solid #ff5a43;
+      border-radius: 12px;
+      padding: 20px;
+      width: 200px;
+    }
+
+
+    .planet-name {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+
+    .planet-fact { 
+      color: #666; 
+      margin-top: 10px; 
+      font-size: 14px; 
+    }
+
+
+    button {
+      background: #ff5a43;
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <h1>My Planet Cards</h1>
+
+  <p>Use a JavaScript class to build planet cards!</p>
+
+  <button onclick="showPlanets()">Show Planets!</button>
+
+
+  <div class="cards">
+
+    <div id="card1"></div>
+
+    <div id="card2"></div>
+
+    <div id="card3"></div>
+
+    <div id="card4"></div>
+
+    <div id="card5"></div>
+
+    <div id="card6"></div>
+
+    <div id="card7"></div>
+
+    <div id="card8"></div>
+
+  </div>
+
+
+  <script>
+
+    class Planet {
+
+      constructor(name, fact) {
+        this.name = name;
+        this.fact = fact;
+      }
+
+
+      describe() {
+        return `${this.name}: ${this.fact}`;
+      }
+
+    }
+
+
+    function showPlanets() {
+
+      const planets = [
+        new Planet("Mercury", "The smallest and closest planet to the Sun"),
+        new Planet("Venus", "The hottest planet in our solar system"),
+        new Planet("Earth", "The only planet known to harbor life"),
+        new Planet("Mars", "Known as the Red Planet due to iron oxide on its surface"),
+        new Planet("Jupiter", "The largest planet, twice as massive as all others combined"),
+        new Planet("Saturn", "Famous for its extensive and beautiful ring system"),
+        new Planet("Uranus", "An ice giant that uniquely rotates completely on its side"),
+        new Planet("Neptune", "The most distant planet from the Sun, known for supersonic winds")
+      ];
+
+
+      planets.forEach((planet, index) => {
+
+        const cardNumber = index + 1;
+
+        const targetCard = document.getElementById(`card${cardNumber}`);
+
+
+        if (targetCard) {
+
+          targetCard.innerHTML = `
+            <div class="card">
+              <div class="planet-name">${planet.name}</div>
+              <div class="planet-fact">${planet.fact}</div>
+            </div>
+          `;
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+
+</body>
+
+
+</html>
