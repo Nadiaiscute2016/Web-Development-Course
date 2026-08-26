@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Superhero Power Cards</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4ff;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #e50914;
+    }
+
+    p {
+      color: #444444;
+    }
+
+    button {
+      background-color: #e50914;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #b20710;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background-color: white;
+      border: 3px solid #e50914;
+      border-radius: 12px;
+      width: 240px;
+      padding: 18px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: left;
+    }
+
+    .hero-name {
+      font-size: 20px;
+      font-weight: bold;
+      color: #111111;
+      margin-top: 0;
+      border-bottom: 2px solid #f0f4ff;
+      padding-bottom: 5px;
+    }
+
+    .hero-universe {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #777777;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .hero-power {
+      color: #0057b8;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .hero-mission {
+      color: #555555;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Famous Superhero Power Cards</h1>
+
+  <p>
+    Click the button below to generate 25 superhero cards using JavaScript objects.
+  </p>
+
+  <button onclick="showHeroes()">Show Superheroes</button>
+
+  <div class="card-container" id="heroCards"></div>
+
+  <script>
+    // Blueprint for creating superhero objects
+    class Superhero {
+      constructor(name, universe, power, mission) {
+        this.name = name;
+        this.universe = universe;
+        this.power = power;
+        this.mission = mission;
+      }
+
+      // Method to output HTML template literal
+      describeHero() {
+        return `
+          <div class="hero-card">
+            <p class="hero-name">${this.name}</p>
+            <p class="hero-universe">${this.universe}</p>
+            <p class="hero-power">Power: ${this.power}</p>
+            <p class="hero-mission">Mission: ${this.mission}</p>
+          </div>
+        `;
+      }
+    }
+
+    function showHeroes() {
+      // Array holding 25 real superhero instances
+      const heroes = [
+        // Miraculous Ladybug
+        new Superhero("Ladybug", "Miraculous", "Lucky Charm & Creation", "De-evilize akumas and protect Paris from Hawk Moth."),
+        new Superhero("Cat Noir", "Miraculous", "Cataclysm & Destruction", "Fight alongside Ladybug using cataclysmic powers."),
+        new Superhero("Rena Rouge", "Miraculous", "Mirage Illusions", "Help Ladybug by creating realistic illusions."),
+        new Superhero("Carapace", "Miraculous", "Shell-ter Protection", "Create indestructible force fields to shield the team from danger."),
+        new Superhero("Queen Bee", "Miraculous", "Venom Immobilization", "Paralyze villains completely with a single sting tool."),
+        new Superhero("Viperion", "Miraculous", "Second Chance Time Loop", "Rewind time by a few minutes to fix tactical mistakes."),
+        new Superhero("Pegasus", "Miraculous", "Voyage Teleportation", "Open portal gateways to travel anywhere instantly."),
+        new Superhero("Ryuko", "Miraculous", "Elemental Dragon Alteration", "Transform freely into wind, water, or lightning elements."),
+
+        // DC Super Hero Girls
+        new Superhero("Wonder Woman", "DC Super Hero Girls", "Super strength & Lasso of Truth", "Lead the hero team and defend Metropolis High."),
+        new Superhero("Supergirl", "DC Super Hero Girls", "Kryptonian heat vision & Flight", "Protect Earth while managing her teenage temper."),
+        new Superhero("Batgirl", "DC Super Hero Girls", "Genius intellect & Tech gadgets", "Solve mysteries and build tools without superpower abilities."),
+        new Superhero("Bumblebee", "DC Super Hero Girls", "Size shrinking & Sonic stings", "Overcome shyness to save her friends from danger."),
+        new Superhero("Zatanna", "DC Super Hero Girls", "Magic spells", "Balance theatrical stage illusions with real spellcasting."),
+        new Superhero("Green Lantern (Jessica)", "DC Super Hero Girls", "Power Ring constructs", "Defend peace and protect the environment."),
+
+        // We Can Be Heroes
+        new Superhero("Missy Moreno", "We Can Be Heroes", "Natural leadership & Tactics", "Lead the children of the Heroics to rescue their parents."),
+        new Superhero("Guppy", "We Can Be Heroes", "Water manipulation & Shark strength", "Reshape water into weapons and punch through steel."),
+        new Superhero("Wild Card", "We Can Be Heroes", "Every superpower imaginable", "Learn to focus and control his unpredictable abilities."),
+        new Superhero("Noodles", "We Can Be Heroes", "Body elasticity", "Stretch and twist his limbs to dodge attacks."),
+        new Superhero("Ojo", "We Can Be Heroes", "Drawing future events", "Create art that reveals what will happen next."),
+        new Superhero("A Capella", "We Can Be Heroes", "Vocal levitation", "Sing at low pitches to float objects and enemies."),
+
+        // Classic Favorites
+        new Superhero("Spider-Man", "Marvel", "Wall-crawling & Spider-sense", "Protect New York neighborhoods with great responsibility."),
+        new Superhero("Iron Man", "Marvel", "Armored exo-suit suit tech", "Defend the world using genius engineering intellect."),
+        new Superhero("Batman", "DC Universe", "Master detective martial arts", "Guard Gotham City from crime using shadows and wealth."),
+        new Superhero("Superman", "DC Universe", "Solar energy invulnerability", "Act as a beacon of hope and truth across the universe."),
+        new Superhero("The Flash", "DC Universe", "Speed force acceleration", "Run fast enough to travel through time and save lives.")
+      ];
+
+      // Clean out container first
+      const container = document.getElementById("heroCards");
+      container.innerHTML = "";
+
+      // Loop through all 25 objects and append their HTML
+      heroes.forEach(hero => {
+        container.innerHTML += hero.describeHero();
+      });
+    }
+  </script>
+
+</body>
+</html>
