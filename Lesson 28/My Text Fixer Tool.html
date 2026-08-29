@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Text Fixer Tool</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <style>
+    body { background: #fff7e6; }
+    h1, h3 { color: #d35400; }
+    .box { background: white; color: #d35400; }
+  </style>
+</head>
+
+<body>
+<div class="container py-4">
+
+  <h1 class="mb-1">My Text Fixer Tool</h1>
+  <p class="text-muted mb-4">Check types, convert values, find and replace words, and catch errors!</p>
+
+  <!-- TOPIC 1: typeof -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">What Type Is It?</h3>
+      <button class="btn btn-warning" onclick="checkTypes()">Check Data Types</button>
+      <div id="typeResult" class="box p-3 mt-3 rounded">Click the button to check the types!</div>
+    </div>
+  </div>
+
+  <!-- TOPIC 2: Type Conversion -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Convert Data Types</h3>
+      <button class="btn btn-warning" onclick="convertTypes()">Convert Values</button>
+      <div id="convertResult" class="box p-3 mt-3 rounded">Click the button to convert values!</div>
+    </div>
+  </div>
+
+  <!-- TOPIC 3: Search and Replace -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Fix My Sentence</h3>
+      <p>Sentence: I like maths because maths is fun.</p>
+      <button class="btn btn-warning" onclick="replaceText()">Replace Word</button>
+      <div id="replaceResult" class="box p-3 mt-3 rounded">Click the button to replace a word!</div>
+    </div>
+  </div>
+
+  <!-- TOPIC 4: try/catch -->
+  <div class="card mb-4">
+    <div class="card-body">
+      <h3 class="card-title">Error Catcher</h3>
+      <button class="btn btn-warning" onclick="catchError()">Test Error Catcher</button>
+      <div id="errorResult" class="box p-3 mt-3 rounded">Click the button to test the error catcher!</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function checkTypes() {
+    var name = "Riya";
+    var score = 95;
+    var isReady = true;
+
+    document.getElementById("typeResult").innerHTML =
+      "Name: " + typeof name + "<br>" +
+      "Score: " + typeof score + "<br>" +
+      "Is Ready: " + typeof isReady;
+  }
+
+  function convertTypes() {
+    var marksText = "88";
+    var marksNumber = Number(marksText);
+    var age = 12;
+    var ageText = String(age);
+
+    document.getElementById("convertResult").innerHTML =
+      '"88" as a number: ' + marksNumber + "<br>" +
+      "Type: " + typeof marksNumber + "<br><br>" +
+      "12 as text: " + ageText + "<br>" +
+      "Type: " + typeof ageText;
+  }
+
+  function replaceText() {
+    var sentence = "I like maths because maths is fun.";
+    var newSentence = sentence.replace("maths", "coding");
+
+    document.getElementById("replaceResult").innerHTML =
+      "Original: " + sentence + "<br><br>" +
+      "Fixed: " + newSentence;
+  }
+
+  function catchError() {
+    try {
+      var result = totalMarks + 10;
+      document.getElementById("errorResult").innerHTML = "Result: " + result;
+    }
+    catch(error) {
+      document.getElementById("errorResult").innerHTML =
+        "Oops! An error was caught: " + error.message;
+    }
+  }
+</script>
+
+</body>
+</html>
