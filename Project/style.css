@@ -1,0 +1,88 @@
+
+html { scroll-behavior: smooth; }
+body{background: #fff; font-family: "Baloo Tamma 2, cursive"; margin :0 }
+.m-heading {
+    font-family: "Roboto Slab", serif;
+}
+.navigation{ background: #222; border-top: 2px solid #f2a900; padding: 12 px 40 px !important;}
+.text-white {
+    color: white;
+}
+.brand-logo{height:2px; width: auto;}
+.navigation-link{ text-decoration: none; font-size: 14px; font-weight: 500; color: #fff ! important;}
+.main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url ('https://github.com/harshacc031-dot/img/blob/main/1.png?raw=true');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.navigation-link:hover{color: #f2a900 !important;}
+.main_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_row h1 {
+    font-size: 5rem;
+}
+.main_row img {
+    width: auto;
+    height: 100vh;
+}
+#projects h1{
+  font-weight:900;
+}
+
+.card{
+  border:0;
+  border-radius:3px;
+  box-shadow:0 6px 18px rgba(0,0,0,.35);
+}
+
+.card-img-top{
+  padding:18px;
+  height:13rem;
+  object-fit:contain;
+}
+
+.card-text{
+  color:#6f7780;
+  font-size:.85rem;
+}
+
+.btn-warning{
+  font-weight:700;
+  font-size:.8rem;
+  border-radius:3px;
+}
+.about {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.m-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+
+}
+
+.btn-outline-warning {
+    border-width: 2px;
+    font-weight: 600;
+    padding: 10px 30px;
+    transition: all 0.3s ease;
+
+}
+
+
+
+.btn-outline-warning:hover {
+    background-color: #ffc107;
+    transform: scale(1.05);
+
+}
