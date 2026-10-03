@@ -1,0 +1,133 @@
+/* Body layout to center the card on the page */
+body {
+    /* Checklist: font-family with at least three fonts */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #090d16; /* Deep, luxury midnight-black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury card wrapper */
+.bank-card {
+    background-color: #111827; /* Sleek matte-black card surface */
+    padding: 36px 32px;
+    width: 350px; 
+    border-radius: 24px;
+    text-align: center;
+    /* Checklist: Place 1 for box-shadow (Deep premium shadow aura) */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    /* Subtle gold hairline border for an elite aesthetic */
+    border: 1px solid rgba(212, 175, 55, 0.15); 
+}
+
+/* Checklist: text-transform uppercase on title */
+.bank-title {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 800;
+    color: #e2b842; /* Premium metallic gold accent */
+    margin-top: 0;
+    margin-bottom: 32px;
+    letter-spacing: 2.5px;
+}
+
+/* Checklist: text-decoration underline on both labels */
+.underlined-label {
+    display: block;
+    text-decoration: underline;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9ca3af; /* Muted silver-grey label */
+    margin-bottom: 8px;
+}
+
+/* Large balance display */
+.balance-display {
+    font-size: 42px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 32px;
+    color: #ffffff; /* Crisp white text against the black card */
+    letter-spacing: -0.5px;
+}
+
+/* Financial Input Field */
+input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 4px;
+    margin-bottom: 28px;
+    border: 1.5px solid #374151; /* Dark structural border */
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1f2937; /* Embedded dark field */
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+/* Premium gold focus ring */
+input:focus {
+    outline: none;
+    border-color: #e2b842; /* Highlights gold on active typing */
+    box-shadow: 0 0 0 4px rgba(226, 184, 66, 0.15);
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+/* Base button properties */
+.btn {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #ffffff;
+    cursor: pointer;
+    /* Checklist: Place 2 for box-shadow (Clean micro-shadow) */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    transition: all 0.15s ease;
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+/* Checklist: Credit button is Green (Rich emerald velvet) */
+.btn-credit {
+    background-color: #059669;
+}
+
+/* Checklist: Debit button is Red (Deep crimson velvet) */
+.btn-debit {
+    background-color: #dc2626;
+}
+
+/* Checklist: text-decoration line-through, small, and grey */
+.disclaimer-note {
+    font-size: 11px;
+    font-weight: 500;
+    color: #6b7280; /* Muted grey charcoal */
+    text-decoration: line-through;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
