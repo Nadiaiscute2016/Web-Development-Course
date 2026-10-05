@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susan's Restaurant</title>
+    <style>
+        /* General Page Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navigation Bar Styling */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50; /* Elegant dark slate color */
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-logo a {
+            color: #f39c12; /* Warm orange accent color */
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover and Active states */
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #f39c12;
+        }
+
+        /* Banner Section Styling */
+        .banner-section {
+            position: relative;
+            height: 80vh; /* Fills 80% of the viewport height */
+            /* Placeholder restaurant background image */
+            background-image: url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Dark tint over the image to make white text highly readable */
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner-content {
+            color: #ffffff;
+            padding: 20px;
+            max-width: 600px;
+        }
+
+        .banner-content h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .banner-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        /* Call to Action Button */
+        .banner-btn {
+            display: inline-block;
+            background-color: #f39c12;
+            color: #ffffff;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .banner-btn:hover {
+            background-color: #e67e22;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#">Susan's Kitchen</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Banner Image Section -->
+    <header class="banner-section" id="home">
+        <div class="banner-overlay">
+            <div class="banner-content">
+                <h1>Welcome to Susan's Kitchen</h1>
+                <p>Experience fresh, authentic flavors cooked with passion.</p>
+                <a href="#menu" class="banner-btn">View Our Menu</a>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>
